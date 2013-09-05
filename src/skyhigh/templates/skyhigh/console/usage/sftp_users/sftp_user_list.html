@@ -1,0 +1,59 @@
+{% extends 'skyhigh/console/base.html' %}
+{% load unobase_tags %}
+
+{% block title %}SFTP User List{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>SFTP User List</h1>
+            <a href="{% url console_usage_sftp_user_create %}" class="link btn_light console-btn">Add an SFTP User</a>
+            <a href="javascript: void(0);" class="link toggle-filter">Toggle Filter</a>
+            <div class="form filter">
+                <form id="frmUserFilter" action="." method="GET">
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Username</label>
+                            <div class="clear"></div>
+                            {{ filter_form.username }}{{ filter_form.first_name.errors }}
+                        </div>
+                        <div class="buttons">
+	                        <input type="submit" id="submit" value="Filter" class="btn" />
+	                    </div>
+                    </div>
+                </form>
+            </div>
+            <div class="clear"></div>
+            <div class="column column_full">
+                <div class="listing listing_full">
+
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">Username</th>
+                                <th width="80">Password</th>
+                                <th width="80">User</th>
+                                <th width="60"></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr onclick="DoNav('{% url console_usage_sftp_user_detail object.pk %}');">
+                                <td><a href="{% url console_usage_sftp_user_detail object.pk %}">{{ object.username }}</a></td>
+                                <td>{{ object.password }}</td>
+                                <td>{{ object.user.username }}</td>
+                                <td><a href="{% url console_usage_sftp_user_update object.pk %}" class="link">Edit</a><br /><a href="{% url console_usage_sftp_user_delete object.pk %}" class="link">Delete</a></td>
+                            </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="2">Sorry, there are no items to list</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    {% pagination page_obj %}
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

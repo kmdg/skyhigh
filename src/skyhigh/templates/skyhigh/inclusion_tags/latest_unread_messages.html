@@ -1,0 +1,8 @@
+{% if objects %}
+	<div class="widget">
+	    <h3>Latest Messages</h3>
+        {% for object in objects %}
+	        <p><a href="{% url console_message_detail object.id %}">{{ object.user.display_name }} : {{ object.message|truncatechars:15 }}</a></p>
+        {% endfor %}
+	</div>
+{% endif %}

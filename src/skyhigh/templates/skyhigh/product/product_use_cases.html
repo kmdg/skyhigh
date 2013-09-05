@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Use Cases{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Use Cases</h1>
+            <h2>Skyhigh enables the safe adoption of Cloud Services for<br />Some of the World’s Leading Brands</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <h3 id="discover">Discover</h3>
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_half.png" class="image_half" />
+                        <p><strong>Skyhigh takes Cloud Service usage out of the shadows.</strong> With just 3 clicks, you simply upload the log files from your IT egress points, like Firewalls, Proxies and Gateways, to our secure cloud infrastructure.  Once uploaded, Skyhigh immediately delivers visibility into the usage, security and legal exposure to all the cloud services being used by your employees. Skyhigh automatically analyzes your activity against our extensive and constantly expanding cloud services registry, with deep understanding of 2,000 SaaS, PaaS and IaaS services already. You’ll also get continuous visibility as employees adopt more and more cloud services week on week.  With Skyhigh, you no longer fly blind, you’ve got full visibility.</p>
+                    </div>
+                    <div class="listing">
+                        <h3 id="analyze">Analyze</h3>
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_half.png" class="image_half align-right marg-left" />
+                        <p><strong>Skyhigh quickly takes you from discovery to insight</strong> with ready to use analytics on the business, legal and IT risk of all the cloud services in use by your employees. Skyhigh continuously gives you the intelligence you need: decide on new services and alternatives, drive policy definition and enforcement, measure risk exposure and mitigation, and gain insight into users and usage.  So whether you are finding less risky alternatives, consistently enforcing policy, or negotiating/consolidating subscriptions, Skyhigh delivers the insight you need to reduce exposure and increase returns.  </p>
+                    </div>
+                    <div class="listing">
+                        <h3 id="control">Control</h3>
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_half.png" class="image_half" />
+                        <p><strong>Skyhigh gives you the control</strong> to reduce risk and improve security. Our Simple 3-Step Control process allows you to define and enforce security and usage policies, all without agents or other client software. Skyhigh protects users on or off the corporate network, across all company and personal devices.  With Skyhigh you can turn off access to unauthorized services, limit service access to specific use cases and users, set up and alert on triggers, and enforce actions like file encryption. Simply set up your traffic to flow through our high speed, high security reverse proxy, turn on control of desired services, and then define policy, all with easy to use click and go interfaces.  With Skyhigh, you get back the power to actively reduce and manage risk of your critical Cloud Services.</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

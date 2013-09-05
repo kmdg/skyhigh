@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Case List{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Your previous cases</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    <div class="widget">
+                        <h3>Submit a New Case</h3>
+                        <p><a href="{% url support_case_create %}" class="link btn_light console-btn">Submit a new Case</a></p>
+                    </div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    {% for object in object_list %}
+                        <div class="listing">
+                            <h3>{{ object.title }}</h3>
+                            <p>{{ object.content|safe|truncatewords_html:40 }}</p>
+                            <p><a href="{% url support_case_detail object.pk %}" class="link">View</a></p>
+                        </div>
+                    {% empty %}
+                        <p>You have not submitted any cases yet.</p>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

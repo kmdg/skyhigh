@@ -1,0 +1,64 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Press Releases{% endblock %}
+
+{% block content %}
+<script type="text/javascript" src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>
+<div class="section">
+    <div class="container console">
+        <h1>{% if form.instance.id %}Edit{% else %}Add{% endif %} Press Release</h1>
+        <a href="{% url console_news_and_events_press_release_list %}" class="link btn_light console-btn">Back To List</a>
+        <div class="form">
+            <form id="frmNewMediaCoverage" action="." method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.modified_by }}
+                {{ form.created_by }}
+
+                <div class="row">
+                    <div class="field">
+                        <label>Title</label>
+                        <div>{{ form.title }}{{ form.title.errors }}</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label>Content</label>
+                        <div class="clear"></div>
+                        <div class="editor">{{ form.content }}{{ form.content.errors }}</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field field-half">
+                        <label>PDF File</label>
+                        <div>{{ form.pdf }}{{ form.pdf.errors }}</div>
+                    </div>
+                    <div class="field field-half align-right">
+                        <label>Tags <span>Separate tags with commas e.g.: "Tag 1, Tag 2, Tag 3".</span></label>
+                        <div>{{ form.comma_seperated_tags }}{{ form.comma_seperated_tags.errors }}</div>
+                    </div>
+                </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>State</label>
+                            <div>{{ form.state }}{{ form.state.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Publish Date/Time <span>Format: YYYY-MM-DD HH:mm:ss</span></label>
+                            <div>{{ form.publish_date_time }}{{ form.publish_date_time.errors }}</div>
+                        </div>
+                    </div>
+
+                <div class="buttons">
+                    <input type="submit" id="submit" value="{% if not form.instance.id %}Create{% else %}Update{% endif %} Press Release" class="btn" />
+                </div>
+
+                <div class="clear"></div>
+            </form>
+        </div>
+    </div><!--/content-->
+</div>
+</div>
+{% endblock %}

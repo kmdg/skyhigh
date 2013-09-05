@@ -1,0 +1,40 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Event</h1>
+            <a href="{% url console_news_and_events_event_list %}" class="link btn_light console-btn">Back To List</a>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th width="80">State</th>
+                        <td>{{ object.get_state_display }}</td>
+                    </tr>
+                    <tr>
+                        <th width="120">Image</th>
+                        <td><img src="{{ object.get_120x120_url }}" /></td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td>{{ object.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>Content</th>
+                        <td>{{ object.content|safe }}</td>
+                    </tr>
+                    <tr>
+                        <th width="110">Date</th>
+                        <td>{{ object.start_date }} - {{ object.end_date }}</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><a href="{% url console_news_and_events_event_update object.pk %}" class="link btn btn-edit">Edit</a> &nbsp; <a href="{% url console_news_and_events_event_delete object.pk %}" class="link btn_light btn-delete">Delete</a></td>
+                    </tr>
+                </table>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

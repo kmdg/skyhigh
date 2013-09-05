@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Investor{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <h1>Investor</h1>
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar_top"></div>
+                <div class="sidebar_bottom"></div>
+                {% include 'includes/sidebar.html' %}
+            </div>
+            <div class="column">
+                <div class="listing">
+                    <h3>{{ object.title }}</h3>
+                    {% if object.get_202x126_url %}
+                        <a href="{% url company_investor_detail object.pk %}"><img src="{{ object.get_202x126_url }}" class="image_third" /></a>
+                    {% endif %}
+                    {{ object.content|safe }}
+                </div>
+                <div class="back_to_list"><a href="{% url company_investors %}" class="btn btn_light">&laquo; Back To List</a></div>
+            </div>
+        </div><!--/content-->
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Configurable Email{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Configurable Email</h1>
+            <a href="{% url console_usage_configurable_email_list %}" class="link btn_light console-btn">Back To List</a>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>Reason for sending</th>
+                        <td>{% if object.send_reason %}{{ object.send_reason }}{% else %}Not configured yet{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td>{{ object.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>Subject</th>
+                        <td>{{ object.subject }}</td>
+                    </tr>
+                    <tr>
+                        <th>Content</th>
+                        <td>{{ object.content|safe|truncatechars:200 }}</td>
+                    </tr>
+                    <tr>
+                        <th>Plaintext Content</th>
+                        <td>{{ object.plaintext_content|truncatechars:200 }}</td>
+                    </tr>
+                    <tr>
+                        <th>Internal BCCs</th>
+                        <td>{% if object.internal_bcc_list_string %}{{ object.internal_bcc_list_string }}{% else %}None{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><a href="{% url console_usage_configurable_email_update object.pk %}" class="link btn btn-edit">Edit</a> &nbsp; <a href="{% url console_usage_configurable_email_delete object.pk %}" class="link btn_light btn-delete">Delete</a></td>
+                    </tr>
+                </table>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

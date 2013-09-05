@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Case Study - Torrance Memorial Medical Center  - Skyhigh Networks{% endblock %}
+{% block meta_description %}Torrance Memorial Medical Center is a leading healthcare organization in LA. With the help of Skyhigh Networks, it discovered all cloud services in use by its employees.{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <h1>Customer Case Study: Torrance Memorial Medical Center Illuminates Cloud Activity with Skyhigh Networks</h1>
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar_top"></div>
+                <div class="sidebar_bottom"></div>
+                {% include 'includes/sidebar_customers.html' %}
+            </div>
+            <div class="column">
+                <div class="listing no-marg-bottom no-bord">
+                    <img src="{{ STATIC_URL }}skyhigh/img/case_torrance_detail.png" class="image_third shadow" />
+                    <p>
+                        <strong>Name:</strong>    Torrance Memorial Medical Center<br />
+                        <strong>Location:</strong>   Torrance, California<br />
+                        <strong>Size:</strong>    3000+ employees<br />
+                        <strong>Description:</strong>   One of the largest hospital and healthcare organizations in Los Angeles County handling tens of thousands of patients every year.
+                    </p>
+                </div>
+                <div class="listing">
+                    <h3>Challenge:</h3>
+                    <p>To improve its economies of scale, Torrance Memorial Medical Center (Torrance Memorial) grew rapidly over the last five years acquiring new business entities and expanding its physician network. This produced network sprawl and rapidly grew the workforce. Both new and old employees at Torrance Memorial were using more and more cloud computing services. Healthcare organizations are highly regulated entities due to privacy and medical records concerns. </p>
+                    <p>Todd Felker, Torrance Memorial’s technical services manager, wanted to know exactly which services employees were using to ensure he could maintain high security and privacy standards. Felker also needed this information to put in place a cloud services security policy that was flexible enough to allow employees to use the tools they needed but granular enough to maintain rock-solid security and resource controls. He also had no easy way to rate the risk of the different cloud services.  With an IT security staff of only one person, Felker did not have sufficient resources to perform regular diligence on the risks posed by cloud services. “We had a Palo Alto Networks firewall that told us what types of services were in use along broad types, such as streaming video or remote storage,” says Felker. “But we didn’t want to block entire classes of services and we needed more detailed information to both understand usage and to craft a smart policy.” Felker needed a tool that would:</p>
+                    <ul>
+                        <li>Automatically and continuously discover all cloud services in use from Torrance Memorial’s expanding pool of employees and locations</li>
+                        <li>Regularly analyze the risks of every discovered cloud service and provide an easy way to convert the analysis into actionable information and a well-defined cloud services policy</li>
+                        <li>Identify the usage levels of cloud services in order to set priorities for adding support for new cloud services or moving users from single-user subscriptions to a better managed, more secure enterprise-level service tiers</li>
+                    </ul>
+                    <h3>Solution:</h3>
+                    <div class="quote_right">I was amazed to see over 200 services in use, including many that I had never heard of before...</div>
+                    <p>In February 2013, Torrance Memorial uploaded log files into the Skyhigh Networks Cloud Services Manager, a cloud-based discovery, analysis, and control service. Within minutes, Felker had received a discovery report from Skyhigh’s CloudRegistry&trade; identifying every cloud service used by Torrance Memorial employees. “I had expected to see 15 or so services. I was amazed to see more than 200 services in use, including many that I had never heard of before,” says Felker.  Equally important, Skyhigh’s CloudRisk&trade; tool immediately assigned to each discovered service a 1-to-10 risk rating based on a matrix of over 30 metrics pulled from both first-person research and automated monitoring tools. “Getting those risk ratings is just tremendously valuable. It is something we could never do on our own,” says Felker</p>
+                    <p>Using Skyhigh Networks, Felker was able to:</p>
+                    <ul>
+                        <li>Discover all cloud services in use by Torrance Memorial employees</li>
+                        <li>Continuously monitor for new services</li>
+                        <li>Quickly rate the risk associated with each discovered cloud service, based on industry best-practice measures, and be notified of change in risk</li>
+                        <li>Effectively manage cloud security risks from a single dashboard managed by a single employee using only a small portion of their workday</li>
+                        <li>Easily map usage of cloud services by class or type to risks presented by specific service providers. Use these correlations to quickly build a smart cloud services policy</li>
+                    </ul>
+                    <p>
+                        <table>
+                        <tr>
+                            <th width="33%">Problem</th>
+                            <th width="33%">Solution</th>
+                            <th>Result</th>
+                        </tr>
+                        <tr>
+                            <td>Torrance Memorial could not easily monitor which cloud services were being used by their employees </td>
+                            <td>Torrance Memorial ran network log files through Skyhigh to discover all cloud services in use. Set up automated log-file upload and analysis for continuous discovery</td>
+                            <td>Discovery of 200+ services in use previously unknown to the IT department. Delivery of complete visibility into all cloud services in use from Torrance Memorial facilities</td>
+                        </tr>
+                        <tr>
+                            <td>Torrance Memorial did not have strong insights into which cloud services were in use and this posed serious security, compliance, and privacy risks</td>
+                            <td>Skyhigh delivers detailed risk ratings based on over 30 factors including penetration testing of service, authentication methods, data encryption, and more</td>
+                            <td>Torrance Memorial staff can make rapid judgments on risks of cloud services and build a nimble yet comprehensive cloud services security policy</td>
+                        </tr>
+                        <tr>
+                            <td>Single IT security staff person tasked with responsibility for all cloud services security management and risk assessment not sufficient to cover rapidly expanding use of diverse cloud services</td>
+                            <td>Skyhigh dashboard gives Torrance Memorial security engineer a single pane of glass and actionable suggestions for controlling and managing all cloud services in use</td>
+                            <td>Torrance Memorial achieves world-class cloud services security management without spending additional manpower or installing software or hardware</td>
+                        </tr>
+                        </table>
+                    </p>
+                </div>
+                <div class="back_to_list">
+                    <a href="{% url product_case_studies %}" class="btn btn_light">&laquo; Back To List</a>
+                    <a href="{{ STATIC_URL }}skyhigh/pdf/Case-Study-TMMC.pdf" target="_blank" class="btn btn_light align-right">Download PDF &raquo;</a>
+                </div>
+            </div>
+        </div><!--/content-->
+    </div>
+</div>
+{% endblock %}

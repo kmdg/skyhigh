@@ -1,0 +1,1 @@
+{{ object.log_file_sample }}

@@ -1,0 +1,65 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Evaluator{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>{% if form.instance.id %}Change{% else %}Add{% endif %} Evaluator Status</h1>
+            <a href="{% url console_usage_evaluator_list %}" class="link btn_light console-btn">Back To List</a>
+            <div class="form">
+                <form id="frmNewEvaluator" action="." method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.modified_by }}
+                    {{ form.created_by }}
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>First Name</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.first_name }}{{ form.first_name.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Last Name</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.last_name }}{{ form.last_name.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Email</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.email }}{{ form.email.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Company</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.company }}{{ form.company.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Evaluation Status</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.evaluator_status }}{{ form.evaluator_status.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Job Title</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.job_title }}{{ form.job_title.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <input type="submit" id="submit" value="{% if not form.instance.id %}Create{% else %}Update{% endif %} Evaluator Status" class="btn" />
+                    </div>
+                
+                    <div class="clear"></div>
+                </form>
+            </div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

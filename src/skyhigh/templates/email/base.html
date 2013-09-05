@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SkyhighNetworks</title>
+</head>
+<body style="background: #f7f8fa; padding: 0; margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #5c6572;" align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background: #f7f8fa; padding: 0; margin: 0;">
+<tr>
+<td align="center">
+    <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" style="background: #f7f8fa; padding: 0 20px; margin: 50px 0;">
+    <tr>
+        <td valign="top">
+            <table width="700" border="0" cellpadding="0" cellspacing="0" style="background: #fff; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 1px solid #e6e9ed;">
+            <tr>
+                <td height="40" colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td width="40" rowspan="7">&nbsp;</td>
+                <td width="200"><a href="http://{{ site }}/"><img src="http://{{ site }}{{ STATIC_URL }}skyhigh/img/mailer/logo_top.png" border="0" /></a></td>
+                <td width="420" style="text-align: right;"><a href="http://skyhighnetworks.com/" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #3399cc; text-decoration: none;">www.skyhighnetworks.com</a></td>
+                <td width="40" rowspan="7">&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td width="620" colspan="2" style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #5c6572;">
+                    {% block content %}{% endblock %}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"  height="25">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 1px!important; background: #e6e9ed!important; margin: 0!important; padding: 0!important"></td>
+            </tr>
+            <tr>
+                <td height="25">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2"  style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #5c6572;">
+                    {% block footer %}{% endblock %}
+                    Kind regards<br />
+                    The Skyhigh Team<br />
+                    <a href="mailto:info@skyhighnetworks.com" style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #3399cc;">info@skyhighnetworks.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td height="40" colspan="4">&nbsp;</td>
+            </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #5c6572; text-align: center;">Copyright &copy; SkyhighNetworks. All Rights Reserved.<br /><br />&nbsp;</a></td>
+    </tr>
+    </table>
+</td>
+</tr>
+</table>
+</body>
+</html>

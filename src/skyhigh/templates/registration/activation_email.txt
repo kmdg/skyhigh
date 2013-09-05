@@ -1,0 +1,14 @@
+Dear {{ user.profile.display_name }},
+
+Thank you for your evaluation request. You are now registered on Skyhigh at http://{{ site }}
+
+Your username is: {{ user.username }}
+
+We are eager to help you discover and analyze the cloud serviced in use at your organization. 
+
+You have 7 days to activate your account. To activate your account, please go to http://{{ site }}/secure/accounts/activate/{{ activation_key }}/
+
+Once activated, we will contact you shortly to initiate your no cost Skyhigh Cloud Discovery and Risk Assessment.  
+
+Kind regards,
+The Skyhigh Team.

@@ -1,0 +1,68 @@
+{% extends 'skyhigh/console/base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Outbound Email List{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="container console">
+        <h1>Outbound Email List</h1>
+        <a href="javascript: void(0);" class="link toggle-filter">Toggle Filter</a>
+        <div class="form filter">
+            <form id="frmUserFilter" action="." method="GET">
+                <div class="row">
+                    <div class="field field-half">
+                        <label>Subject</label>
+                        <div class="clear"></div>
+                        {{ filter_form.subject }}{{ filter_form.subject.errors }}
+                    </div>
+                    <div class="field field-half">
+                        <label>User</label>
+                        <div class="clear"></div>
+                        {{ filter_form.name }}{{ filter_form.name.errors }}
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <div class="clear"></div>
+                        {{ filter_form.email }}{{ filter_form.email.errors }}
+                    </div>
+                </div>
+                <div class="buttons">
+                    <input type="submit" id="submit" value="Filter" class="btn" />
+                </div>
+            </form>
+        </div>
+        <div class="clear"></div>
+        <div class="column column_full">
+            <div class="listing listing_full">
+
+                <table>
+                    <tr>
+                        <thead>
+                        <th width="80">Subject</th>
+                        <th width="80">User</th>
+                        <th width="120">Email</th>
+                        <th width="120">Sent Date</th>
+                        </thead>
+                    </tr>
+                    {% for object in object_list %}
+                    <tr>
+                        <td><a class="outbound_email_lightbox" href="{% url outbound_email_detail object.pk %}">{{ object.subject }}</a></td>
+                        <td>{{ object.user.first_name }} {{ object.user.last_name }}</td>
+                        <td>{{ object.user.email }}</td>
+                        <td>{{ object.sent_timestamp }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5">Sorry, there are no items to list</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% pagination page_obj %}
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div><!--/content-->
+</div>
+</div>
+{% endblock %}

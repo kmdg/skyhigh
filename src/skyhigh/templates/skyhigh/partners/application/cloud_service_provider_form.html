@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load honeypot %}
+
+{% block title %}Apply to become cloud service provider partner{% endblock %}
+{% block meta_description %}Partner with Skyhigh Networks to be discovered by new customers, please sign up and add yourself to our registry.{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form form_full_site">
+            <h1>Cloud Service Provider Partner Application</h1>
+            <h2>Skyhigh's cloud registry, already more than 2,500 services strong, is used by our customers to identify and recommend new cloud services that they should consider using. If you would like to be discovered by new customers, please sign up and add yourself to our registry.</h2>
+            <div class="content">
+                <div class="column">
+                    <div class="marketo_embed_wider"><iframe width="822" height="450" frameborder="0" style="margin: -45px 0 -120px -120px" scrolling="no" src="http://info.skyhighnetworks.com/CSPPartnerRegistration_RegistrationPage.html"></iframe></div>
+                    <div class="clear"></div>
+{% comment %}
+                    <form id="frmCSPPartner" action="." method="POST" class="validate_form">{% csrf_token %}
+                    	{{ form.search_string }}
+                    	{{ form.search_engine }}
+                    	{{ form.pay_per_click_keyword }}
+                        <div class="note">Fields marked with <span class="blue">*</span> are required</div>
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_first_name">First Name <span class="blue">*</span></label>
+                                {{ form.first_name }}{{ form.first_name.errors }}
+                            </div>
+                            <div class="field field-half align-right">
+                                <label for="id_last_name">Last Name <span class="blue">*</span></label>
+                                {{ form.last_name }}{{ form.last_name.errors }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_email">Work Email Address <span class="blue">*</span></label>
+                                {{ form.email }}{{ form.email.errors }}
+                            </div>
+                            <div class="field field-half align-right">
+                                <label for="id_company">Company <span class="blue">*</span></label>
+                                {{ form.company }}{{ form.company.errors }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_job_title">Job Title <span class="blue">*</span></label>
+                                {{ form.job_title }}{{ form.job_title.errors }}
+                            </div>
+                            <div class="field field-half align-right">
+                                <label for="id_phone_number">Phone Number</label>
+                                {{ form.phone_number }}{{ form.phone_number.errors }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_url">Cloud Service Provider URL</label>
+                                {{ form.url }}{{ form.url.errors }}
+                            </div>
+                            <div class="field field-half align-right">
+                                <label for="id_category">Cloud Service Provider Category</label>
+                                {{ form.category }}{{ form.category.errors }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_leading_competitors">Leading Competitors</label>
+                                {{ form.leading_competitors }}{{ form.leading_competitors.errors }}
+                            </div>
+                        </div>
+                        {% render_honeypot_field %}
+                        <div class="buttons">
+                            <input type="submit" value="Submit Application" />
+                            {% if not user.is_authenticated %}
+                                <p>Already have a Skyhigh account? <a href="{% url login %}">Sign In</a></p>
+                            {% endif %}
+                        </div>
+                    </form>
+{% endcomment %}
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block bottom_js %}
+	{% include 'includes/ga_remarketing_scripts.html' %}
+{% endblock %}

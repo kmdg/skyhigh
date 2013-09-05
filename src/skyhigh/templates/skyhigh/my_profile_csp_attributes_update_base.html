@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}My Profile - CSP Attributes{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+            <h1>My CSP Attributes</h1>
+            <h2>Please update your details in the form below</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column has_steps">
+                    <ul class="steps">
+                        {% block wizard_steps %}
+                        <li class="{% block step1 %}{% endblock %}"><a href="{% url my_profile_csp_attributes_update_step 'data' %}">Data<span></span></a></li>
+                        <li class="{% block step2 %}{% endblock %}"><a href="{% url my_profile_csp_attributes_update_step 'user_device' %}">User / Device<span></span></a></li>
+                        <li class="{% block step3 %}{% endblock %}"><a href="{% url my_profile_csp_attributes_update_step 'service' %}">Service<span></span></a></li>
+                        <li class="{% block step4 %}{% endblock %}"><a href="{% url my_profile_csp_attributes_update_step 'business_risk' %}">Business Risk<span></span></a></li>
+                        <li class="{% block step5 %}{% endblock %}"><a href="{% url my_profile_csp_attributes_update_step 'legal' %}">Legal<span></span></a></li>
+                        {% endblock %}
+                    </ul>
+                    <form id="frmCSPAttributeUpdate" action="." method="POST" class="validate_form">{% csrf_token %}
+                        {{ wizard.management_form }}
+                        {% block wizard_form %}{% endblock %}
+                        <div class="buttons">
+                            {% if wizard.steps.prev %}
+                                {% comment %}
+                                {% ifequal wizard.steps.current wizard.steps.last %}
+                                    <button class="btn" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">First step</button>
+                                {% endifequal %}
+                                {% endcomment %}
+                                <button class="btn" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">Prev step</button>
+                            {% endif %}
+                            {% block next_button %}
+                                <input class="btn align-right" type="submit" value="{% ifequal wizard.steps.current wizard.steps.last %}Save{% else %}Save and go to Next step{% endifequal %}"/>
+                            {% endblock %}
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+
+{% load skyhigh_tags %}
+
+{% block title %}Skyhigh Networks: Cloud Data Security Services{% endblock %}
+{% block meta_description %}Skyhigh Networks cloud data security services help businesses manage their cloud infrastructure effectively by discovering the cloud services their employees are using, analyze risk and enforce security policies.{% endblock %}
+{% block meta_keywords %}Cloud security, Cloud Data security{% endblock %}
+
+{% block content %}
+    <div class="section promo">
+{% comment %}
+        <ul id="promo">
+            <li class="dash">
+                <div class="container">
+                    <div class="promo_left">
+                        <h2>Discover, Analyze, Control</h2>
+                        <p>You’re Just 3 Easy Steps from Understanding All of the Cloud Services Used In Your Organization</p>
+                        <a href="{% url product_tour %}" class="btn wide"><i></i>Take the Skyhigh Tour</a>
+                    </div>
+                    <img src="{{ STATIC_URL }}skyhigh/img/promo/dash.png" alt="Skyhigh Discovery Dashboard" />
+                </div>
+            </li>
+            <li class="rethink_promo">
+                <div class="container">
+                    <div class="promo_left">
+                        <h2>It's Time to Rethink Cloud Security and Management</h2>
+                        <p>From Shadow IT to Visibility,<br />Control and Success</p>
+                        <a href="{% url rethink_cloud %}" class="btn"><i></i>Learn More</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+{% endcomment %}
+        <ul id="promo">
+        {% comment %}
+            <li class="thirty">
+                <div class="title_30"></div>
+                <a href="{% url campaign_30_in_30 %}" class="btn"><i></i>Learn More</a>
+            </li>
+            <li class="dash">
+                <h2>Discover, Analyze, Control</h2>
+                <p>You’re Just 3 Easy Steps from Understanding All of the<br />Cloud Services Used In Your Organization</p>
+                <a href="/product-tour/" class="btn wide"><i></i>Take the Skyhigh Tour</a>
+                <div class="image"><img src="{{ STATIC_URL }}skyhigh/img/promo/dash.png" alt="Skyhigh Discovery Dashboard" /></div>
+            </li>
+            <li class="rethink_promo">
+                <h2>It's Time to Rethink Cloud Security<br />and Management</h2>
+                <p>From Shadow IT to Visibility, Control and Success</p>
+                <a href="/rethink-cloud/" class="btn"><i></i>Learn More</a>
+                <div class="image"><img src="{{ STATIC_URL }}skyhigh/img/promo/rethink.png" alt="Rethink Cloud" /></div>
+            </li>
+            <li class="going_skyhigh">
+                <h2>Going Skyhigh!</h2>
+                <p>Skyhigh named Top 10 Hottest Security<br /> Startups by Network World</p>
+                <a href="/product/overview/" class="btn"><i></i>Find Out Why</a>
+                <div class="image"><img src="{{ STATIC_URL }}skyhigh/img/promo/networkworld-logo.png" alt="Hottest Security Startups" /></div>
+            </li>
+        {% endcomment %}
+        <li class="announcing">
+                <div class="wording">
+                    <h1>Announcing Skyhigh Secure</h1>
+                    <h2>The Most Advanced Data Security Solution for Information in the Cloud</h2>
+                    <a href="/secure/" class="btn wide"><i></i>LEARN MORE</a>
+                </div>
+                <img src="{{ STATIC_URL }}skyhigh/img/promo/banner3.png" alt="Skyhigh Advanced Data Security Solutions" />
+            </li>
+            <li class="its_time">
+            	<div class="wording">
+            		<h1>It's Time to Rethink Cloud Data Security</h1>
+                	<h2>From Shadow IT to Visibility, Control, and Protection</h2>
+                	<a href="/rethink-cloud/" class="btn wide">LEARN MORE</a>
+            	</div>                
+                <div class="image">
+                    <img src="{{ STATIC_URL }}skyhigh/img/promo/banner1.png" alt="Skyhigh Rethink Cloud Data Security" />
+                </div>
+            </li>
+            <li class="its_time">
+            	<div class="wording">
+                    <h1>Discover, Analyze, Secure</h1>
+                    <h2>You're Just 3 Easy Steps From Understanding and Securing Your Data in the Cloud</h2>
+                    <a href="/cloud-security-product-tour/" class="btn wide"><i></i>LEARN MORE</a>
+                </div>
+                <div class="image">
+                    <img src="{{ STATIC_URL }}skyhigh/img/promo/banner2.png" alt="Skyhigh Understand and Secure Your Data in the Cloud" />
+                </div>
+            </li>
+        </ul>
+    </div>
+    {% comment %}    
+    <div class="section ticker">
+        <div class="ticker_box">
+	        <marquee behavior="scroll" scrollamount="3" direction="left">
+                <div class="scroller">State Of The Cloud <span> &middot; &middot; &middot; </span> <strong>Risk Distribution (ALL Services):</strong> <span class="green">Low (19%)</span> <span>&middot;</span> <span class="yellow">Mid (69%)</span> <span>&middot;</span> <span class="red">High (12%)</span> <span> &middot; &middot; &middot; </span> <strong>TOP 5 Cloud Storage (A-Z):</strong> Amazon S3 <span>&middot;</span> Apple Icloud <span>&middot;</span> Box <span>&middot;</span> Dropbox <span>&middot;</span> Yousendit <span> &middot; &middot; &middot; </span> <strong>Top 5 Collaboration (A-Z):</strong> Evernote <span>&middot;</span> Gmail <span>&middot;</span> Hotmail <span>&middot;</span> Microsoft Office 365 <span>&middot;</span> Webex <span> &middot; &middot; &middot; </span> <strong>Top 5 Social Media (A-Z):</strong> Disqus <span>&middot;</span> Facebook <span>&middot;</span> Linkedin <span>&middot;</span> Tumblr <span>&middot;</span> Twitter <span> &middot; &middot; &middot; </span> <strong>Top 5 Sales &amp; Marketing (A-Z):</strong> Lithium <span>&middot;</span> Marketo <span>&middot;</span> Netsuite <span>&middot;</span> Pega <span>&middot;</span> Salesforce.Com <span> &middot; &middot; &middot; </span> <strong>Top 5 Analytics (A-Z):</strong> Birst <span>&middot;</span> Pentaho <span>&middot;</span> Sap Businessobjects <span>&middot;</span> Sas Ondemand <span>&middot;</span> Tableau <span> &middot; &middot; &middot; </span> <strong>Top 5 IT Management (A-Z):</strong> Bmc <span>&middot;</span> Compuware Gomez <span>&middot;</span> Loggly <span>&middot;</span> New Relic <span>&middot;</span> Splunk <span> &middot; &middot; &middot; </span> State Of The Cloud <span> &middot; &middot; &middot; </span> <strong>Risk Distribution (ALL Services):</strong> <span class="green">Low (19%)</span> <span>&middot;</span> <span class="yellow">Mid (69%)</span> <span>&middot;</span> <span class="red">High (12%)</span> <span> &middot; &middot; &middot; </span> <strong>TOP 5 Cloud Storage (A-Z):</strong> Amazon S3 <span>&middot;</span> Apple Icloud <span>&middot;</span> Box <span>&middot;</span> Dropbox <span>&middot;</span> Yousendit <span> &middot; &middot; &middot; </span> <strong>Top 5 Collaboration (A-Z):</strong> Evernote <span>&middot;</span> Gmail <span>&middot;</span> Hotmail <span>&middot;</span> Microsoft Office 365 <span>&middot;</span> Webex <span> &middot; &middot; &middot; </span> <strong>Top 5 Social Media (A-Z):</strong> Disqus <span>&middot;</span> Facebook <span>&middot;</span> Linkedin <span>&middot;</span> Tumblr <span>&middot;</span> Twitter <span> &middot; &middot; &middot; </span> <strong>Top 5 Sales &amp; Marketing (A-Z):</strong> Lithium <span>&middot;</span> Marketo <span>&middot;</span> Netsuite <span>&middot;</span> Pega <span>&middot;</span> Salesforce.Com <span> &middot; &middot; &middot; </span> <strong>Top 5 Analytics (A-Z):</strong> Birst <span>&middot;</span> Pentaho <span>&middot;</span> Sap Businessobjects <span>&middot;</span> Sas Ondemand <span>&middot;</span> Tableau <span> &middot; &middot; &middot; </span> <strong>Top 5 IT Management (A-Z):</strong> Bmc <span>&middot;</span> Compuware Gomez <span>&middot;</span> Loggly <span>&middot;</span> New Relic <span>&middot;</span> Splunk <span> &middot; &middot; &middot; </span></div>
+            </marquee>           
+
+        </div>    
+        <div class="rank"><span>State of the<br />Cloud Report</span><a class="btn more" href="{% url state_of_the_cloud %}">Request a Copy</a></div>
+    </div>
+    {% endcomment %}
+    <div class="section">
+        <div class="container">
+            <div class="section_title">Accelerate the Adoption of Cloud Services</div>
+            <div class="section_subtitle">Skyhigh’s cloud security solution allows you to Discover, Analyze and Secure the usage of all of the Cloud Services in your organization - get started in just 3 clicks!</div>
+            <div class="usp">
+                <h1><img src="{{ STATIC_URL }}skyhigh/img/icon_discover.png" alt="Cloud service broker" /></h1>
+                <h3>Discover Cloud Service Usage</h3>
+                <p>Find, understand and manage all of<br />the Cloud Services being used<br />in your organization</p>
+            </div>
+            <div class="usp">
+                <img src="{{ STATIC_URL }}skyhigh/img/icon_monitor.png" alt="Data loss prevention software" />
+                <h3>Analyze Risk and Opportunity</h3>
+                <p>Quickly identify and reduce security<br /> and legal risks and uncover<br /> cost saving opportunities.</p>
+            </div>
+            <div class="usp">
+                <img src="{{ STATIC_URL }}skyhigh/img/icon_control.png" alt="Shadow IT" />
+                <h3>Secure Your Data in the Cloud</h3>
+                <p>Protect corporate data by enforcing data security policies, while maintaining the direct-to-cloud experience end users love.</p>
+            </div>
+            <div class="clear"></div>
+            <a href="{% url product_tour %}" class="btn cta_center"><i></i>Take the Skyhigh Tour</a>
+            {% comment %}
+            <div class="demo">
+                <p>Learn more about the <strong>Skyhigh Networks Dashboard</strong></p>
+                <a href="{% url company_contact_info_request %}" class="btn">Contact a Rep</a>
+            </div>
+            <div class="clear"></div>
+            {% endcomment %}
+        </div>
+    </div>
+    
+    <div class="section white">
+        <div class="container">
+{% comment %}
+            <div class="section_title">News &amp; Events</div>
+            <div class="section_subtitle">Read what we are up to and what others are saying about the challenges<br />and solutions to Shadow IT and Cloud Adoption</div>
+            {% recent_blog_posts 3 %}
+            {% recent_press_releases 3 %}
+            {% recent_media_coverage 3 %}
+{% endcomment %}
+            <div class="blogs">
+                <h3>Featured Video</h3>
+                <h4>The Skyhigh Mission</h4>
+                <a href="/company/video/" class="open_pop"><img src="/static/skyhigh/img/video.png" class="image_third" /></a>
+                <div class="descriptor">
+                    <p>Rajiv Gupta<br /><span>CEO and Co-Founder</span></p>
+                </div>
+            </div>
+            <div class="blogs">
+                <h3>Analyst Coverage</h3>
+                <h4>Skyhigh named as Cool Vendor</h4>
+                <div class="descriptor align-center center"><a href="/news/press_releases/44/detail/"><img src="/static/skyhigh/img/gartner.png" class="align-center" /></a></div>
+                <div class="descriptor">
+                    <p><a href="/news/press_releases/44/detail/">"Skyhigh is an early innovator in the emerging category of cloud access security brokers"</a><br /><br /><span>Gartner, "Cool Vendors in Security: Security Services, 2013," by Ray Wagner, et al, April 29, 2013.</span></p>
+                </div>
+            </div>
+            <div class="media">
+                <h3>Media Coverage</h3>
+                <div class="item top">
+                    <p class="date">12 August 2013</p>
+                    <p class="img"><a href="http://www.crn.com/slide-shows/components-peripherals/240159701/the-25-coolest-emerging-vendors-for-2013.htm?pgno=21" target="_blank"><img src="/static/skyhigh/img/logo_usp_crn.png" /></a></p>
+                    <p class="desc"><a href="http://www.crn.com/slide-shows/components-peripherals/240159701/the-25-coolest-emerging-vendors-for-2013.htm?pgno=21" target="_blank">The 25 Coolest Emerging Vendors For 2013</a></p>
+{% comment %}
+                    <a href="#" target="_blank">Read More</a>
+{% endcomment %}
+                </div>
+                <div class="item">
+                    <p class="date">13 August 2013</p>
+                    <p class="img"><a href="http://www.itbusinessedge.com/blogs/it-unmasked/compliance-management-gets-streamlined-with-skyhigh-secure.html" target="_blank"><img src="/static/skyhigh/img/logo_usp_it_business_edge.png" /></a></p>
+                    <p class="desc"><a href="http://www.itbusinessedge.com/blogs/it-unmasked/compliance-management-gets-streamlined-with-skyhigh-secure.html" target="_blank">Compliance Management Gets Streamlined with Skyhigh Secure</a></p>
+{% comment %}
+                    <a href="#" target="_blank">Read More</a>
+{% endcomment %}
+                </div>
+                <div class="item">
+                    <p class="date">10 July 2013</p>
+                    <p class="img"><a href="http://www.networkworld.com/news/2013/071013-10-hot-security-startups-to-271677.html?page=4" target="_blank"><img src="/static/skyhigh/img/logo_usp_nw.png" /></a></p>
+                    <p class="desc"><a href="http://www.networkworld.com/news/2013/071013-10-hot-security-startups-to-271677.html?page=4" target="_blank">10 Hot Security Startups to Watch</a></p>
+{% comment %}
+                    <a href="#" target="_blank">Read More</a>
+{% endcomment %}
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+{% comment %}
+    <div class="section white">
+        <div class="container">
+            <h1>Become a Partner</h1>
+            <h2>
+                Skyhigh Networks partners with some of the world’s most trusted technology providers and resellers.<br />
+                To find a partner near you and schedule a demo, contact us <a href="{% url company_contact_info_request %}">today</a>.
+            </h2>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <h1>Featured Partners</h1>
+            <ul class="partners">
+                <li><a href="#">image</a></li>
+            </ul>
+        </div>
+    </div>
+{% endcomment %}
+{% endblock %}
+
+{% block bottom_js %}
+	<script>
+        $('marquee').marquee();
+{% comment %}
+	    $("#webticker").webTicker({
+            speed: 100
+        });
+{% endcomment %}
+	</script>
+{% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1 class="left">Healthcare</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    <div class="widget">
+                        <img src="{{ STATIC_URL }}skyhigh/img/30_torrance.png" />
+                        <h3>Skyhigh 30-in-30 Challenge</h3>
+                        <p>Register today for the webcast featuring Skyhigh customer Todd Felker from Torrance Memorial Medical Center and learn about the Skyhigh 30-in-30 Challenge.</p>
+                        <p><a href="{% url campaign_30_in_30 %}" class="btn">Read More</a></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Do you know about all the cloud services running in your organization?</h3>
+                    <img src="{{ STATIC_URL }}skyhigh/img/3030_pic.png" class="align-left pad-image" />
+                    <p>There is no question that Cloud services have made life simpler for health care organizations. Users benefit from a range of easily-accessible tools like Salesforce.com, Box.Net, Office365 ...and IT has the ability to provide these services without the administration and costs they would incur with traditional applications. Cloud services also minimize the IT burden necessary to comply with HIPAA and Meaningful Use.</p>
+                    <p>IT organizations understand that the dynamic nature of Cloud services also make them a huge risk. An approved service that is primarily used for collaboration today can suddenly add capabilities for uploading photos or sensitive content. And while an IT team can put policies in place to block risky applications, new ones pop up every day. These rapidly changing services put even the most secure organizations in jeopardy: from inconsistent policy enforcement to the very real risk of exposing sensitive patient or organizational data, images or intellectual property.</p>
+                    <p>Even the most proactive security teams are struggling to keep up with the expanding list of public Cloud services their users access. In fact, recent data shows that a typical mid-size hospital has more that 30 Cloud services running which they didn’t know about - many of which offered capabilities in violation of existing - but unenforceable - policies.</p>
+                    <h3>To learn how Skyhigh can help you eliminate blind spots in your Cloud strategy,</h3>
+                    <ul>
+                        <li><a href="{% url campaign_30_in_30_register %}">Attend the webcast</a> featuring Skyhigh customer Todd Felker from Torrance Memorial Medical Center</li>
+                        <li><a href="{% url campaign_30_in_30 %}">Learn about</a> the Skyhigh 30-in-30 Challenge</li>
+                        <li>Read the <a href="{% url case_study_torrance %}">Torrance Memorial Medical Center case study</a></li>
+                        <!--<li><a href="#">Download</a> the Skyhigh for Health Care solution brief</li>-->
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

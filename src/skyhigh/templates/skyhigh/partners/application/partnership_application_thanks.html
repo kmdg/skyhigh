@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Partnership Application{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Partnership Application Submitted</h1>
+            <h2>We have received your Partnership Application.</h2>
+            
+            {% if not request.user.is_authenticated %}
+            	<h2>What happens now?</h2>
+            	<p>A registration confirmation email was sent to the email address you entered on the previous page. The email contains a link to a web page to confirm your registration.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

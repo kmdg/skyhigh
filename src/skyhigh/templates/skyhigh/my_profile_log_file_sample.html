@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}My Profile Log File Sample{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+            <h1>My Profile Log File Sample</h1>
+            <h2>Please upload your sample log file in the form below</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                	{% include 'includes/message_error_header.html' %}
+                    <form id="frmMyProfileLogFileSample" action="." method="POST" class="validate_form">{% csrf_token %}
+                        <div class="note">Fields marked with <span class="blue">*</span> are required</div>
+                        <div class="field">
+                        	<p>Please copy & paste 5 to 20 lines of the log file you wish to use. Skyhigh will setup your account and contact you with upload information.</p>
+                            <label for="id_log_file_sample">Log File Sample <span class="blue">*</span></label>
+                            {{ form.log_file_sample }}{{ form.log_file_sample.errors }}
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" value="Upload" />
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

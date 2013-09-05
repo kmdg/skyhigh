@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Partner Resources{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Deals</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_no_partners.html' %}
+                </div>
+                <div class="column">
+                	{% include 'includes/message_error_header.html' %}
+                    <div class="half no-bord">
+                        <h3>Request a Deal</h3>
+                        <p>Use the link below to access the deal form</p>
+                        <p><a href="{% url partners_resources_deal %}" class="link">Deal Form</a></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

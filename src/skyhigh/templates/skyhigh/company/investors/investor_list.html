@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Investors of Skyhigh Networks{% endblock %}
+{% block meta_description %}Skyhigh Networks is funded by top silicon valley venture capitalists, Greylock Partners and Sequoia Capital{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Investors</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_company.html' %}
+                </div>
+                <div class="column">
+	                {% for object in object_list %}
+                        <div class="listing">
+                            {% if object.get_202x126_url %}
+                            <img src="{{ object.get_202x126_url }}" class="image_third" />
+                            {% endif %}
+                            <h3>{{ object.title }}</h3>
+                            <p>{{ object.content|safe }}</p>
+                            {% comment %}<p><a href="{% url company_investor_detail object.pk %}" class="link">Read More</a></p>{% endcomment %}
+                        </div>
+                    {% empty %}
+                        <p>There are no investors to display.</p>
+                    {% endfor %}
+                </div>
+                {% comment %}{% pagination page_obj %}{% endcomment %}
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

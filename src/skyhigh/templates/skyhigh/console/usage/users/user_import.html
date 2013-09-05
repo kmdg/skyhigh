@@ -1,0 +1,49 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}User Import{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Users - Bulk Import</h1>
+            <a href="{% url console_usage_evaluator_list %}" class="link btn_light console-btn">Back To List</a>
+            <a href="{% url console_usage_user_import_template_download %}" class="btn_light console-btn">Download the CSV Template</a>
+            <div class="content">
+                {% include 'includes/message_error_header.html' %}
+                <div class="form">
+                    <form id="frmImport" action="{% url console_usage_user_import %}" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% if csv_errors %}
+                            <label for="id_create">CSV Errors</label>
+                            <br />
+                            {% for key, error in csv_errors.items %}
+                            <label for="id_create">{{ key }}</label>
+                            <div>
+                                Value of "{{ error.0 }}" is invalid. {{ error.1.0 }}
+                            </div>
+                            <br />
+                            {% endfor %}
+                        {% endif %}
+                        {% for field in form.visible_fields %}
+                            <div class="row">
+                                <div class="field">
+                                    {% if field.label %}
+                                    {{ field.label_tag }}
+                                    {% endif %}
+                                    <br/>{{ field.errors }}
+                                    {{ field }}&nbsp; {{ field.help_text }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="buttons">
+                            {% for field in form.hidden_fields %}
+                            {{ field }}
+                            {% endfor %}
+                            <input type="submit" id="submit" value="Import" class="btn" />
+                        </div>
+                    </form>
+                </div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

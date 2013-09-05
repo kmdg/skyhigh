@@ -1,0 +1,60 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Partners{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>CSP Attribute List</h1>
+            <a href="javascript: history.back(-1);" class="link btn_light console-btn">Back To List</a>
+            <a href="{% url console_usage_partner_csp_attribute_list_export params.pk %}" class="link btn_light console-btn">Download CSV</a>
+            <div class="content">
+            {% if params.form_errors %}
+                {{ params.form_errors }}
+            {% endif %}
+                <form action="." method="POST">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">SI No.</th>
+                                <th width="120">Category</th>
+                                <th width="120">Name</th>
+                                <th width="120">Value</th>
+                            </thead>
+                        </tr>
+                        {% for object in params.object_list %}
+                            <tr>
+                                <td>{{ object.si_number }}</td>
+                                <td>{{ object.category }}</td>
+                                <td>{{ object.name }}</td>
+                                <td>
+                                    <div class="field">
+                                        {% if object.options %}
+                                            <select id="id_si_number_{{ forloop.counter }}" name="si_number_{{ forloop.counter }}">
+                                                <option value="">--------</option>
+                                            {% for option in object.options %}
+                                                <option {% ifequal object.value option.name %}selected="selected"{% endifequal %} value={{ option.pk }}>{{ option.name }}</option>
+                                            {% endfor %}
+                                            </select>
+                                        {% else %}
+                                            <input id="id_si_number_{{ forloop.counter }}" name="si_number_{{ forloop.counter }}" {% if object.value %}value="{{ object.value }}"{% endif %} type="text" />
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="5">Sorry, there are no items to list</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <div class="buttons non">
+                        <input type="submit" id="submit" value="Save" class="btn" />
+                    </div>
+                    <div class="clear"></div>
+                </form>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

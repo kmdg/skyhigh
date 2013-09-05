@@ -1,0 +1,56 @@
+{% extends 'skyhigh/my_profile_csp_attributes_update_base.html' %}
+
+{% block step3 %}on{% endblock %}
+
+{% block wizard_form %}
+<div class="field">
+    <label for="id_recent_vulnerabilities">Recent vulnerabilities</label>
+    <p>Are there any vulnerabilities reported for the service?</p>
+    {{ wizard.form.recent_vulnerabilities }}{{ wizard.form.recent_vulnerabilities.errors }}
+</div>
+<div class="field">
+    <label for="id_csrf">CSRF</label>
+    <p>The vendor has implemented a systemic way to protect against CSRF attacks on all their services</p>
+    {{ wizard.form.csrf }}{{ wizard.form.csrf.errors }}
+</div>
+<div class="field">
+    <label for="id_sqli">SQLi</label>
+    <p>The vendor has implemented a systemic way to protect against SQLi attacks on all their services</p>
+    {{ wizard.form.sqli }}{{ wizard.form.sqli.errors }}
+</div>
+<div class="field">
+    <label for="id_xss">XSS</label>
+    <p>The vendor has implemented a systemic way to protect against SQLi attacks on all their services</p>
+    {{ wizard.form.xss }}{{ wizard.form.xss.errors }}
+</div>
+<div class="field">
+    <label for="id_pentesting">Pentesting</label>
+    <p>Does the vendor do penetration testing?</p>
+    {{ wizard.form.pentesting }}{{ wizard.form.pentesting.errors }}
+</div>
+<div class="field">
+    <label for="id_api_supported">API supported</label>
+    <p>Does the Service Provider expose APIs to access the functionality?</p>
+    {{ wizard.form.api_supported }}{{ wizard.form.api_supported.errors }}
+</div>
+<div class="field">
+    <label for="id_api_url">API URL</label>
+    <p>If yes to above, what is the end point of the API?</p>
+    {{ wizard.form.api_url }}{{ wizard.form.api_url.errors }}
+</div>
+<div class="field">
+    <label for="id_ip_filtering_support">IP filtering support</label>
+    <p>Does the SP provide IP filtering, where in access to the service is restricted to the tenants IPs?</p>
+    {{ wizard.form.ip_filtering_support }}{{ wizard.form.ip_filtering_support.errors }}
+</div>
+<div class="field">
+    <label for="id_malware_site_use">Are there any known malicious misuse of the site by its users?</label>
+    <p>Does the SP site allow malware?</p>
+    {{ wizard.form.malware_site_use }}{{ wizard.form.malware_site_use.errors }}
+</div>
+<div class="field">
+    <label for="id_api_authentication">API authentication</label>
+    <p>What kind of authentication mechanism is supported for access to the APIs?</p>
+    {{ wizard.form.api_authentication }}{{ wizard.form.api_authentication.errors }}
+</div>
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title %}Case Study - Cisco Systems - Skyhigh Networks{% endblock %}
+{% block meta_description %}Learn how Cisco Systems, a leader in networking and communications products and services, benefitted by deploying Skyhigh Networks Cloud Security Services Manager.{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <h1>Customer Case Study: Cisco Systems<br /> Takes Control of Cloud Services</h1>
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar_top"></div>
+                <div class="sidebar_bottom"></div>
+                {% include 'includes/sidebar_customers.html' %}
+            </div>
+            <div class="column">
+                <div class="listing no-marg-bottom no-bord">
+                    <img src="{{ STATIC_URL }}skyhigh/img/case_cisco_detail.png" class="image_third shadow" />
+                    <p>
+                        <strong>Name:</strong>    Cisco Systems<br />
+                        <strong>Location:</strong>   San Jose, California<br />
+                        <strong>Size:</strong>    60,000+ employees, 2012 revenues of over $46 billion<br />
+                        <strong>Description:</strong>   The world’s leader in networking and communications products and services
+                    </p>
+                </div>                
+                
+                <div class="listing">
+                    <h3>Challenge:</h3>
+                    <div class="quote_right">We had no comprehensive way of knowing what services were in use, where outgoing data was headed for...</div>
+                    <p>With dozens of business units spread across the globe including numerous acquired companies in various stages of integration, Cisco Systems did not know which cloud services employees were 
+accessing over company networks. The increased use of these services complicated data loss protection (DLP) efforts by increasing the number of vectors and destinations by which critical company information could be transported outside of secure corporate networks and into unknown, unregulated, and insecure locations in the cloud.  “We had no comprehensive way of knowing what services were in use, where outgoing data was headed for, and what risks these cloud services implied for our business,” explains Cisco’s Director of Information Systems Desmond Murray. To solve this problem Murray wanted a tool that would:</p>
+                    <ul>
+                        <li>Discover and identify all cloud services running on Cisco networks including SaaS, PaaS and IaaS</li>
+                        <li>Provide a detailed, actionable and timely risk analysis of each identified cloud service</li>
+                        <li>Fingerprint likely sources of and probable behaviors indicating data leakage across various key asset types</li>
+                        <li>Find out which cloud services are popular in order to prioritize creation of authorized services</li>
+                        <li>Provide visibility into the utilization levels of paid cloud services to measure and monitor the “Shelfware Tax”</li>
+                    </ul>
+                    <h3>Solution:</h3>
+                    <div class="quote_left">The number of cloud providers we were using was definitely a bit of an eyebrow raiser...</div>
+                    <p>Cisco decided to deploy the Skyhigh Networks Cloud Security Services Manager to get a better handle on Shadow IT usage and illuminate its cloud services footprint. Murray’s team collected log files for network traffic from key business units and uploaded the log data into the Skyhigh Networks’ CloudRegistry&trade; discovery and analytics engine. The deployment took less than a day. The engine identified dozens of unauthorized cloud services operating on the Cisco networks. “The number of cloud providers we were using was definitely a bit of an eyebrow raiser,” says Murray. “We knew there would be a good number but we were surprised by exactly how many showed up.” Murray’s team also received from Skyhigh Network’s CloudRisk&trade; module  actionable risk ratings of each service in the form of a simple 1-to-10 rating based on detailed analysis of over 30 risk factors. Previously cloud service risk assessment was a one-off activity that required significant time and effort on the part of Cisco’s information security and systems teams for each additional cloud service. “With Skyhigh, we get this comprehensive view and full visibility,” says Murray.  “This dashboard driven capability that was never there before and it allows us to make fast policy decisions.”</p>
+                    <div class="quote_right">...with Skyhigh we would be able to see a spike in downloads over the cloud service in question and flag that user...</div>
+                    <p>In addition, Murray was able to use Skyhigh Networks’ Hadoop-powered CloudAnomaly&trade; algorithmic behavioral detection engine to set up rules to highlight and then block anomalous activities that carried a high probability of data or information leakage. “If a Business Unit has average activity around downloading of key data in a given week, with Skyhigh we would be able to see a spike in downloads over the cloud service in question and flag that user,” says Murray. Through the Skyhigh service, Murray was able to:</p>
+                    <ul>
+                        <li>Discover and quickly assess the risk for all unauthorized cloud services running on the company networks</li>
+                        <li>Identify services that could be legitimized and brought under better control with minimal risk to help employees do their jobs with the tools they wanted</li>
+                        <li>Immediately shut down unauthorized cloud services that carried excessive security, legal, privacy, compliance or data leakage risks</li>
+                        <li>Build behavioral screens based on business and data loss risks that would block activities on approved cloud services which appeared overly risky</li>
+                        <li>Track popularity of different cloud services to understand employee usage to begin to consolidate multiple types of the same service into a single, approved service</li>
+                        <li>Begin granular usage monitoring of cloud services to spot “Shelfware” that could be pruned, consolidated, or eliminated entirely</li>
+                    </ul>
+                    <p>
+                        <table>
+                        <tr>
+                            <th width="33%">Problem</th>
+                            <th width="33%">Solution</th>
+                            <th>Result</th>
+                        </tr>
+                        <tr>
+                            <td>No comprehensive way to see which cloud services being accessed from Cisco networks</td>
+                            <td>Run log-files through Skyhigh to identify which services were being accessed</td>
+                            <td>Complete visibility into all cloud services running on Cisco networks</td>
+                        </tr>
+                        <tr>
+                            <td>Measuring risk of cloud services is a time-consuming, one-off activity</td>
+                            <td>Skyhigh delivers detailed risk ratings based on over 30 factors including penetration testing of service, authentication methods, data encryption, and more</td>
+                            <td>Instantly actionable risk information on all detected cloud services</td>
+                        </tr>
+                        <tr>
+                            <td>No single comprehensive tool for DLP monitoring or highly customizable algorithm mechanism for anomaly detection</td>
+                            <td>Skyhigh allows Cisco to set specific behavioral triggers that indicate a higher risk of data loss in an activity or prevent those activities before they can be completed</td>
+                            <td>Significant improvement in DLP. Better security for critical company data</td>
+                        </tr>
+                        <tr>
+                            <td>Multiple accounts across multiple services delivering similar functionality (i.e., Box.net, DropBox, SugarSync). Inefficient way to purchase services, greater security risk by splitting usage across three services</td>
+                            <td>Skyhigh allows Cisco CIO to determine which types of cloud services are heavily used and who should be the preferred vendors</td>
+                            <td>Gained ability to pull services on-premises or into better pricing structures with higher levels of admin capabilities and security</td>
+                        </tr>
+                        <tr>
+                            <td>Difficult to know which specific parts of cloud services users access the most and deliver the most value. For example, certain pages and sections inside Salesforce.com may get significantly more traffic</td>
+                            <td>Skyhigh not only provides visibility into services in use but also into what parts / URLs / sections of those services are most heavily used</td>
+                            <td>Delivers valuable usage information for UI / UX teams and provides insights into what types of services and / or offerings or collateral are most useful to employees</td>
+                        </tr>
+                        <tr>
+                            <td>Shelfware - underutilized or barely utilized cloud services</td>
+                            <td>Skyhigh tracks usage of cloud services and even maps that usage back to individual users, business units, or internal functions (sales, marketing, engineering)</td>
+                            <td>Identifies which cloud services licenses are getting the most use and allows CIOs to negotiate for better prices, trim unused services, or otherwise improve utilization of cloud services</td>
+                        </tr>
+                        </table>
+                    </p>
+                </div>
+                <div class="back_to_list">
+                    <a href="{% url product_case_studies %}" class="btn btn_light">&laquo; Back To List</a>
+                    <a href="{{ STATIC_URL }}skyhigh/pdf/Case-Study-Cisco.pdf" target="_blank" class="btn btn_light align-right">Download PDF &raquo;</a>
+                </div>
+            </div>
+        </div><!--/content-->
+        <div class="clear"></div>
+    </div>
+</div>
+{% endblock %}

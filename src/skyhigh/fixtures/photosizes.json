@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 1,
+        "model": "photologue.photosize",
+        "fields": {
+            "name": "98x98",
+            "watermark": null,
+            "increment_count": false,
+            "effect": null,
+            "crop": true,
+            "height": 98,
+            "width": 98,
+            "upscale": true,
+            "pre_cache": true,
+            "quality": 70
+        }
+    },
+    {
+        "pk": 2,
+        "model": "photologue.photosize",
+        "fields": {
+            "name": "120x120",
+            "watermark": null,
+            "increment_count": false,
+            "effect": null,
+            "crop": true,
+            "height": 120,
+            "width": 120,
+            "upscale": true,
+            "pre_cache": true,
+            "quality": 70
+        }
+    },
+    {
+        "pk": 3,
+        "model": "photologue.photosize",
+        "fields": {
+            "name": "202x126",
+            "watermark": null,
+            "increment_count": false,
+            "effect": null,
+            "crop": true,
+            "height": 126,
+            "width": 202,
+            "upscale": true,
+            "pre_cache": true,
+            "quality": 70
+        }
+    }
+]

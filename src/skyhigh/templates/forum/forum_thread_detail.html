@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Forum Thread{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>{{ object.title }}</h1>
+            <h2>{{ object_list|length }} repl{{ object_list|length|pluralize:"y,ies" }}</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    <div class="widget">
+                        <h3>Create a Reply</h3>
+                        <p><a href="{% url forum_post_create object.slug %}" class="link btn_light">New Reply</a></p>
+                    </div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <p class="meta">By: {{ object.created_by.profile.display_name }}</p>
+                        <h3>{{ object.title }}</h3>
+                        <p>{{ object.content|safe }}</p>
+                        {% if object.edited %}
+                            <p><i>Edited by {{ object.modified_by.profile.display_name }} on {{ object.modified }}</i></p>
+                        {% endif %}
+                        {% if request.user == object.created_by or perms.forum.can_moderate %}
+                        <p>
+                            <a href="{% url forum_thread_edit object.slug %}" class="link">Edit</a> &nbsp;
+                            {% if perms.forum.can_moderate %}
+                                <a href="{% url forum_thread_delete object.slug %}" class="link">Delete</a>
+                            {% endif %}
+                        </p>
+                        {% endif %}
+                        {% tag_list object %}
+                    </div>
+                    {% for obj in object_list %}
+                        <div class="listing">
+                            <p class="meta">By: {{ obj.created_by.profile.display_name }}</p>
+                            <h3>{{ obj.title }}</h3>
+                            <p>{{ obj.content|safe }}</p>
+                            {% if obj.edited %}
+                                <p><i>Edited by {{ object.modified_by.profile.display_name }} on {{ obj.modified }}</i></p>
+                            {% endif %}
+                            {% if request.user == object.created_by or perms.forum.can_moderate %}
+                            <p>
+                                <a href="{% url forum_post_edit obj.slug %}" class="link">Edit</a> &nbsp; 
+                                <a href="{% url forum_post_delete obj.slug %}" class="link pull-right">Delete</a>
+                            </p>
+                            {% endif %}
+                            {% tag_list obj %}
+                        </div>
+                    {% empty %}
+                        <p>There are no replies to this thread yet.</p>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+                {% pagination page_obj %}
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

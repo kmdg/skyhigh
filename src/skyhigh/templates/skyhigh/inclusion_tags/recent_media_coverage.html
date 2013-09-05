@@ -1,0 +1,14 @@
+{% if objects %}
+<div class="media">
+    <h3>Media Coverage</h3>
+    {% for object in objects %}
+    <div class="item">
+        <p class="date">{{ object.publish_date_time|date:'j F Y' }}</p>
+        <p class="desc">{{ object.title }}</p>
+        {% if object.external_link %}
+            <a href="{{ object.external_link }}" target="_blank">Read More</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}

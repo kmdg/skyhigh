@@ -1,0 +1,8 @@
+{% extends 'email/base.txt' %}
+
+{% block content %}
+User {{ user.profile.display_name }} has requested a product evaluation with us.
+{% if user.profile.company %}Company: {{ user.profile.company }}{% endif %}
+{% if user.profile.country %}Country: {{ user.profile.country }}{% endif %}
+{% if user.profile.state_province %}State / Province: {{ user.profile.state_province }}{% endif %}
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Saas Security and Cloud Compliance Services by Skyhigh Networks{% endblock %}
+{% block meta_description %}Secure your SaaS applications with the industry best cloud security solution by Skyhigh Network; Ensures sensitive data is monitored, analysed and well protected.{% endblock %}
+{% block meta_keywords %}Saas Security, Cloud compliance{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Skyhigh Analyze</h1>
+            <h2>Skyhigh’s SaaS Security solution enables users to analyze their enterprise’s cloud usage to identify anomalies in user behavior, malware downloaded from the cloud, inconsistencies in policy enforcement, license utilization, and usage trends.</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_product.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <h3>Identify Policy Inconsistencies and Anomalous Behavior</h3>
+                        <ul>
+                            <li><strong>Allow/Deny Analytics</strong>: Presents detailed statistics on users, data, and requests allowed and denied for each cloud service.</li>
+                            <li><strong>CloudAnomaly™</strong>: Identifies anomalies in cloud service usage that are indicative of malware, malicious use, or high-risk activity.</li>
+                        </ul>
+                    </div>
+                    <div class="listing">
+                        <h3>Respond with Actionable Intelligence</h3>
+                        <ul>
+                            <li><strong>Malware Tracking</strong>: Identifies known malware downloaded from cloud services and provides forensic tracking capabilities to determine exposure.</li>
+                            <li><strong>Auto-Alerts</strong>: Delivers instantaneous or scheduled email alerts for service events, anomalous usage, and operational events.</li>
+                        </ul>
+                    </div>
+                    <div class="listing">
+                        <h3>Visually Summarize and Benchmark Cloud Trends</h3>
+                        <ul>
+                            <li><strong>Trending Analytics</strong>: Provides a set of interactive charts to explore usage over time and pivot across multiple facets.</li>
+                            <li><strong>CloudCompare™</strong>: Provides benchmarks for each cloud service including the percentage of all companies that use the service.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

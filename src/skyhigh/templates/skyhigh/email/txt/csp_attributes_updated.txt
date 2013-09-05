@@ -1,0 +1,17 @@
+{% extends 'email/base.txt' %}
+
+{% block content %}
+Cloud Service Provider {{ user.profile.display_name }} has updated their CSP Attributes,
+
+Please visit http://{{ site }}/console/usage/partner/csp/attribute/list/{{ user.profile.pk }} to edit them
+
+They are as follows:
+{% for csp_attribute in user.profile.csp_attributes %}
+SI Number: {{ csp_attribute.si_number }}
+Category: {{ csp_attribute.category }}
+Name: {{ csp_attribute.name }}
+Value: {{ csp_attribute.value }}
+
+{% endfor %}
+
+{% endblock %}

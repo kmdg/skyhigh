@@ -1,0 +1,30 @@
+<div class="content tab_content" id="csp">
+	{% if object.is_cloud_service_provider %}
+		<table>
+		    <tr>
+		        <thead>
+		            <th width="80">SI No.</th>
+		            <th width="120">Category</th>
+		            <th width="120">Name</th>
+		            <th width="120">Value</th>
+		        </thead>
+		    </tr>
+		    {% for object in csp_attribute_list %}
+		        <tr>
+		            <td>{{ object.si_number }}</td>
+		            <td>{{ object.category }}</td>
+		            <td>{{ object.name }}</td>
+		            <td>{{ object.value }}</td>
+		        </tr>
+		    {% empty %}
+		        <tr>
+		            <td colspan="4">Sorry, there are no items to list</td>
+		        </tr>
+		    {% endfor %}
+		</table>
+		<div class="clear"></div>
+		<p><a href="{% url console_usage_partner_csp_attribute_list object.pk %}" class="link btn btn-edit">Edit CSP Attribute List</a></p>
+	{% else %}
+	<p>This user is not a Cloud Service Provider</p>
+	{% endif %}
+</div><!--/content-->

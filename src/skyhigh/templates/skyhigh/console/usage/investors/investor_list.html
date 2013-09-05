@@ -1,0 +1,40 @@
+{% extends 'skyhigh/console/base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Investors{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Investors</h1>
+            <a href="{% url console_usage_investor_create %}" class="link btn_light console-btn">Add an Investor</a>
+            <div class="column column_full">
+                <div class="listing listing_full">
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">State</th>
+                                <th>Title</th>
+                                <th width="60"></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr onclick="DoNav('{% url console_usage_investor_detail object.pk %}');">
+                                <td>{{ object.get_state_display }}</td>
+                                <td><a href="{% url console_usage_investor_detail object.pk %}">{{ object.title }}</a></td>
+                                <td><a href="{% url console_usage_investor_update object.pk %}" class="link">Edit</a><br /><a href="{% url console_usage_investor_delete object.pk %}" class="link">Delete</a></td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="3">There are no investors yet.</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            {% pagination page_obj %}
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

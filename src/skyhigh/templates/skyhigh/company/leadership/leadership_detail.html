@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if object.meta_title %}{{ object.meta_title }}{% endif %}{% endblock %}
+
+{% block meta_description %}{% if object.meta_description %}{{ object.meta_description }}{% else %}{% include 'includes/meta_description.html' %}{% endif %}{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <h1>Leadership</h1>
+        <h2>Skyhigh Networks is led by a team of repeat, successful entrepreneurs with more than two decades of experience delivering game-changing products and services.</h2>
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar_top"></div>
+                <div class="sidebar_bottom"></div>
+                {% include 'includes/sidebar.html' %}
+            </div>
+            <div class="column">
+                <div class="listing">
+                    <h3>{{ object.title }}{% if object.job_title %}, {{ object.job_title }}{% endif %}</h3>
+                    {% if object.get_202x126_url %}
+                        <a href="{% url company_leadership_detail object.pk %}"><img src="{{ object.get_202x126_url }}" class="image_third" /></a>
+                    {% endif %}
+                    {{ object.content|safe }}
+                </div>
+                <div class="back_to_list"><a href="{% url company_leadership %}" class="btn btn_light">&laquo; Back To List</a></div>
+            </div>
+        </div><!--/content-->
+    </div>
+</div>
+{% endblock %}

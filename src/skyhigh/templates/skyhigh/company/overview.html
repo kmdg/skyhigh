@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Skyhigh Networks Overview - Cloud Visibility and Control Services Company{% endblock %}
+{% block meta_description %}Skyhigh Networks is cloud visibility and control company designed by industry's top professionals in cloud security & management.{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Company Overview</h1>
+            <h2>Skyhigh, the cloud access security company, enables companies to embrace<br /> cloud services with appropriate levels of security, compliance, and governance while lowering overall risk and cost.</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_product.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <h3>About Skyhigh</h3>
+                        <p>Skyhigh Networks enables our customers to accelerate the safe and profitable adoption of cloud services across their company.</p>
+                        <p>We leverage over 8 decades of combined experience in cloud security and management, networking, data analysis and scalable cloud infrastructure to solve our customer’s most complex and pressing challenges. The result is the Skyhigh Cloud Services Manager, a game changing, zero footprint, highly available, service provider-scale, multi-tenant offering that provides complete visibility and control of the cloud.</p>
+                        <p>Skyhigh and our leading partners help our customers safely unlock massive cloud returns by finding and eliminating risk, cost, and inefficiencies resulting from unmanaged "shadow IT" cloud adoption.</p>
+                        <p>The Skyhigh Cloud Services Manager leverages a number of patented and unique technologies to provide unmatched visibility and control over Cloud service risk, usage, and costs. Skyhigh was a finalist for the RSA Conference 2013 Most Innovative Company award and was named a “Cool Vendor” by Gartner.</p>
+                    </div>
+                    <div class="listing">
+                        <h3>The Skyhigh Mission</h3>
+                        <p><a href="{% url company_video %}" class="open_pop"><img src="{{ STATIC_URL }}skyhigh/img/video_body.png" class="image_third mobile_video" /></a></p>
+                    </div>
+                    
+                </div>
+                <div class="column column_full">
+                    
+                </div>
+{% comment %}
+                <div class="column column_full">
+                    <h3>Our Leadership - We are built by a team of dedicated professionals</h3>
+                </div>
+                <div class="column column_full">
+                    {% for object in object_list %}
+                    <div class="third no-marg{% if not forloop.last %}-bottom{% endif %} no-bord">
+                        <a href="{% url company_leadership_detail object.id %}"><img src="{{ object.get_202x126_url }}" class="image_third" /></a>
+                        <h3>{{ object.title }}</h3>
+                        <p><a href="{% url company_leadership_detail object.id %}" class="link">Read More</a></p>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% comment %}
+                <div class="column column_full">
+                    <h3>Our Partners - Skyhigh’s partners include some of the most influential and talented resellers and distributors in the industry including: </h3>
+                </div>
+                <div class="column column_full">
+                    <div class="third no-bord">
+                        <img src="{{ STATIC_URL }}skyhigh/img/logo_trace3.png" class="image_third" />
+                        <p><a href="{% url partners_overview %}" class="link">Our Partners</a></p>
+                    </div>
+                </div>
+{% endcomment %}
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

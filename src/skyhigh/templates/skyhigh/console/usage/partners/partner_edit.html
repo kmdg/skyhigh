@@ -1,0 +1,169 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Partners{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>{% if form.instance.id %}Edit{% else %}Add{% endif %} Partner</h1>
+            {% if type == 'technical' %}<a href="{% url console_usage_partner_list 'technical' %}" class="link btn_light console-btn">Back To List</a>{% else %}<a href="{% url console_usage_partner_list 'channel' %}" class="link btn_light console-btn">Back To List</a>{% endif %}
+            <div class="form">
+                <form id="frmNewPartner" action="." method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.modified_by }}
+                    {{ form.created_by }}
+
+                    <div class="row">
+                        <div class="field edit-image">
+                            <label>Partner Image</label>
+                            {% if form.object %}<img src="{{ form.object.get_120x120_url }}" class="edit_avatar" />{% endif %}
+                            <div>{{ form.image }}{{ form.image.errors }}</div>
+                            <div class="revert">{% if form.object %}Revert to default image{{ form.default_image }}{% endif %}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Title</label>
+                            <div>{{ form.title }}{{ form.title.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Role</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.role }}{{ form.role.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>First Name</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.first_name }}{{ form.first_name.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Last Name</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.last_name }}{{ form.last_name.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Email</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.email }}{{ form.email.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Company</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.company }}{{ form.company.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Job Title</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.job_title }}{{ form.job_title.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Partnership Status</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.partnership_status }}{{ form.partnership_status.errors }}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="field field-half">
+                            <label>Partner Type</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.partner_type }}{{ form.partner_type.errors }}</div>
+                        </div>
+                        <div id="channel_row" class="field field-half align-right">
+                            <label>Partner Subtype</label>
+                            <div class="clear"></div>
+                            {{ form.channel_partner_subtype }}{{ form.channel_partner_subtype.errors }}
+                        </div>
+                        <div id="technology_row" class="field field-half align-right">
+                            <label>Cloud Service Provider</label>
+                            <div class="clear"></div>
+                            {{ form.technology_partner_subtype }}{{ form.technology_partner_subtype.errors }}
+                        </div>
+                    </div>
+
+                    <div id="csp_row" class="row">
+                        <div class="field field-half">
+                            <label>CSP Category</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.technology_partner_subtype_category }}{{ form.technology_partner_subtype_category.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>CSP URL</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.technology_partner_subtype_url }}{{ form.technology_partner_subtype_url.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Phone Number</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.phone_number }}{{ form.phone_number.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Mobile Number</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.mobile_number }}{{ form.mobile_number.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Address</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.address }}{{ form.address.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>City</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.city }}{{ form.city.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Zip/Postal Code</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.zip_postal_code }}{{ form.zip_postal_code.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>State/Province</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.state_province }}{{ form.state_province.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Country</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.country }}{{ form.country.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Timezone</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.timezone }}{{ form.timezone.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <input type="submit" id="submit" value="{% if not form.instance.id %}Create{% else %}Update{% endif %} Partner" class="btn" />
+                    </div>
+                
+                    <div class="clear"></div>
+                </form>
+            </div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

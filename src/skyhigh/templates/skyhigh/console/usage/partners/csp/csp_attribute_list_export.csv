@@ -1,0 +1,3 @@
+si_number,category,name,value
+{% for object in object_list %}"{{ object.cloud_service_provider_attribute.si_number }}","{{ object.cloud_service_provider_attribute.get_category_display }}","{{ object.cloud_service_provider_attribute.name }}","{{ object.value }}"
+{% endfor %}

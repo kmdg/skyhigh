@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+
+{% block title %}Partner Deal Form{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+            <h1>Partner Deal Form</h1>
+            <h2>Please enter your details in the form below</h2>
+            <div class="content">
+                {% if not user.is_authenticated %}
+                    <p class="additional">Already have a Skyhigh Account? &nbsp; <a href="{% url login %}" class="btn_light">Sign In</a></p>
+                {% endif %}
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_no_partners.html' %}
+                </div>
+                <div class="column">
+                    <form id="frmPartnerDeal" action="." method="POST" class="validate_form">{% csrf_token %}
+                    	{{ form.search_string }}
+                    	{{ form.search_engine }}
+                    	{{ form.pay_per_click_keyword }}
+                        <div class="note">Fields marked with <span class="blue">*</span> are required</div>
+                        <div class="field">
+                            <label for="id_title">Title <span class="blue">*</span></label>
+                            {{ form.title }}{{ form.content.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_content">Content <span class="blue">*</span></label>
+                            {{ form.content }}{{ form.content.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_first_name">First Name <span class="blue">*</span></label>
+                            {{ form.first_name }}{{ form.first_name.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_last_name">Last Name <span class="blue">*</span></label>
+                            {{ form.last_name }}{{ form.last_name.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_email">Email Address <span class="blue">*</span></label>
+                            {{ form.email }}{{ form.email.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_phone_number">Phone Number <span class="blue">*</span></label>
+                            {{ form.phone_number }}{{ form.phone_number.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_zip_postal_code">Zip Code <span class="blue">*</span></label>
+                            {{ form.zip_postal_code }}{{ form.zip_postal_code.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_company">Company <span class="blue">*</span></label>
+                            {{ form.company }}{{ form.company.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_job_title">Job Title <span class="blue">*</span></label>
+                            {{ form.job_title }}{{ form.job_title.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_num_branches">Number of Branches</label>
+                            {{ form.num_branches }}{{ form.num_branches.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_branch_offices">Branch Offices</label>
+                            {{ form.branch_offices }}{{ form.branch_offices.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_countries_requesting_to_sell_in">Countries you are requesting to sell in</label>
+                            {{ form.countries_requesting_to_sell_in }}{{ form.countries_requesting_to_sell_in.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_us_states_requesting_to_sell_in">US States requesting to sell in</label>
+                            {{ form.us_states_requesting_to_sell_in }}{{ form.us_states_requesting_to_sell_in.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_annual_revenue">Annual Revenue</label>
+                            {{ form.annual_revenue }}{{ form.annual_revenue.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_years_in_business">Years in Business</label>
+                            {{ form.years_in_business }}{{ form.years_in_business.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_num_sales_reps">Number of Sales Reps</label>
+                            {{ form.num_sales_reps }}{{ form.num_sales_reps.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_num_systems_engineers">Number of Systems Engineers</label>
+                            {{ form.num_systems_engineers }}{{ form.num_systems_engineers.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_num_technical_support_staff">Number of Technical Support Staff</label>
+                            {{ form.num_technical_support_staff }}{{ form.num_technical_support_staff.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_business_type">Business Type</label>
+                            {{ form.business_type }}{{ form.business_type.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_preferred_distributor">Preferred Distributor</label>
+                            {{ form.preferred_distributor }}{{ form.preferred_distributor.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_target_vertical_focus">Target Vertical Focus</label>
+                            {{ form.target_vertical_focus }}{{ form.target_vertical_focus.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_resell_to_usa_federal_sectors">Resell to USA Federal Sectors</label>
+                            {{ form.resell_to_usa_federal_sectors }}{{ form.resell_to_usa_federal_sectors.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_offer_own_support">Offer Own Support</label>
+                            {{ form.offer_own_support }}{{ form.offer_own_support.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_manufacturers_selling">Manufacturers Selling</label>
+                            {{ form.manufacturers_selling }}{{ form.manufacturers_selling.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_leading_competitors">Leading Competitors</label>
+                            {{ form.leading_competitors }}{{ form.leading_competitors.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_additional_comments">Additional Comments</label>
+                            {{ form.additional_comments }}{{ form.additional_comments.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_representitive">Representitive</label>
+                            {{ form.representitive }}{{ form.representitive.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_vat_number">VAT Number</label>
+                            {{ form.vat_number }}{{ form.vat_number.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_gst_number">GST Number</label>
+                            {{ form.gst_number }}{{ form.gst_number.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_tax_id_number">Tax ID Number</label>
+                            {{ form.tax_id_number }}{{ form.tax_id_number.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_d_and_b_number">D&B Number</label>
+                            {{ form.d_and_b_number }}{{ form.d_and_b_number.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_requests_or_comments">Requests </label>
+                            {{ form.requests_or_comments }}{{ form.requests_or_comments.errors }}
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" value="Send Application" />
+                            {% if not user.is_authenticated %}
+                                <p>Already have a Skyhigh account? <a href="{% url login %}">Sign In</a></p>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

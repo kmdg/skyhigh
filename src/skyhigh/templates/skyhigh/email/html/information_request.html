@@ -1,0 +1,7 @@
+{% extends 'email/base.html' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},<br/>
+<br/>
+You have sent us an information request.<br/>
+{% endblock %}

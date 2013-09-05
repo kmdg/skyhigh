@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Media Coverage{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Media Coverage</h1>
+            <div class="content media_overview">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_company.html' %}
+                </div>
+                <div class="column">
+                    {% for object in object_list %}
+                        <div class="listing">
+                            <a target="_blank" href="{{ object.external_link }}"><img src="{{ object.get_202x126_url }}" width="150" class="image_third" /></a>
+                            <h3>{{ object.title }}</h3>
+                            <p>{{ object.content|safe }}</p>
+                            <p>{{ object.publish_date_time|date:'j F Y' }} | 
+	                            {% if object.external_link %}
+	                                <a href="{{ object.external_link }}" target="_blank" class="link">Read</a>
+	                            {% endif %}
+	                            {% if object.pdf %}
+	                                <a href="{{ MEDIA_URL }}{{ object.pdf }}" target="_blank" class="link">Download</a>
+	                            {% endif %}
+                            </p>
+                        </div>
+                    {% empty %}
+                        <p>There are no media coverage items to display.</p>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

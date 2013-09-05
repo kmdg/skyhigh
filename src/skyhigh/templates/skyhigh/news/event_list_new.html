@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Events</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_company.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <div class="listing_visual">
+                        	<img src="{{ STATIC_URL }}skyhigh/img/icon_webinar.png" />
+                        	<p>Aug <span>14</span></p>
+                        </div>
+                        <div class="listing_event_content">
+                            <h3>Product Briefing: The Skyhigh Networks Cloud Service Manager</h3>
+	                        <p>Aug 14, 2013 - Aug 14, 2013 &nbsp;|&nbsp; <a href="" class="link" target="_blank">Learn More</a></p>
+                        </div>
+                    </div>
+                    <div class="listing">
+                        <div class="listing_visual">
+                        	<img src="{{ STATIC_URL }}skyhigh/img/icon_conference.png" />
+                        	<p>Aug <span>20</span></p>
+                        </div>
+                        <div class="listing_event_content">
+                            <h3>Product Briefing: The Skyhigh Networks Cloud Service Manager</h3>
+	                        <p>Aug 14, 2013 - Aug 14, 2013 &nbsp;|&nbsp; <a href="" class="link" target="_blank">Learn More</a></p>
+                        </div>
+                    </div>
+                    <div class="listing">
+                        <div class="listing_visual">
+                        	<img src="{{ STATIC_URL }}skyhigh/img/icon_webinar.png" />
+                        	<p>Sep <span>02</span></p>
+                        </div>
+                        <div class="listing_event_content">
+                            <h3>Product Briefing: The Skyhigh Networks Cloud Service Manager</h3>
+	                        <p>Aug 14, 2013 - Aug 14, 2013 &nbsp;|&nbsp; <a href="" class="link" target="_blank">Learn More</a></p>
+                        </div>
+                    </div>
+                    <div class="listing">
+                        <div class="listing_visual">
+                        	<img src="{{ STATIC_URL }}skyhigh/img/icon_conference.png" />
+                        	<p>Sep <span>23</span></p>
+                        </div>
+                        <div class="listing_event_content">
+                            <h3>Product Briefing: The Skyhigh Networks Cloud Service Manager</h3>
+	                        <p>Aug 14, 2013 - Aug 14, 2013 &nbsp;|&nbsp; <a href="" class="link" target="_blank">Learn More</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load skyhigh_widgets %}
+
+{% comment %}
+<div class="widget">
+    <h3>Take the 30-in-30 Challenge</h3>
+    <p>Identify 30 unknown cloud services in 30 mins</p>
+    <p><a href="{% url 30_in_30_vanity %}" class="link">Learn More</a></p>
+</div>
+<div class="widget">
+    <h3>Read the Product Overview</h3>
+    <p>Get the 1 page overview of Skyhigh Networks</p>
+    <p><a href="{{ STATIC_URL }}skyhigh/pdf/Skyhigh-1-pager.pdf" target="_blank" onclick="_gaq.push(['_trackPageview', '/goals/click/pdfdownload.html']);" class="link">Download PDF</a></p>
+</div>
+<div class="widget">
+    <h3>See How it’s Deployed</h3>
+    <p>Check out this simple deployment diagram</p>
+    <p><a href="{{ STATIC_URL }}skyhigh/img/deployment.png" class="link open_pop">View Diagram</a></p>
+</div>
+{% endcomment %}
+
+<div class="widget">
+    {% comment %}<h3>Live Demo Schedule</h3>{% endcomment %}
+    <h3> Schedule a demo</h3>
+    {% comment %}
+    <p>Wed, July 10, 2013 at 10am PT/ 1pm ET</p>
+    <p><a href="{% url campaign_demo %}" class="link">Register Now</a></p>
+    <p>Wed, July 31, 2013 at 10am PT/ 1pm ET</p>
+    <p><a href="{% url campaign_demo_31_july_2013 %}" class="link">Register Now</a></p>
+    <p>Thurs, August 22, 2013 at 1 pm EDT / 10 am PDT</p>
+    <p><a href="{% url landing-22-aug-2013 %}" class="link">Register Now</a></p>
+    {% endcomment %}
+</div>

@@ -1,0 +1,12 @@
+Dear {{ user.profile.display_name }},
+
+You have changed your email address on {{ app_name }} at http://{{ site }}
+
+Your username is: {{ user.username }}
+
+To reactivate your account, go to http://{{ site }}/secure/accounts/activate/{{ activation_key }}/
+
+You need to do this within {{ expiration_days }} days, before this key will expire.
+
+Kind regards,
+The {{ app_name }} Team.

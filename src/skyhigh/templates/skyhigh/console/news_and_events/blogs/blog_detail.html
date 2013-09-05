@@ -1,0 +1,36 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>{{ object.title }}</h1>
+            <div class="column column_full">
+                <a href="{% url console_news_and_events_blog_entry_create object.pk %}" class="link btn_light console-btn">Add a new Blog Entry</a>
+                <div class="listing listing_full">
+                    <table>
+                        <tr>
+                            <thead>
+                            <th>State:</th>
+                            <th>Title</th>
+                            <th></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr>
+                                <td>{{ object.get_state_display }}</td>
+                                <td><a href="{% url console_news_and_events_blog_entry_detail object.pk %}">{{ object.title }}</a></td>
+                                <td><a href="{% url console_news_and_events_blog_entry_update object.pk %}" class="link">Edit</a><br /><a href="{% url console_news_and_events_blog_entry_delete object.pk %}" class="link">Delete</a></td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="3">Sorry, there are no items to list</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

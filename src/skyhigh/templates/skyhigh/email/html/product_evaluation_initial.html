@@ -1,0 +1,8 @@
+{% extends 'email/base.html' %}
+
+{% block content %}
+User {{ user.profile.display_name }} has requested a product evaluation with us.<br/>
+{% if user.profile.company %}Company: {{ user.profile.company }}<br/>{% endif %}
+{% if user.profile.country %}Country: {{ user.profile.country }}<br/>{% endif %}
+{% if user.profile.state_province %}State / Province: {{ user.profile.state_province }}<br/>{% endif %}
+{% endblock %}

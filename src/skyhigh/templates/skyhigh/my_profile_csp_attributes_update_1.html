@@ -1,0 +1,56 @@
+{% extends 'skyhigh/my_profile_csp_attributes_update_base.html' %}
+
+{% block step1 %}on{% endblock %}
+
+{% block wizard_form %}
+    <div class="field">
+        <label for="id_data_sharing_support">File Sharing Support</label>
+        <p>Does the service allow sharing of data by allowing users to upload files?</p>
+        {{ wizard.form.data_sharing_support }}{{ wizard.form.data_sharing_support.errors }}
+    </div>
+    <div class="field">
+        <label for="id_data_capacity">File Capacity</label>
+        <p>If yes to the above, what is the size of the file allowed?</p>
+        {{ wizard.form.data_capacity }}{{ wizard.form.data_capacity.errors }}
+    </div>
+    <div class="field">
+        <label for="id_data_encryption_at_rest">Data encryption at rest</label>
+        <p>Is the data encrypted once stored in the cloud?</p>
+        {{ wizard.form.data_encryption_at_rest }}{{ wizard.form.data_encryption_at_rest.errors }}
+    </div>
+    <div class="field">
+        <label for="id_data_encryption_in_transit">Data encryption in transit</label>
+        <p>Is the data encrypted in transit, essentially do you use SSL?</p>
+        {{ wizard.form.data_encryption_in_transit }}{{ wizard.form.data_encryption_in_transit.errors }}
+    </div>
+    <div class="field">
+        <label for="id_data_multi_tenancy">Data multi-tenancy</label>
+        <p>Is the service multi-tenant?</p>
+        {{ wizard.form.data_multi_tenancy }}{{ wizard.form.data_multi_tenancy.errors }}
+    </div>
+    <div class="field">
+        <label for="id_data_mingling">Encryption with tenant-managed keys</label>
+        <p>Does the service allow usage of tenant specified keys for encrypting data at rest?</p>
+        {{ wizard.form.data_mingling }}{{ wizard.form.data_mingling.errors }}
+    </div>
+    <div class="field">
+        <label for="id_data_retention_on_termination">Data retention on termination</label>
+        <p>What happens to the tenant data once the tenant/SP terminates the contract?</p>
+        {{ wizard.form.data_retention_on_termination }}{{ wizard.form.data_retention_on_termination.errors }}
+    </div>
+    <div class="field">
+        <label for="id_auto_sync_data">Auto sync data</label>
+        <p>Does the service support auto-sync of data via desktop / mobile app?</p>
+        {{ wizard.form.auto_sync_data }}{{ wizard.form.auto_sync_data.errors }}
+    </div>
+    <div class="field">
+        <label for="id_encryption_strength">Encryption strength</label>
+        <p>Key strength for encrypting data at rest?</p>
+        {{ wizard.form.encryption_strength }}{{ wizard.form.encryption_strength.errors }}
+    </div>
+    <div class="field">
+        <label for="id_password_policy_strength">Password policy strength</label>
+        <p>Do you support strong passwords?</p>
+        {{ wizard.form.password_policy_strength }}{{ wizard.form.password_policy_strength.errors }}
+    </div>
+{% endblock %}

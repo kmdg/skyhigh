@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load unobase_tags blog_widgets %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>{{ object.title }}</h1>
+            <div class="content">
+                <div class="sidebar">
+	                <div class="sidebar_top"></div>
+	                <div class="sidebar_bottom"></div>
+                    {% tag_cloud object.slug %}
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    {% for object in object_list %}
+                        <div class="listing blog_entry">
+                            <h3><a href="{% url blog_entry_detail object.slug %}">{{ object.title }}</a></h3>
+                            {% if object.get_98x98_url %}
+                                <img src="{{ object.get_98x98_url }}" class="image_thumb" />
+                            {% endif %}
+                            <p class="date">{{ object.publish_date_time|date:'j F Y' }}</p>
+                            {{ object.content|safe|truncatewords_html:40 }}
+                            <p><a href="{% url blog_entry_detail object.slug %}" class="link">Read More</a></p>
+                            {% tag_list object %}
+                        </div>
+                    {% empty %}
+                        <p>There are no blog entries to display.</p>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+                {% pagination page_obj %}
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block livechat %}{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load unobase_tags blog_widgets %}
+
+{% block title %}Blogs{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Blogs</h1>
+            <div class="content">
+                <div class="column">
+                    {% for object in object_list %}
+                        <div class="listing">
+                            <h3><a href="{% url blog_detail object.pk %}">{{ object.title }}</a></h3>
+                            {% if object.get_98x98_url %}
+                                <img src="{{ object.get_98x98_url }}" class="image_thumb" />
+                            {% endif %}
+                            {% tag_list object %}
+                        </div>
+                    {% empty %}
+                        <p>There are no blogs to display.</p>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block livechat %}{% endblock %}

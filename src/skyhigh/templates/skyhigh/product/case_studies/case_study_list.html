@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Customers{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Customer Case Studies</h1>
+            <div class="content pad-top">
+                <div class="column column_full">
+                    <div class="listing bord-bottom-3px no-pad-bottom">
+                        <img src="{{ STATIC_URL }}skyhigh/img/case_cisco_image.png" class="image_case_big shadow" />
+                        <h3><a href="{%  url case_study_cisco %}">Cisco Systems Takes Control of Cloud Services&nbsp;&raquo;</a></h3>
+                        <p><em>"The number of cloud providers we were using was definitely a bit of an eyebrow raiser.<br />We knew there would be a good number but we were surprised by exactly<br />how many showed up."</em></p>
+                        <p class="yellow bold">Desmond Murray,<br />Cisco’s Director of Information Systems</p>
+                        <p><a href="{% url case_study_cisco %}"><img src="{{ STATIC_URL }}skyhigh/img/case_cisco.png" class="image_case shadow" /></a><a href="{% url case_study_cisco %}" class="link">Read More</a></p>
+                    </div>
+                    <div class="listing bord-bottom-3px">
+                        <img src="{{ STATIC_URL }}skyhigh/img/case_equinix_image.png" class="image_case_big shadow" />
+                        <h3><a href="{%  url case_study_equinix %}">Equinix Safeguards Employee Use of Cloud Services&nbsp;&raquo;</a></h3>
+                        <p><em>"Having specific risk ratings for each cloud service from a source we can trust means we can cut down time spent onboarding a new cloud service to 3-4 hours. It has allowed my team to become far more efficient, and I love the fact that Skyhigh continually updates its ratings because we would never have time to go back and regularly check up on approved services."</em></p>
+                        <p class="yellow bold">George Do,<br />Global Information Security Officer</p>
+                        <p><a href="{% url case_study_equinix %}"><img src="{{ STATIC_URL }}skyhigh/img/case_equinix.png" class="image_case shadow" /></a><a href="{% url case_study_equinix %}" class="link">Read More</a></p>
+                    </div>
+                    <div class="listing">
+                        <img src="{{ STATIC_URL }}skyhigh/img/case_torrance_image.png" class="image_case_big shadow" />
+                        <h3><a href="{%  url case_study_torrance %}">Torrance Memorial Medical Center Illuminates Cloud Activity with Skyhigh Networks&nbsp;&raquo;</a></h3>
+                        <p><em>"As a healthcare IT organization, we have been cautious when it comes to cloud services. We understand their value proposition but because many are unmanageable, we typically just said no thinking that our firewalls and proxies could block their use."</em></p>
+                        <p class="yellow bold">Steve Lantz,<br />Director, Infrastructure &amp; Operations | Information Technology</p>
+                        <p><a href="{% url case_study_torrance %}"><img src="{{ STATIC_URL }}skyhigh/img/case_torrance.png" class="image_case shadow" /></a><a href="{% url case_study_torrance %}" class="link">Read More</a></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

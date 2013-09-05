@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Shadow IT solutions: Cloud Security Software by Skyhigh Networks{% endblock %}
+{% block meta_description %}Bring unauthorized cloud shadow IT in your enterprise to visibility with Skyhigh networks cloud security software.{% endblock %}
+{% block meta_keywords %}Shadow IT, Cloud security software{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Skyhigh Discover</h1>
+            <h2>Skyhigh’s cloud security software enables users to discover the full range of approved and unapproved cloud services in use across the enterprise, understand the risk of each service, and take steps to encourage the use of low risk services.</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_product.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <h3>Gain a Comprehensive View of Cloud Service Use</h3>
+                        <ul>
+                            <li><strong>Log Processor</strong>: Collects and tokenizes logs from firewalls, web proxies, SIEMs, and log aggregation products.</li>
+                            <li><strong>CloudRegistry™</strong>: Identifies and classifies thousands of cloud services including ones uncategorized by firewalls.</li>
+                            <li><strong>Usage Dashboard</strong>: Categorizes all cloud services, summarizes usage statistics, and provides navigation filters.</li>
+                        </ul>
+                    </div>
+                    <div class="listing">
+                        <h3>Understand Your Risk Exposure</h3>
+                        <ul>
+                            <li><strong>CloudRisk™</strong>: Assigns an objective 1-10 risk rating for each cloud service based on data, user/device, service, business, and legal risk.</li>
+                            <li><strong>License Management Dashboard</strong>: Visually summarizes cloud service usage from a business perspective, showing usage frequency.</li>
+                            <li><strong>Security Dashboard</strong>: Provides a dashboard view from a security perspective that summarizes high-risk cloud services.</li>
+                        </ul>
+                    </div>
+                    <div class="listing">
+                        <h3>Control Access to Cloud Services</h3>
+                        <ul>
+                            <li><strong>Script Generation</strong>: Automatically generates scripts for popular firewalls and web proxies to block selected services.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

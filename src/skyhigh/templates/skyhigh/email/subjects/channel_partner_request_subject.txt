@@ -1,0 +1,1 @@
+{{ app_name }} Channel Partnership requested

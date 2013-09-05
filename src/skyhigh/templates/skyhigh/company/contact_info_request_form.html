@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load honeypot %}
+
+{% block title %}Information Request{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+            <h1>Information Request</h1>
+            <h2>Please enter your details in the form below</h2>
+            <div class="content">
+                {% if not user.is_authenticated %}
+                    <p class="additional">Already have a Skyhigh Account? &nbsp; <a href="{% url login %}" class="btn_light">Sign In</a></p>
+                {% endif %}
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    <form id="frmContactMessage" action="." method="POST" class="validate_form">{% csrf_token %}
+                        <div class="note">Fields marked with <span class="blue">*</span> are required</div>
+                        <div class="field">
+                            <label for="id_first_name">First Name <span class="blue">*</span></label>
+                            {{ form.first_name }}{{ form.first_name.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_last_name">Last Name <span class="blue">*</span></label>
+                            {{ form.last_name }}{{ form.last_name.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_email">Email Address <span class="blue">*</span></label>
+                            {{ form.email }}{{ form.email.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_company">Company <span class="blue">*</span></label>
+                            {{ form.company }}{{ form.company.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_job_title">Job Title <span class="blue">*</span></label>
+                            {{ form.job_title }}{{ form.job_title.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_phone_number">Phone Number <span class="blue">*</span></label>
+                            {{ form.phone_number }}{{ form.phone_number.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_message">Request <span class="blue">*</span></label>
+                            {{ form.message }}{{ form.message.errors }}
+                        </div>
+                        {% render_honeypot_field %}
+                        <div class="buttons">
+                            <input type="submit" value="Send Information Request" />
+                            {% if not user.is_authenticated %}
+                                <p>Already have a Skyhigh account? <a href="{% url login %}">Sign In</a></p>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

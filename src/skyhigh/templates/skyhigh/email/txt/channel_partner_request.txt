@@ -1,0 +1,7 @@
+{% extends 'email/base.txt' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},
+
+You have requested to become a Channel Partner.
+{% endblock %}

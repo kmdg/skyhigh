@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Skyhigh Networks</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{ STATIC_URL }}skyhigh/splash/inc/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="wrap">
+
+    <div id="main">
+
+    	<div class="content">
+            <h1 class="logo">Skyhigh Networks</h1>
+    		<form id="frmSignup" action="." method="post">{% csrf_token %}
+    			<div class="top10">
+                    <h2>Most Innovative Company at RSA</h2>
+                    <p>Come see us at booth number 147<br />&amp; get a product demo.</p>
+                </div>
+                <div class="freepass">Get a <span class="green">FREE</span> pass to <span class="black">RSA</span></div>
+    			<div class="field">
+    				<input type="text" id="id_email" name="email" value="Enter your email address" onfocus="if (this.value == 'Enter your email address') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter your email address';}" class="field_input required email" />
+                </div>
+                <div class="field">
+    				<input type="submit" id="submit" value="Submit" class="btn" />
+    			</div>
+    		</form>
+    	</div>
+
+     <div class="footer">&copy; Copyright 2013. Skyhigh Networks. Created by <a href="http://unomena.com/" target="_blank">Unomena</a></div>   
+    </div><!--/Main-->
+
+</div><!--/Wrap-->
+<script src="{{ STATIC_URL }}skyhigh/splash/inc/jquery-1.7.2.min.js"></script>
+<script src="{{ STATIC_URL }}skyhigh/splash/inc/jquery.validate.js"></script>
+<script src="{{ STATIC_URL }}skyhigh/splash/inc/scripts.js"></script>
+</body>
+</html>

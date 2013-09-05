@@ -1,0 +1,4 @@
+#!/bin/bash
+
+openssl req -new -nodes -keyout ${crt_dir}/${server_name}.key -out ${crt_dir}/${server_name}.csr
+openssl x509 -req -days 365 -in ${crt_dir}/${server_name}.csr -signkey ${crt_dir}/${server_name}.key -out ${crt_dir}/${server_name}.crt

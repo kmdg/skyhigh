@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}State of the Cloud Report{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>State of the Cloud Report</h1>
+            <h2>Get the latest information on cloud service use</h2>
+            <div class="content">
+{% comment %}
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_company.html' %}
+                </div>
+{% endcomment %}
+                <div class="column column_full">
+                    <div class="third_full"><img src="{{ STATIC_URL }}skyhigh/img/state_1.png" />What percentage of cloud services are rated safe vs. risky?</div>
+                    <div class="third_full"><img src="{{ STATIC_URL }}skyhigh/img/state_2.png" />What are the most popular categories of cloud services in use across the enterprise?</div>
+                    <div class="third_full"><img src="{{ STATIC_URL }}skyhigh/img/state_3.png" />What are the most popular services in each category?</div>
+                    <div class="listing">
+                        <p>Skyhigh has processed the log files of over 2 million users, and now you can take a peak into the cloud with the State of the Cloud Report. To see what’s inside, request a copy here:</p>
+                        <div class="clear"></div>
+                        <div class="marketo_embed"><iframe width="822" height="450" frameborder="0" style="margin: -45px 0 -120px -195px" scrolling="no" src="http://info.skyhighnetworks.com/StateoftheCloudReport-Infographic_RegistrationPage.html"></iframe></div>
+                        <p><img src="{{ STATIC_URL }}skyhigh/img/state_of_the_cloud.png" class="align-right sotc" /></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

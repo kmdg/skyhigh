@@ -1,0 +1,12 @@
+{% extends 'email/base.html' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},<br/>
+<br/>
+Your account has been successfully activated.<br /><br />
+
+Your username is: {{ user.username }}<br /><br />
+
+Please click <a href="http://{{ site }}/secure/accounts/reset/{{ uid }}-{{ token }}/" style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #3399cc;">here</a> to reset your password.<br />
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Confirm Delete{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Are you sure you want to delete this object?</h1>
+            <div class="content">
+                <h2>{{ object }}</h2>
+                <form action="." method="POST">{% csrf_token %}
+                    <input type="hidden" name="pk" value="{{ object.pk }}"/>
+                    <a href="javascript:history.go(-1);" class="link btn_light console-btn">Cancel</a>
+                    <input type="submit" class="link btn_light console-btn" value="Confirm"/>
+                </form>
+                <p>&nbsp;</p>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

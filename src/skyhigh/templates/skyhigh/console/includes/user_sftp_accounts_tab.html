@@ -1,0 +1,19 @@
+{% for sftp_account in object.sftp_user_accounts.all %}
+	<div class="content tab_content" id="sftp">
+	    <table>
+	        <tr>
+	            <th width="80">SFTP Username</th>
+	            <td>{{ sftp_account.username }}</td>
+	        </tr>
+	        <tr>
+	            <th width="120">SFTP Password</th>
+	            <td>{{ sftp_account.password }}</td>
+	        </tr>
+	    </table>
+	</div><!--/content-->
+	<div class="clear"></div><br />
+{% empty %}
+	<div class="content tab_content" id="sftp">
+        <p>This user has no SFTP accounts<p>
+    </div><!--/content-->
+{% endfor %}

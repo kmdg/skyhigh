@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load honeypot %}
+
+{% block title %}Registration{% endblock %}
+
+{% block messages %}<div></div>{% endblock %}
+
+{% block content %}
+    
+    <div class="section">
+        <div class="container form">
+            <h1>Register</h1>
+            <h2>Please enter your details in the form below</h2>
+            <div class="content">
+                <p class="additional">Already have a Skyhigh Account? &nbsp; <a href="{% url login %}" class="btn_light">Sign In</a></p>
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    <div class="widget">
+                        <h3>Need help?</h3>
+                        <p>General Questions:</p>
+                        <p><a href="mailto:info@skyhighnetworks.com">info@skyhighnetworks.com</a></p>
+                        <p>Contact Support:</p>
+                        <p><a href="mailto:support@skyhighnetworks.com">support@skyhighnetworks.com</a></p>
+                        <p>Contact Sales:</p>
+                        <p><a href="sales:sales@skyhighnetworks.com">sales@skyhighnetworks.com</a></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <p style="margin-top: 0px;">If you would like to receive our newsletter or request a product evaluation, please fill out this form to register on our website.
+		               For technical partnerships, please visit <a href="{% url partners_overview %}">Partnerships</a> and for any general questions, please contact <a href="mailto:sales@skyhighnetworks.com">sales@skyhighnetworks.com</a>
+		            </p>
+                    <form id="frmRegister" action="." method="POST" class="validate_form">{% csrf_token %}
+                    	{{ form.search_string }}
+                    	{{ form.search_engine }}
+                    	{{ form.pay_per_click_keyword }}
+                        <div class="note">Fields marked with <span class="blue">*</span> are required</div>
+                        <div class="field">
+                            <label for="id_first_name">First Name <span class="blue">*</span></label>
+                            {{ form.first_name }}{{ form.first_name.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_last_name">Last Name <span class="blue">*</span></label>
+                            {{ form.last_name }}{{ form.last_name.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_email">Email Address <span class="blue">*</span></label>
+                            {{ form.email }}{{ form.email.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_company">Company <span class="blue">*</span></label>
+                            {{ form.company }}{{ form.company.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_job_title">Job Title</label>
+                            {{ form.job_title }}{{ form.job_title.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_password1">Password <span class="blue">*</span></label>
+                            {{ form.password1 }}{{ form.password1.errors }}
+                        </div>
+                        <div class="field">
+                            <label for="id_password2">Confirm Password <span class="blue">*</span></label>
+                            {{ form.password2 }}{{ form.password2.errors }}
+                        </div>
+                        <div class="field half_width">
+                            <label for="id_request_evaluation">Request a free evaluation</label>
+                            {{ form.request_evaluation }}
+                        </div>
+                        {% render_honeypot_field %}
+                        <div class="buttons">
+                            <input type="submit" value="Create an Account" />
+                            <p>Already have a Skyhigh account? <a href="{% url login %}">Sign In</a></p>
+                        </div>
+                        <div class="footnote">By signing up, you agree to our <a href="/terms/">Terms of Use</a> and <a href="/privacy/">Privacy Policy</a></div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block bottom_js %}
+	{% include 'includes/ga_remarketing_scripts.html' %}
+{% endblock %}
+
+{% block extra_tracking_js %}
+<script type="text/javascript" src="//formalyzer.com/formalyze_init.js"></script> 
+<script type="text/javascript" src="//formalyzer.com/formalyze_call.js"></script> 
+{% endblock %}

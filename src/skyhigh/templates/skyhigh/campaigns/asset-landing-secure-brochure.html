@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Skyhigh Secure Datasheet{% endblock %}
+{% block meta_description %}Skyhigh Secure is the only comprehensive solution for securing corporate data in the cloud. With Skyhigh Secure, IT organizations enable lines of business to securely adopt cloud services by addressing cloud data security risks.{% endblock %}
+
+{% block landing_class %}class="landing"{% endblock %}
+
+{% block header %}
+	<div class="container">
+	    <a href="/" class="logo">Skyhigh Networks | Cloud Usage Monitoring</a>
+	</div>
+{% endblock %}
+
+{% block landing_nav %}{% endblock %}
+
+{% block content %}
+
+    <div class="section">
+        <div class="container form_full_site">
+            <h1>Skyhigh Secure Datasheet</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="widget">
+                        <h2>Download Now</h2>
+                        <div class="marketo_embed"><iframe width="576" height="435" frameborder="0" style="margin: -10px 0 0 -240px;"  scrolling="no" src="http://info.skyhighnetworks.com/SkyhighSecuredatasheet.html"></iframe></div>
+                   </div>
+                </div>
+				<div class="column">
+					<div class="column_float column_shorter">
+						<img src="{{ STATIC_URL }}skyhigh/img/thumb_skyhigh_networks_secure_brochure_v4.png" alt="Secure Datasheet" class="image_square" />
+					</div>
+					<p>Skyhigh Secure is the only comprehensive solution for securing corporate data in the cloud. With Skyhigh Secure, IT organizations enable lines of business to securely adopt cloud services by addressing cloud data security risks.</p>
+					<p>Download this datasheet and learn how Skyhigh Secure can help your organization deploy a virtual “cloud edge” that consistently and transparently enforces security, privacy, and regulatory policies on corporate data stored in cloud services.</p>				
+					<div class="socials">
+					    <span title='Delicious' class='st_delicious_large' displayText='Delicious'></span>
+				        <span title='Digg' class='st_diigo_large' displayText='Diigo'></span>
+				        <span title='Facebook' class='st_facebook_large' displayText='Facebook'></span>
+				        <span title='Twitter' class='st_twitter_large' displayText='Tweet'></span>
+				        <span title='LinkedIn' class='st_linkedin_large' displayText='LinkedIn'></span>
+				        <span title='Pinterest' class='st_pinterest_large' displayText='Pinterest'></span>
+				        <span title='Google Plus' class='st_googleplus_large' displayText='Google +'></span>
+				        <span title='Reddit' class='st_reddit_large' displayText='Reddit'></span>
+				        <span title='StumbleUpon' class='st_stumbleupon_large' displayText='StumbleUpon'></span>
+					</div>
+				</div><!--/column-->
+            </div><!--/content-->
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block landing_footer %}
+
+	<div class="footer">
+	    <div class="container">
+	        <p class="legal">Copyright &copy; 2013 Skyhigh Networks</p>
+	        <p class="connect">
+                <a href="http://www.facebook.com/pages/Skyhigh-Networks/179236572223050?ref=ts&fref=ts" class="fb">Skyhigh on Facebook</a>                
+                <a href="https://twitter.com/SkyhighNetworks" class="tw">Skyhigh on Twitter</a>                
+            </p>	        
+	    </div>
+	</div><!--/footer-->
+        
+{% endblock %}
+
+{% block bottom_js %}
+    {% include 'unobase/commenting/comment_script.html' %}
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ed2330ac-a311-4a43-8879-41e85bd1a870", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+{% endblock %}
+
+{% block livechat %}{% endblock %}

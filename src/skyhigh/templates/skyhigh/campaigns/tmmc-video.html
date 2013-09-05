@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+            <h1>View the On-Demand Webinar</h1>
+            <h2>30-in-30: How Torrance Memorial Uncovered Unknown Cloud Services</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    <img src="{{ STATIC_URL }}skyhigh/img/todd_felker.jpg" class="image_thumb" />
+                    <p class="center"><strong>Speaker: Todd Felker, Infrastructure &amp; Security Architect</strong></p>
+                    <img src="{{ STATIC_URL }}skyhigh/img/30_torrance.png" />
+                </div>
+                <div class="column">
+                    <a href="/product/evaluation/30-in-30/tmmc/video/" class="open_pop"><img src="{{ STATIC_URL }}skyhigh/img/webinar_3030_tmmc.png" class="image_third" /></a>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

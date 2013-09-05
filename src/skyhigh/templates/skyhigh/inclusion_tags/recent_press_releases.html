@@ -1,0 +1,12 @@
+{% if objects %}
+<div class="events">
+    <h3>Press Releases</h3>
+    {% for object in objects %}
+    <div class="item">
+        <p class="date">{{ object.publish_date_time|date:'j F Y' }}</p>
+        <p class="desc">{{ object.title }}</p>
+        <a href="{% url media_press_releases_detail object.pk %}">Read more</a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}

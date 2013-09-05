@@ -1,0 +1,34 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Cloud Service Provider Attributes{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>{% if form.instance.id %}Edit{% else %}Add{% endif %} Cloud Service Provider Attributes</h1>
+            <div class="form">
+                <form id="frmNewCSPAttributes" action="." method="POST">
+                    {% csrf_token %}
+
+                    {% if form.instance.id %}
+
+                    <div class="row">
+                        <div class="field">
+                            <label>Title</label>
+                            <div>{{ form.title }}{{ form.title.errors }}</div>
+                        </div>
+                    </div>
+
+                    {% endif %}
+
+                    <div class="buttons">
+                        <input type="submit" id="submit" value="{% if not form.instance.id %}Create{% else %}Update{% endif %} Partner" class="btn" />
+                    </div>
+                
+                    <div class="clear"></div>
+                </form>
+            </div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

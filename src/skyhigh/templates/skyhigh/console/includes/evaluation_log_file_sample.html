@@ -1,0 +1,11 @@
+<div class="content tab_content" id="log">
+	{% if object.evaluation_request.log_file_sample %}
+		{% include 'includes/message_error_header.html' %}
+		<textarea readonly="readonly" class="log">{{ object.evaluation_request.log_file_sample }}</textarea>
+		<div class="clear"></div><br />
+		<a class="link btn_light" href="{% url console_usage_evaluator_log_file_sample_export object.pk %}">Download Log File</a>
+		<a class="link btn_light" href="{% url console_usage_evaluator_resend_log_file_sample_email object.pk %}">Resend Email</a>
+	{% else %}
+		<p>There are no Evaluation Log File Samples for this user</p>
+	{% endif %}
+</div>

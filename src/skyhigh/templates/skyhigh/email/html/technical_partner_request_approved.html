@@ -1,0 +1,7 @@
+{% extends 'email/base.html' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},<br/>
+<br/>
+Your request to become a Technical Partner has been approved.<br/>
+{% endblock %}

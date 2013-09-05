@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form form_full_site">
+            <h1>My Profile</h1>
+            <h2>Please update your details in the form below</h2>
+            <div class="content">
+                <div class="column column_full">
+                	{% include 'includes/message_error_header.html' %}
+                    <form id="frmMyProfile" action="." method="POST" class="validate_form">
+                    	{% csrf_token %}
+                        <div class="note">Fields marked with <span class="blue">*</span> are required</div>
+                        <div class="row">
+	                        <div class="field field-half">
+	                            <label for="id_first_name">Title</label>
+	                            {{ form.title }}{{ form.title.errors }}
+	                        </div>
+                        </div>
+                        <div class="row">
+                        	<div class="field field-half">
+	                            <label for="id_first_name">First Name <span class="blue">*</span></label>
+	                            {{ form.first_name }}{{ form.first_name.errors }}
+	                        </div>
+	                        <div class="field field-half align-right">
+	                            <label for="id_last_name">Last Name <span class="blue">*</span></label>
+	                            {{ form.last_name }}{{ form.last_name.errors }}
+	                        </div>
+                        </div>
+                        <div class="row">
+                        	<div class="field field-half">
+	                            <label for="id_email">Email Address <span class="blue">*</span></label>
+	                            {{ form.email }}{{ form.email.errors }}
+	                        </div>
+	                        <div class="field field-half align-right">
+	                            <label for="id_company">Mobile Number</label>
+	                            {{ form.mobile_number }}{{ form.mobile_number.errors }}
+	                        </div>
+                        </div>
+                        <div class="row">
+                        	<div class="field field-half">
+	                            <label for="id_company">Phone Number</label>
+	                            {{ form.phone_number }}{{ form.phone_number.errors }}
+	                        </div>
+	                        <div class="field field-half align-right">
+	                            <label for="id_zip_postal_code">Zip Code</label>
+	                            {{ form.zip_postal_code }}{{ form.zip_postal_code.errors }}
+	                        </div>
+                        </div>
+                        <div class="row">
+                        	<div class="field field-half">
+	                            <label for="id_company">Company</label>
+	                            {{ form.company }}{{ form.company.errors }}
+	                        </div>
+	                        <div class="field field-half align-right">
+	                            <label for="id_job_title">Job Title</label>
+	                            {{ form.job_title }}{{ form.job_title.errors }}
+	                        </div>
+                        </div>
+                        <div class="row">
+                        	<div class="field field-half">
+	                            <label for="id_website">Website</label>
+	                            {{ form.website }}{{ form.website.errors }}
+	                        </div>
+	                        <div class="field field-half align-right">
+	                            <label for="id_industry">Industry</label>
+	                            {{ form.industry }}{{ form.industry.errors }}
+	                        </div>
+                        </div>
+                        <div class="row">
+                        	<div class="field field-half">
+	                            <label for="id_num_employees">Number of Employees</label>
+	                            {{ form.num_employees }}{{ form.num_employees.errors }}
+	                        </div>
+	                        <div class="field field-half align-right">
+	                            <label for="id_heard_about_from">Where did you hear about us?</label>
+	                            {{ form.heard_about_from }}{{ form.heard_about_from.errors }}
+	                        </div>
+                        </div>
+                        {% if form.instance.is_partner %}
+                        	<div class="row">
+                        		<div class="field field-half">
+		                            <label for="id_num_branches">Number of Branches</label>
+		                            {{ form.num_branches }}{{ form.num_branches.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_branch_offices">Branch Offices</label>
+		                            {{ form.branch_offices }}{{ form.branch_offices.errors }}
+		                        </div>
+                        	</div>
+                        	<div class="row">
+                        		<div class="field field-half">
+		                            <label for="id_countries_requesting_to_sell_in">Countries you are requesting to sell in</label>
+		                            {{ form.countries_requesting_to_sell_in }}{{ form.countries_requesting_to_sell_in.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_us_states_requesting_to_sell_in">US States requesting to sell in</label>
+		                            {{ form.us_states_requesting_to_sell_in }}{{ form.us_states_requesting_to_sell_in.errors }}
+		                        </div>
+                        	</div>
+                        	<div class="row">
+                        		<div class="field field-half">
+		                            <label for="id_annual_revenue">Annual Revenue</label>
+		                            {{ form.annual_revenue }}{{ form.annual_revenue.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_years_in_business">Years in Business</label>
+		                            {{ form.years_in_business }}{{ form.years_in_business.errors }}
+		                        </div>
+                        	</div>
+                        	<div class="row">
+                        		<div class="field field-half">
+		                            <label for="id_num_sales_reps">Number of Sales Reps</label>
+		                            {{ form.num_sales_reps }}{{ form.num_sales_reps.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_num_systems_engineers">Number of Systems Engineers</label>
+		                            {{ form.num_systems_engineers }}{{ form.num_systems_engineers.errors }}
+		                        </div>
+	                        </div>
+                        	<div class="row">
+		                        <div class="field field-half">
+		                            <label for="id_num_technical_support_staff">Number of Technical Support Staff</label>
+		                            {{ form.num_technical_support_staff }}{{ form.num_technical_support_staff.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_business_type">Business Type</label>
+		                            {{ form.business_type }}{{ form.business_type.errors }}
+		                        </div>
+	                        </div>
+                        	<div class="row">
+		                        <div class="field field-half">
+		                            <label for="id_preferred_distributor">Preferred Distributor</label>
+		                            {{ form.preferred_distributor }}{{ form.preferred_distributor.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_target_vertical_focus">Target Vertical Focus</label>
+		                            {{ form.target_vertical_focus }}{{ form.target_vertical_focus.errors }}
+		                        </div>
+	                        </div>
+                        	<div class="row">
+		                        <div class="field field-half">
+		                            <label for="id_resell_to_usa_federal_sectors">Resell to USA Federal Sectors</label>
+		                            {{ form.resell_to_usa_federal_sectors }}{{ form.resell_to_usa_federal_sectors.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_offer_own_support">Offer Own Support</label>
+		                            {{ form.offer_own_support }}{{ form.offer_own_support.errors }}
+		                        </div>
+	                        </div>
+                        	<div class="row">
+		                        <div class="field field-half">
+		                            <label for="id_manufacturers_selling">Manufacturers Selling</label>
+		                            {{ form.manufacturers_selling }}{{ form.manufacturers_selling.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_leading_competitors">Leading Competitors</label>
+		                            {{ form.leading_competitors }}{{ form.leading_competitors.errors }}
+		                        </div>
+	                        </div>
+                        	<div class="row">
+		                        <div class="field field-half">
+		                            <label for="id_representitive">Representitive</label>
+		                            {{ form.representitive }}{{ form.representitive.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_vat_number">VAT Number</label>
+		                            {{ form.vat_number }}{{ form.vat_number.errors }}
+		                        </div>
+	                        </div>
+                        	<div class="row">
+		                        <div class="field field-half">
+		                            <label for="id_gst_number">GST Number</label>
+		                            {{ form.gst_number }}{{ form.gst_number.errors }}
+		                        </div>
+		                        <div class="field field-half align-right">
+		                            <label for="id_tax_id_number">Tax ID Number</label>
+		                            {{ form.tax_id_number }}{{ form.tax_id_number.errors }}
+		                        </div>
+	                        </div>
+                        	<div class="row">
+		                        <div class="field field-half">
+		                            <label for="id_d_and_b_number">D&amp;B Number</label>
+		                            {{ form.d_and_b_number }}{{ form.d_and_b_number.errors }}
+		                        </div>
+	                        </div>
+                        {% endif %}
+
+
+                        <div class="row">
+                        	<div class="field field-half">
+	                            <label for="id_requests_or_comments">Requests or Comments</label>
+	                            {{ form.requests_or_comments }}{{ form.requests_or_comments.errors }}
+	                        </div>
+	                        {% if form.instance.is_partner %}
+		                        <div class="field field-half align-right">
+		                            <label for="id_additional_comments">Additional Comments</label>
+		                            {{ form.additional_comments }}{{ form.additional_comments.errors }}
+		                        </div>
+	                        {% endif %}
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" value="Update my Details" class="mini" />
+                            <a class="mini marg-left smaller" href="{% url my_profile_sftp_account_list %}">Update SFTP Accounts</a>
+                            {% if form.instance.is_cloud_service_provider %}
+                                <a class="mini marg-left smaller" href="{% url my_profile_csp_attributes_update_step step='data' %}">Update My CSP Attributes</a>
+                            {% endif %}
+                            {% if form.instance.is_product_evaluator %}
+                                <a class="mini marg-left smaller" href="{% url my_profile_log_file_sample_upload %}">Upload Sample Log File</a>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

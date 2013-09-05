@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load unobase_tags blog_widgets %}
+
+{% block title %}{{ object.title }} | {{ object.blog.title }}{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>{{ object.blog.title }}</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing rich">
+                        <h3>{{ object.title }}</h3>
+                        {% if object.get_200x200_url %}
+                        <img src="{{ object.get_200x200_url }}" class="image_thumb" />
+                        {% endif %}
+                        <p class="date">{{ object.publish_date_time|date:'j F Y' }}</p>
+                        <p><strong>Author: {{ object.created_by.display_name }}</strong></p>
+                        {{ object.content|safe }}
+                        {% tag_list object %}
+                        <p>Share:</p>
+                        <span title='Delicious' class='st_delicious_large' displayText='Delicious'></span>
+                        <span title='Digg' class='st_diigo_large' displayText='Diigo'></span>
+                        <span title='Facebook' class='st_facebook_large' displayText='Facebook'></span>
+						<span title='Twitter' class='st_twitter_large' displayText='Tweet'></span>
+						<span title='LinkedIn' class='st_linkedin_large' displayText='LinkedIn'></span>
+						<span title='Pinterest' class='st_pinterest_large' displayText='Pinterest'></span>
+						<span title='Google Plus' class='st_googleplus_large' displayText='Google +'></span>
+						<span title='Reddit' class='st_reddit_large' displayText='Reddit'></span>
+						<span title='StumbleUpon' class='st_stumbleupon_large' displayText='StumbleUpon'></span>
+                    </div>
+                    <div class="back_to_list"><a href="{% url blog_detail object.blog.slug %}" class="btn btn_light">&laquo; Back To Blog</a></div>
+                </div>
+                <div class="column">
+                    {% block comments %}
+                        {% include 'unobase/commenting/comment_block.html' %}
+                    {% endblock %}
+                </div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block bottom_js %}
+    {% include 'unobase/commenting/comment_script.html' %}
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "ed2330ac-a311-4a43-8879-41e85bd1a870", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+{% endblock %}
+
+{% block livechat %}{% endblock %}

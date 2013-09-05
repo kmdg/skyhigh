@@ -1,0 +1,12 @@
+{% extends 'email/base.txt' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},
+
+Your account has been successfully activated.
+
+Your username is: {{ user.username }}
+
+Please visit http://{{ site }}/secure/accounts/reset/{{ uid }}-{{ token }}/ to reset your password.
+
+{% endblock %}

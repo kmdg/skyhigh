@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Category{% endblock %}
+
+{% block content %}
+<script type="text/javascript" src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>
+<div class="section">
+    <div class="container form form_full">
+        <h1>{% if form.instance.id %}Edit{% else %}Create{% endif %} Category</h1>
+        <a href="javascript: history.back(-1);" class="link btn_light btn_action">Back To List</a>
+        <div class="content">
+            <div class="column column_full">
+                <div class="form">
+                    <form id="frmNewForumCategory" action="." method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.modified_by }}
+                        {{ form.created_by }}
+                        {{ form.state }}
+                        {{ form.forum }}
+
+                        <div class="row">
+                            <div class="field">
+                                <label>Title</label>
+                                <div>{{ form.title }}{{ form.title.errors }}</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field">
+                                <label>Content</label>
+                                <div class="clear"></div>
+                                <div class="editor">{{ form.content }}{{ form.content.errors }}</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field">
+                                <label>Tags <span>Separate tags with commas e.g.: "Tag 1, Tag 2, Tag 3".</span></label>
+                                <div>{{ form.comma_seperated_tags }}{{ form.comma_seperated_tags.errors }}</div>
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <input type="submit" id="submit" value="{% if not form.instance.id %}Create{% else %}Update{% endif %} Category" class="btn" />
+                        </div>
+
+                        <div class="clear"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!--/content-->
+</div>
+</div>
+{% endblock %}

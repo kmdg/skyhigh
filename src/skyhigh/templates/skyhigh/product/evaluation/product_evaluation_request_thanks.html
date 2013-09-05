@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Evaluation Request{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form_full_site">
+            <h1>Product Evaluation Request Submitted</h1>
+            <h2>Thank you for your evaluation request.  Please check your email to confirm your registration details. </h2>
+            <h2>Following the confirmation of registration details, we will contact you shortly to initiate your no cost Skyhigh Cloud Discovery and Risk Assessment.  </h2>
+{% comment %}
+            {% if not request.user.is_authenticated %}
+            	<h2>What happens now?</h2>
+            	<p>A registration confirmation email was sent to the email address you entered on the previous page. The email contains a link to a web page to confirm your registration.</p>
+            {% endif %}
+{% endcomment %}
+        </div>
+    </div>
+{% endblock %}

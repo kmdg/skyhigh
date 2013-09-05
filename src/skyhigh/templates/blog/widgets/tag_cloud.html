@@ -1,0 +1,9 @@
+{% load blog_tags %}
+
+<div class="widget">
+    <h3>Tag Cloud</h3>
+    {% for tag in tags %}
+        <a href="{% url blog_detail blog_slug %}?filter_by_tag={{ tag.title }}" class="tag"><span class="tag_l tag_size-{% get_tag_size tag %}"></span><span>{{ tag.title }}</span><span class="tag_r"></span></a>
+    {% endfor %}
+    <a href="{% url blog_detail blog_slug %}" class="tag"><span class="tag_l"></span><span>All tags</span><span class="tag_r"></span></a>
+</div>

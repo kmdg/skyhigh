@@ -1,0 +1,7 @@
+{% extends 'email/base.txt' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},
+
+You have been evaluating our product for 30 days and your evaluation period has now expired.
+{% endblock %}

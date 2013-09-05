@@ -1,0 +1,43 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Messages{% endblock %}
+
+{% block content %}
+    <script type="text/javascript" src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>
+    <div class="section">
+        <div class="container console">
+            <h1>From: {{ object.user.first_name }} {{ object.user.last_name }}</h1>
+            <br class="clear">
+
+            <a class="{% ifequal label 'inbox' %}active{% endifequal %}" href="{% url console_messages 'inbox' %}">Inbox</a>
+            <a class="{% ifequal label 'read' %}active{% endifequal %}" href="{% url console_messages 'read' %}">Read</a>
+            <a class="{% ifequal label 'unread' %}active{% endifequal %}" href="{% url console_messages 'unread' %}">Unread</a>
+            <a class="{% ifequal label 'responded' %}active{% endifequal %}" href="{% url console_messages 'responded' %}">Responded</a>
+
+            <div class="column column_full">
+                <div class="listing listing_full">
+                    <p><strong>{{ object.user.email }}</strong></p>
+                    <div>{{ object.message|safe }}</div>
+                    <br class="clear">
+                    <h1>Reply to: {{ object.user.email }}</h1>
+                    <br class="clear">
+                    <p><strong>From: support@skyhighnetworks.com</strong></p>
+                    <p><strong>Subject: Skyhighnetworks.com - Response to contact</strong></p>
+                    <form id="frmMessageReply" action="." method="POST">
+                        {% csrf_token %}
+                        <p>{{ form.from_address }}</p>
+                        <p>{{ form.to_address }}</p>
+                        <p>{{ form.message }}</p>
+                        <div class="buttons">
+                            <input type="submit" id="submit" value="Send" class="btn" />
+                        </div>
+
+                        <div class="clear"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

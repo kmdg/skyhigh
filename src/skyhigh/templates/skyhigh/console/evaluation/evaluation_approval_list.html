@@ -1,0 +1,74 @@
+{% extends 'skyhigh/console/base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Evaluation Approval{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="container console">
+        <h1>Evaluation Approval</h1>
+        <a href="javascript: void(0);" class="link toggle-filter">Toggle Filter</a>
+        <div class="form filter">
+            <form id="frmPendingEvaluatorFilter" action="." method="GET">
+                <div class="row">
+                    <div class="field field-half">
+                        <label>First Name</label>
+                        <div class="clear"></div>
+                        {{ filter_form.first_name }}{{ filter_form.first_name.errors }}
+                    </div>
+                    <div class="field field-half align-right">
+                        <label>Last Name</label>
+                        <div class="clear"></div>
+                        {{ filter_form.last_name }}{{ filter_form.last_name.errors }}
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <div class="clear"></div>
+                        {{ filter_form.email }}{{ filter_form.email.errors }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="buttons">
+                        <input type="submit" id="submit" value="Filter" class="btn" />
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+        <div class="content">
+            <div class="column column_full">
+                <div class="listing listing_full">
+                    <table>
+                        <tr>
+                            <thead>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email Address</th>
+                                <th>Log File Sample</th>
+                                <th>Request Date</th>
+                                <th></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr>
+                                <td><a href="{% url console_approvals_evaluation_detail object.pk %}">{{ object.user.first_name }}</a></td>
+                                <td>{{ object.user.last_name }}</td>
+                                <td>{{ object.user.email }}</td>
+                                <td>{% if object.log_file_sample %}Yes{% else %}No{% endif %}</td>
+                                <td>{{ object.request_date }}</td>
+                                <td><a id="evaluation_approve_link" href="{% url console_approvals_evaluation_action 'approve' object.user.id %}" class="link">Approve</a><br /><a id="evaluation_decline_link" href="{% url console_approvals_evaluation_action 'decline' object.user.id %}" class="link">Decline</a></td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="5">Sorry, there were no pending evaluation approvals found</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    {% pagination page_obj %}
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div><!--/content-->
+    </div>
+</div>
+{% endblock %}

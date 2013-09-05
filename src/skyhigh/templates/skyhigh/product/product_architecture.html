@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Product Architecture{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Product Architecture</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_product.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <p>The three main externally facing components of the Skyhigh solution are the Skyhigh Dashboard, the Skyhigh CloudFlow&trade; Gateway, and the Log Collector.</p>
+                        <a href="{{ STATIC_URL }}skyhigh/img/architecture.png" class="open_pop"><img src="{{ STATIC_URL }}skyhigh/img/architecture.png" width="300" class="image_full align-right marg-left shadow" /></a>
+                        <p><strong>Skyhigh Dashboard:</strong> This is the central multi-tenant, cloud hosted, management console from which customers can discover, analyze, and control cloud traffic. Built on top of a core set of infrastructure engines the Skyhigh dashboard scales horizontally and supports state-of-the-art security with RBAC, IPS, encryption, and regular pentesting.</p>
+                        <p><strong>Skyhigh CloudFlow&trade; Gateway:</strong> Built ground-up as a cloud-ready multi-tenant reverse proxy, this Gateway isolates each tenant traffic through a virtual host, logs all traffic flow, and supports a multi-layer functional blade architecture for adding data-path control tasks to be executed either per-flow or per-request. Additionally, the CloudFlow&trade; Gateway has a patent-pending approach to steer cloud traffic seamlessly through the reverse proxy with zero client footprint and with no changes to the enterprise-ready Cloud Services. The Gateway is cloud hosted across multiple geographies. The CloudFlow&trade; Gateway also comes in a virtual appliance form factor for an optional on-premise or hybrid deployment.</p>
+                        <p><strong>Log Collector:</strong> This is a high performant log processing engine that can consume logs from all major egress devices, any custom format with the use of a mapping utility, and semantically mapped activity logs from the CloudFlow&trade; Gateway. The logs themselves are highly compressed and the Collector is horizontally scaled to handle tera-byte log feeds everyday.</p>
+                        <p>Skyhigh infrastructure engines:</p>
+                        <ul>
+                            <li><strong>Policy Engine:</strong> This engine is responsible for managing the lifecycle and run-time execution of tenant-specific policies configured from the Dashboard. Policies themselves are context- and content-aware and support a flexible attribute-based model that can be used for both per-flow and per-transaction control.</li>
+                            <li><strong>Map Reduce Engine:</strong> Based on a highly scalable hadoop and elastic search infrastructure, this engine is responsible for performing core statistical and behavioral anomaly detection for all cloud traffic flow through the Skyhigh CloudFlow&trade; Gateway, or from traffic logs obtained from on-premise egress devices (such as firewalls and web proxies).</li>
+                            <li><strong>Keys:</strong> Based on the OASIS KMIP standard, Skyhigh optionally manages enterprise keys in the cloud, or can act as a KMIP client to a KMIP server that may be deployed in a customer premise. These keys are used for many purposes, including enabling the CloudFlow&trade; Gateway to encrypt data with enterprise managed keys.</li>
+                            <li><strong>CloudRisk&trade;:</strong> A proprietary risk scoring engine, the CloudRisk&trade; engine uses a risk scoring mechanism to dynamically score the risk of each Cloud Service based on more than 30 properties of the service which directly impact the risk of using the service in the context of enterprise controls. The CloudRisk&trade; engine also generates tenant-specific suggestions to reduce risk with compensating controls.</li>
+                            <li><strong>CloudRegistry&trade;:</strong> A proprietary registry of more than 2,000 cloud services (and growing), this registry contains detailed intelligence about each service including risk associated with how the service manages data, identifies users, controls mobile devices, provides business transparency, and accepts legal risks of the use of the service.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

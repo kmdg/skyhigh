@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}SFTP Account List{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>My SFTP Account List</h1>
+            <a href="{% url my_profile %}" class="link btn_light">Back To My Profile</a>
+            <div class="column column_full">
+                <div class="listing listing_full">
+
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">Username</th>
+                                <th width="60"></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr>
+                                <td>{{ object.username }}</td>
+                                <td><a href="{% url my_profile_sftp_account object.pk %}" class="link">Edit</a></td>
+                            </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="2">Sorry, there are no items to list</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

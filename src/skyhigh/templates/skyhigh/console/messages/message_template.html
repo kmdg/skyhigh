@@ -1,0 +1,27 @@
+<p>
+    Dear <strong>{{ contact_message.user.first_name }} {{ contact_message.user.last_name }}</strong>,<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    Regards,<br />
+    <br />
+    <a href="mailto:support@skyhighnetworks.com">support@skyhighnetworks.com</a><br />
+    <br />
+    <br />
+    _______________________________________________________________________<br />
+    <br />
+    <strong>To: <a href="mailto:support@skyhighnetworks.com">support@skyhighnetworks.com</a><br />
+        From: <a href="mailto:{{ contact_message.user.email }}">{{ contact_message.user.email }}</a></strong><br />
+    <br />
+    {{ contact_message.message|safe }}<br />
+    <br />
+    _______________________________________________________________________<br />
+    <br />
+    Skyhigh Networks, Inc. 2465 Cristo Rey Place, Los Altos, CA 94024<br />
+    <br />
+    Any information that you provide to Skyhigh Networks will be treated in accordance with our Privacy Policy available at http://skyhighnetworks.com/privacy<br />
+    &nbsp;
+</p>

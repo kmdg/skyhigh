@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block messages %}<div></div>{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Successful registration!</h1>
+            <h2>What happens now?</h2>
+            <p>A registration confirmation email was sent to the email address you entered on the previous page. The email contains a link to a web page to confirm your registration.</p>
+            <h4>This page will redirect shortly.</h4>
+        </div>
+    </div>
+{% endblock %}
+
+{% block bottom_js %}
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            setTimeout(function() {
+                  window.location.href = "{% url index %}";
+            }, 7500);
+        });
+    </script>
+{% endblock %}

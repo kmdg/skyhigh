@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}New Case{% endblock %}
+
+{% block content %}
+<script type="text/javascript" src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>
+<div class="section">
+    <div class="container form form_full">
+        <h1>Submit a new Case</h1>
+        <div class="content">
+            <div class="column column_full">
+                <form id="frmNewCase" action="." method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.modified_by }}
+                    {{ form.created_by }}
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Type</label>
+                            <div>{{ form.type }}{{ form.type.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Priority</label>
+                            <div>{{ form.priority }}{{ form.priority.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Reason</label>
+                            <div>{{ form.reason }}{{ form.reason.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Subject</label>
+                            <div>{{ form.title }}{{ form.title.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label>Description</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.content }}{{ form.content.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label>Tags <span>Separate tags with commas e.g.: "Tag 1, Tag 2, Tag 3".</span></label>
+                            <div>{{ form.comma_seperated_tags }}{{ form.comma_seperated_tags.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <input type="submit" id="submit" value="Submit Case" class="btn" />
+                    </div>
+
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </div>
+    </div><!--/content-->
+</div>
+</div>
+{% endblock %}

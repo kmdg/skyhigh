@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Resources of Skyhigh Networks{% endblock %}
+{% block meta_description %}{% endblock %}
+
+{% block content %}
+    <div class="section white resources">
+        <div class="container">
+            <div class="content">
+                <div class="sidebar white">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_resources.html' %}
+                </div>
+                <div class="column">
+            		<h1>Resources</h1>
+                    <h2 class="yellow featured">Featured Resource</h2>
+                    {% if featured_resource %}
+	                    <div class="listing featured">
+	                        <a href="{{ featured_resource.resource_url }}"><img src="{{ featured_resource.get_94x117_url }}" class="image_third image_square" /></a>
+	                        <a href="{{ featured_resource.resource_url }}"><h3>{{ featured_resource.title }}</h3></a>
+	                        <p>{{ featured_resource.description|safe }}</p>
+	                    </div>
+                    {% else %}
+                    	<div class="listing featured">
+                    		<p>No featured resources selected</p>
+                    	</div>
+                    {% endif %}
+                    <h2 class="yellow">Whitepapers</h2>
+                    {% for whitepaper in whitepapers %}
+	                    <div class="listing">
+	                        <a href="{{ whitepaper.external_link }}"><img src="{{ whitepaper.get_73x90_url }}" class="image_third image_square" /></a>
+	                        <a href="{{ whitepaper.external_link }}"><h3>{{ whitepaper.title }}</h3></a>
+	                        <p>{{ whitepaper.description|safe }}</p>
+	                    </div>
+	                {% empty %}
+	                	<div class="listing">
+	                		<p>No whitepapers loaded</p>
+	                	</div>
+	                {% endfor %}
+                    <h2 class="yellow">Datasheets</h2>
+                    {% for datasheet in datasheets %}
+	                    <div class="listing">
+	                        <a href="{{ datasheet.external_link }}"><img src="{{ datasheet.get_73x90_url }}" class="image_third image_square" /></a>
+	                        <a href="{{ datasheet.external_link }}"><h3>{{ datasheet.title }}</h3></a>
+	                        <p>{{ datasheet.description|safe }}</p>
+	                    </div>
+	                {% empty %}
+	                	<div class="listing">
+	                		<p>No datasheets loaded</p>
+	                	</div>
+	                {% endfor %}
+	                {% comment %}
+                    <h2 class="yellow">Videos</h2>
+                    {% for video in videos %}
+	                    <div class="listing">
+	                        <a href="{{ video.external_link }}"><img src="{{ video.get_140x90_url }}" class="image_third image_square" /></a>
+	                        <a href="{{ video.external_link }}"><h3>{{ video.title }}</h3></a>
+	                        <p>{{ video.description|safe }}</p>
+	                    </div>
+	                {% empty %}
+	                	<div class="listing">
+	                		<p>No videos loaded</p>
+	                	</div>
+	                {% endfor %}
+                    <h2 class="yellow">On-Demand Webinars</h2>
+                    {% for on_demand_webinar in on_demand_webinars %}
+	                    <div class="listing">
+	                        <a href="{{ on_demand_webinar.external_link }}"><img src="{{ on_demand_webinar.get_140x90_url }}" class="image_third image_square" /></a>
+	                        <a href="{{ on_demand_webinar.external_link }}"><h3>{{ on_demand_webinar.title }}</h3></a>
+	                        <p>{{ on_demand_webinar.description|safe }}</p>
+	                    </div>
+	                {% empty %}
+	                	<div class="listing">
+	                		<p>No on-demand webinars loaded</p>
+	                	</div>
+	                {% endfor %}
+	                {% endcomment %}
+		            <div class="social_feeds">
+		            	<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox addthis_default_style">
+						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+						<a class="addthis_button_tweet"></a>
+						<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+						<a class="addthis_button_linkedin_counter"></a>
+						</div>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+						<!-- AddThis Button END -->
+		            </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

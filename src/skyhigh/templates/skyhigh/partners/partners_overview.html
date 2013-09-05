@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Become a Skyhigh Networks Partner{% endblock %}
+{% block meta_description %}Skyhigh Networks provides a unique opportunity to become a cloud service provider partner, technology partner, resellers and distributors.{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Skyhigh Partners</h1>
+            <h2>Our partners deliver cloud visibility and control to their customers, exposing risks and costs of shadow IT and helping deliver protection and return on cloud services. They include some of the most trusted and talented resale partners and technology providers in the industry.</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_partners.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <h3>Cloud Service Providers</h3>
+                        <p>Skyhigh's cloud registry, already more than 2,500 services strong, is used by our customers to identify and recommend new cloud services that they should consider using. If you would like to be discovered by new customers, please sign up and add yourself to our registry.</p>
+                        <p><a href="{% url partners_apply_csp %}" class="link">Become a Cloud Service Provider Partner</a></p>
+                    </div>
+                    <div class="listing">
+                        <h3>Resellers and Distributors</h3>
+                        <p>Skyhigh provides a unique opportunity for resellers and distributors to bring a complete and high value Cloud Services Management and Security solution to their customers. Skyhigh discovers all-cloud services in use and identifies risk and opportunities for end customers.  This allows you to guide your customers and accelerate their successful use of the cloud. If you have industry expertise, geographic coverage or just a great set of customers that need help, let’s go to market together.</p>
+                        <p><a href="{% url partners_apply_channel %}" class="link">Become a Channel Partner</a></p>
+                    </div>
+                    <div class="listing">
+                        <h3>Technology Partners</h3>
+                        <p>Skyhigh integrates with leading cloud services. If you have complementary technology and want to find ways to help our joint customers accelerate their success, we’d love to talk to you today.</p>
+                        <p><a href="{% url partners_apply_technology %}" class="link">Become a Technology Partner</a></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

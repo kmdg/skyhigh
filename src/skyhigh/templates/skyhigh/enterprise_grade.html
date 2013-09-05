@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Enterprise Grade{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Skyhigh is Enterprise Grade</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <p>A cloud security solution is a critical component of your IT infrastructure. It controls how employees, contractors, partners and customers gain access to cloud services.</p>
+                        <p>Skyhigh is designed from the ground up to help you meet your security and compliance needs and also be the enterprise grade service you can trust.</p>
+                        <p>Skyhigh has invested heavily to provide an enterprise grade service. Those investments include:</p>
+                        <ul>
+                            <li>Transparency of controls and compliance</li>
+                            <li>Operations and Data</li>
+                            <li>Security expertise &amp; oversight</li>
+                            <li>Independent Penetration &amp; vulnerability testing</li>
+                        </ul>
+                        <p>&nbsp;</p>
+                        <h3>1. Transparency of controls and compliance</h3>
+                        <p>Skyhigh Networks has been awarded the TRUSTe Privacy Seal signifying that our privacy policy and practices meet their TRUSTed Cloud Program Requirements, and compliance certification for EU Safe Harbor requirements. Our controls have also been submitted for inclusion in the Cloud Security Alliance Security, Trust and Assurance Registry.</p>
+                        <table class="inner_thirds">
+                            <tr>
+                                <td>
+                                    <div id="b6fd56a5-0c25-4d09-85e0-efd618a5cf54"><script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/Skyhigh-Networks/asc?rid=b6fd56a5-0c25-4d09-85e0-efd618a5cf54"></script><a href="//privacy.truste.com/privacy-seal/Skyhigh-Networks/validation?rid=05c86d81-a797-4e0a-83ea-0ee7f3edf035" title="TRUSTe European Safe Harbor certification" target="_blank"><img style="border:none" src="//privacy-policy.truste.com/privacy-seal/Skyhigh-Networks/seal?rid=05c86d81-a797-4e0a-83ea-0ee7f3edf035" alt="TRUSTe European Safe Harbor certification"/></a></div>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://safeharbor.export.gov/list.aspx">We Self-Certify Compliance with:</a><br />
+                                    <a target="_blank" href="http://export.gov/safeharbor/"><img height="72" src="{{ STATIC_URL }}skyhigh/img/logo_safeharbor.jpg" /></a>
+                                </td>                                    
+                                <td>
+                                    <a target="_blank" href="https://cloudsecurityalliance.org/star-registrant/skyhigh-networks/"><img src="{{ STATIC_URL }}skyhigh/img/logo_csa_star.png" /></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="clear"></div>
+                        <h3>2. Operations and Data</h3>
+                        <p>Skyhigh Networks Operations partners with trusted industry leaders like Equinix and XO communications to provide a secure, performant, highly available infrastructure. Access to infrastructure is closely controlled and limited to trusted senior team members. Two-factor authentication and IPSec VPNs ensure strong authentication and encryption of data.</p>
+                        <h3>3. Security expertise &amp; oversight</h3>
+                        <p>Our service was built by <a href="{% url company_leadership %}">a team</a> with a proven track record in enterprise security. Prior to founding Skyhigh Networks, the team was responsible at Cisco for products that enable customers to administer, enforce, and audit standards-based, consistent access policies across the IT stack. The team delivered the Identity Services Engine, a product that won the coveted Pioneer Award in Cisco and is considered to be a game changer for Cisco.</p>
+                        <h3>4. Independent Penetration &amp; vulnerability testing</h3>
+                        <p>While we audit ourselves continually, we remember Richard Feynman's principle: "you must not fool yourself, and you are the easiest person to fool." Accordingly, major software releases are heavily audited by a 3rd party (Data Theorem), at least twice a year.</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

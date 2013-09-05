@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block title %}Cloud Computing Compliance and Governance: ­Skyhigh{% endblock %}
+{% block meta_description %}Cloud computing governance tools by Skyhigh Networks ensures effective management of security and compliance issues with cloud computing.{% endblock %}
+{% block meta_keywords %}Cloud governance{% endblock %}
+
+{% block content %}
+    <div class="section white rethink">
+        <div class="container">
+            <div class="rethink_intro">
+                <div class="section_title rethink_title">Rethink Cloud</div>
+                <h2>From Shadow IT to Visibility and Control</h2>
+                <h3>You know the story - the cloud is the answer to everything IT. But what about risk, compliance, governance, and smart business management? Does your organization have the visibility and control you need to manage risk, ensure cloud governance, and reduce costs?</h3>
+                <h1 class="no-marg no-pad"><img src="{{ STATIC_URL }}skyhigh/img/rethink_chart.png" alt="Cloud compliance" /></h1>
+            </div>
+            <div class="rethink_econ">
+                <div class="section_title econ_title">Yes, The Economics of Cloud are Compelling.</div>
+                <div class="econ">
+                    <div class="econ_costs">
+                        <img src="{{ STATIC_URL }}skyhigh/img/rethink_costs.png" alt="Cloud governance" />
+                        <h3>Reduced<br />Costs</h3>
+                        <p>Cloud File Storage is 75% less costly than on premise.<br />&nbsp;</p>
+                    </div>
+                    <div class="econ_fast">
+                        <img src="{{ STATIC_URL }}skyhigh/img/rethink_fast.png" />
+                        <h3>Faster Deployment &amp;<br />Lower Perceived TCO</h3>
+                        <p>Top 2 reasons for SaaS selection over on premise (Gartner Oct, 2012)</p>
+                    </div>
+                    <div class="econ_agile">
+                        <img src="{{ STATIC_URL }}skyhigh/img/rethink_agile.png" />
+                        <h3>Business<br />Agility</h3>
+                        <p>Add servers in minutes.<br />Test and deploy new business apps without delays.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="container">
+            <div class="rethink_spend">
+                <div class="section_title spend_title">The Growth of Spending on Cloud Services Reflects This...</div>
+                <div class="rethink_spend_group">
+                    <div class="spend_ww_cloud">
+                        <h2>WW Cloud Spending</h2>
+                        <ul>
+                            <li class="left"><h3>2010 Statistics</h3><h4>$21.5</h4><h5>Billion</h5></li>
+                            <li class="right"><h3>2015 Projection</h3><h4>$72.9</h4><h5>Billion</h5></li>
+                        </ul>
+                        <p>Source: <a href="http://www.idc.com/" target="_blank">IDC</a></p>
+                    </div>
+                    <div class="spend_4x">
+                        <ul>
+                            <li>Cloud growing</li>
+                            <li class="mid">4 x Faster</li>
+                            <li>than IT overall</li>
+                        </ul>
+                    </div>
+                    <div class="spend_ww_cagr">
+                        <h2>WW CAGR Cloud IT Spend</h2>
+                        <ul>
+                            <li class="left"><h3>2015</h3><h4>27.2</h4><h5>Percent</h5></li>
+                            <li class="right"><h3>Total IT</h3><h4>6.7</h4><h5>Percent</h5></li>
+                        </ul>
+                        <p>Source: <a href="http://www.idc.com/" target="_blank">IDC</a></p>
+                    </div>
+                </div>
+                <p class="quote">"...The Cloud is part of a larger IT industry transformation (along with mobile, wireless, social and big data).  The last time the industry went through a major growth platform shift was around 25 years ago with the advent of the PC (and related technologies)" (Source IDC, Oct 2012)</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="rethink_happening">
+                <div class="section_title happening_title">...And it is Happening Across EVERY Major Product Category.</div>
+                <p class="hold">Infrastructure, Platform, Storage, CRM,<br />ERP, Accounting and Financial, Billing...</p>
+                <p>While Gartner reports that 79% of enterprises use SaaS and that Cloud is the top priority for CIOs, the number one barrier to broader adoption, according to Morgan Stanley, is security (cited by 42% of respondents).  Add to that concerns over compliance and cost management, and it is clear that the market is young and evolving.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="rethink_shadow">
+                <div class="section_title shadow_title">Shadow IT Happens</div>
+                <p>IT was once the main provider and gatekeeper of applications, devices, and network access. However, today a Shadow IT environment hangs over every organization as end users adopt new cloud services, accessing them from anywhere on any device, often without IT approval or any other governance.<br /><br />We’ve studied this existence of Shadow IT and the results are startling:<br /><img src="{{ STATIC_URL }}skyhigh/img/rethink_graph.png" /></p>
+                <h2>Shadow IT Cloud Usage is at <strong>LEAST 10x</strong> The Size of Known Cloud Usage</h2>
+                <p>Take a look (Skyhigh Discovery Summary, Q42012-Q12013)</p>
+                <img src="{{ STATIC_URL }}skyhigh/img/table.png" class="rethink_table" />
+                <p class="smaller">Unfortunately, legacy management and security products just don’t have the visibility to find,<br />understand, or control cloud service usage and risk, leaving IT flying blind.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="rethink_light">
+                <div class="section_title light_title">Shine a Light on Shadow IT</div>
+                <p>What if you could:</p>
+                <div>Gain a comprehensive view into cloud services in use across the organization with an objective risk assessment of each service</div>
+                <div>Identify anomalous usage patterns that may indicate a security breach, data leakage, or high risk activity<br />&nbsp;<br />&nbsp;</div>
+                <div>Enforce security policies across all cloud services including mobile-to-cloud and cloud-to-cloud activity</div>
+            </div>
+            <div class="clear"></div>
+            <div class="hero">
+                <p class="left">Wouldn’t you be the hero then!</p>
+                <p class="right">That’s why we built <strong>Skyhigh</strong>.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        {% comment %}
+	        <div class="container">
+	            <div class="rethink_try">
+	                <a href="{% url campaign_demo %}" class="btn">Learn More</a>
+	            </div>
+	        </div>
+        {% endcomment %}
+    </div>
+{% endblock %}

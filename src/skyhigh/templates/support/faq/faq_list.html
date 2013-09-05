@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Frequently Asked Questions{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    {% for object in object_list %}
+                        <div class="listing">
+                            <h3>{{ object.question }}</h3>
+                            <p>{{ object.answer }}</p>
+                        </div>
+                    {% empty %}
+                        <p>There are no FAQs to list.</p>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

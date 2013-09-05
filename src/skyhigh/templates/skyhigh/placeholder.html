@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Place Holder Page{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Heading Goes Here</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dolore magna aliqua.</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_full.png" class="image_full" />
+                        <h3>Listing Title</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                    <div class="listing">
+                        <h3>Listing Title</h3>
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_thumb.png" class="image_thumb" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="half">
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_half.png" class="image_half" />
+                        <h3>Half Title</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                    <div class="half">
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_half.png" class="image_half" />
+                        <h3>Half Title</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="third">
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_third.png" class="image_third" />
+                        <h3>Third Title</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                    <div class="third">
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_third.png" class="image_third" />
+                        <h3>Third Title</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                    <div class="third">
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_third.png" class="image_third" />
+                        <h3>Third Title</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="column column_full">
+                    <div class="listing listing_full">
+                        <h3>Listing Title</h3>
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_thumb.png" class="image_thumb" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                    <div class="listing listing_full">
+                        <h3>Listing Title</h3>
+                        <img src="{{ STATIC_URL }}skyhigh/img/holder_thumb.png" class="image_thumb" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p><a href="#" class="link">And this is a link</a></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

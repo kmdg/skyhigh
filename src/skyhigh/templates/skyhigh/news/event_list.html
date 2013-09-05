@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Events</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_company.html' %}
+                </div>
+                <div class="column">
+	                {% for object in object_list %}
+	                    <div class="listing">
+	                        <a target="_blank" class="event_image" href="{{ object.external_link }}"><img src="{{ MEDIA_URL }}{{ object.image }}" class="image_third" /></a>
+                            <div class="listing_event_content">
+                                <h3>{% if object.external_link %}<a href="{{ object.external_link }}" class="link" target="_blank">{{ object.title }}</a>{% else %}{{ object.title}}{% endif %}</h3>
+                                <p>{{ object.description|safe }}</p>
+                                {% comment %}
+    	                        <p>{{ object.start_date }}{% if object.end_date != object.start_date %} - {{ object.end_date }}{% endif %}</p>
+    	                        {% endcomment %}
+                            </div>
+	                    </div>
+	                {% empty %}
+	                    <p>There are no events to display.</p>
+	                {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

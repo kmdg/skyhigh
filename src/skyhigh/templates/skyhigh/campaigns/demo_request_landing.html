@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block landing_class %}class="landing"{% endblock %}
+
+{% block header %}
+	<div class="container">
+	    <a href="/" class="logo">Skyhigh Networks | Cloud Usage Monitoring</a>
+	</div>
+{% endblock %}
+
+{% block landing_nav %}{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form_full_site">
+            <h1>See the Skyhigh Demo</h1>
+            <div class="content">
+                <div class="sidebar">
+                	<div class="widget">
+                        <h2>Schedule a Demo</h2>
+                        <div class="marketo_embed"><iframe width="598" height="435" frameborder="0" style="margin: -20px 0 0 -282px;"  scrolling="no" src="http://info.skyhighnetworks.com/SkyhighDemoRequests_RegistrationPage.html"></iframe></div>
+                   </div>
+                </div>
+                <div class="column">
+                    <h3>“With Skyhigh, we immediately discovered a wide range of services that we had not authorized.” - Steve Martino, VP Information Security, at Cisco</h3>
+                    <p>We’d love to show you the Skyhigh Cloud Access Security Manager in action!  Sign up below and we’ll contact you shortly to schedule a time that’s convenient for you.</p>
+                    <p>&nbsp;</p>
+                    <div class="center">
+                    	<h4 style="color:#000;">The Skyhigh Cloud Access Security Manager</h4>
+                        <img src="{{ STATIC_URL }}skyhigh/img/skyhigh_networks_dashboard_screenshot_filter.jpg" alt="Cloud Usage Monitoring" />
+                    </div>                                 
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block livechat %}{% endblock %}

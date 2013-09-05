@@ -1,0 +1,164 @@
+server {
+    listen ${port};
+    server_name ${server_names}; 
+    client_max_body_size 100m;
+    
+    location /static/skyhigh/pdf/Case {
+        rewrite (.*) https://${server_name}/product/case_studies/ permanent;
+    }
+    
+    location /static/skyhigh/pdf/Case-Study {
+        rewrite (.*) https://${server_name}/product/case_studies/ permanent;
+    }
+    
+    # static resources
+    location ^~ /media/ {
+        alias   ${media_root}/;
+        expires 31d;
+    }
+
+    # static resources
+    location ^~ /static/ {
+        alias   ${static_root}/;
+        expires 31d;
+    }
+
+    # ssl rewrites
+    location /secure/ {
+        rewrite (.*) https://${server_name}$1 permanent;
+    }
+
+    location /console/ {
+        rewrite (.*) https://${server_name}$1 permanent;
+    }
+
+    location /admin/ {
+        rewrite (.*) https://${server_name}$1 permanent;
+    }
+    
+    location /skyhigh/api/ {
+        rewrite (.*) https://${server_name}$1 permanent;
+    }
+    
+    # fcgi    
+    location / {
+        fastcgi_pass ${fcgi_host}:${fcgi_port};
+        fastcgi_param   REQUEST_METHOD      $request_method;
+        fastcgi_param   QUERY_STRING        $query_string;
+        fastcgi_param   CONTENT_TYPE        $content_type;
+        fastcgi_param   CONTENT_LENGTH      $content_length;
+        fastcgi_param   SERVER_PROTOCOL     $server_protocol;
+        fastcgi_param   SERVER_PORT         $server_port;
+        fastcgi_param   SERVER_NAME         $server_name;
+        fastcgi_param   PATH_INFO           $fastcgi_script_name;
+        fastcgi_param   SERVER_ADDR         $server_addr;
+        fastcgi_param   REMOTE_ADDR         $remote_addr;
+        fastcgi_param   HTTP_X_REAL_IP      $http_x_real_ip;
+    }
+
+    # loging
+    access_log  ${log_dir}/nginx_access.log;
+    error_log   ${log_dir}/nginx_error.log;
+    
+#    auth_basic            "Restricted";
+#    auth_basic_user_file  /etc/nginx/htpasswd;
+}
+
+server {
+    listen ${ssl_port};
+    server_name ${server_names};
+    client_max_body_size 100m;
+
+#    ssl                  on;
+#    ssl_certificate      ${crt_dir}/${server_name}.crt;
+#    ssl_certificate_key  ${crt_dir}/${server_name}.key;
+    keepalive_timeout    70;
+
+    # static resources
+    location ^~ /media/ {
+       alias   ${media_root}/;
+       expires 31d;
+    }
+
+    # static resources
+    location ^~ /static/ {
+        alias   ${static_root}/;
+        expires 31d;
+    }
+
+    # fcgi
+    location /secure/ {
+        fastcgi_pass ${fcgi_host}:${fcgi_port};
+        fastcgi_param   REQUEST_METHOD      $request_method;
+        fastcgi_param   QUERY_STRING        $query_string;
+        fastcgi_param   CONTENT_TYPE        $content_type;
+        fastcgi_param   CONTENT_LENGTH      $content_length;
+        fastcgi_param   SERVER_PROTOCOL     $server_protocol;
+        fastcgi_param   SERVER_PORT         $server_port;
+        fastcgi_param   SERVER_NAME         $server_name;
+        fastcgi_param   PATH_INFO           $fastcgi_script_name;
+        fastcgi_param   SERVER_ADDR         $server_addr;
+        fastcgi_param   REMOTE_ADDR         $remote_addr;
+        fastcgi_param   HTTP_X_REAL_IP      $http_x_real_ip;
+        fastcgi_param   HTTPS               on;
+    }
+
+    location /console/ {
+        fastcgi_pass ${fcgi_host}:${fcgi_port};
+        fastcgi_param   REQUEST_METHOD      $request_method;
+        fastcgi_param   QUERY_STRING        $query_string;
+        fastcgi_param   CONTENT_TYPE        $content_type;
+        fastcgi_param   CONTENT_LENGTH      $content_length;
+        fastcgi_param   SERVER_PROTOCOL     $server_protocol;
+        fastcgi_param   SERVER_PORT         $server_port;
+        fastcgi_param   SERVER_NAME         $server_name;
+        fastcgi_param   PATH_INFO           $fastcgi_script_name;
+        fastcgi_param   SERVER_ADDR         $server_addr;
+        fastcgi_param   REMOTE_ADDR         $remote_addr;
+        fastcgi_param   HTTP_X_REAL_IP      $http_x_real_ip;
+        fastcgi_param   HTTPS               on;
+    }
+
+    location /admin/ {
+        fastcgi_pass ${fcgi_host}:${fcgi_port};
+        fastcgi_param   REQUEST_METHOD      $request_method;
+        fastcgi_param   QUERY_STRING        $query_string;
+        fastcgi_param   CONTENT_TYPE        $content_type;
+        fastcgi_param   CONTENT_LENGTH      $content_length;
+        fastcgi_param   SERVER_PROTOCOL     $server_protocol;
+        fastcgi_param   SERVER_PORT         $server_port;
+        fastcgi_param   SERVER_NAME         $server_name;
+        fastcgi_param   PATH_INFO           $fastcgi_script_name;
+        fastcgi_param   SERVER_ADDR         $server_addr;
+        fastcgi_param   REMOTE_ADDR         $remote_addr;
+        fastcgi_param   HTTP_X_REAL_IP      $http_x_real_ip;
+        fastcgi_param   HTTPS               on;
+    }
+    
+    location /skyhigh/api/ {
+        fastcgi_pass ${fcgi_host}:${fcgi_port};
+        fastcgi_param   REQUEST_METHOD      $request_method;
+        fastcgi_param   QUERY_STRING        $query_string;
+        fastcgi_param   CONTENT_TYPE        $content_type;
+        fastcgi_param   CONTENT_LENGTH      $content_length;
+        fastcgi_param   SERVER_PROTOCOL     $server_protocol;
+        fastcgi_param   SERVER_PORT         $server_port;
+        fastcgi_param   SERVER_NAME         $server_name;
+        fastcgi_param   PATH_INFO           $fastcgi_script_name;
+        fastcgi_param   SERVER_ADDR         $server_addr;
+        fastcgi_param   REMOTE_ADDR         $remote_addr;
+        fastcgi_param   HTTP_X_REAL_IP      $http_x_real_ip;
+        fastcgi_param   HTTPS               on;
+    }
+
+    location / {
+        rewrite (.*) http://${server_name}:${port}$1 permanent;
+    }
+
+    # logging
+    access_log  ${log_dir}/nginx_access.log;
+    error_log   ${log_dir}/nginx_error.log;
+
+#    auth_basic            "Restricted";
+#    auth_basic_user_file  /etc/nginx/htpasswd;
+}

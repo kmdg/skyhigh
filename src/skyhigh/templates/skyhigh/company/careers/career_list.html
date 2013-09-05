@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Careers{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Careers</h1>
+            <h2>The sky is the limit – and we need brilliant people like you!</h2>
+            <div class="content">
+                <div class="column">
+                <div class="column column_full">
+                    {% comment %}
+	                {% for object in object_list %}
+	                    <div class="listing">
+                            <h3>{{ object.title }}</h3>
+                            <p>Position: {{ object.position }}</p>
+	                        <p>{{ object.content|safe }}</p>
+                            <p><a href="{% url company_careers_apply object.pk %}" class="link">Apply</a></p>
+	                    </div>
+	                {% empty %}
+	                    <p>There are no careers to display.</p>
+	                {% endfor %}
+                    {% endcomment %}
+                    <p>At Skyhigh Networks we’re building groundbreaking, non-intrusive technology to help enable accelerated adoption of cloud services by enterprise customers.  While we work hard, we have a fun, energetic, and collaborative culture. Most importantly, we all check our egos at the door. </p>
+                    <p>We are hiring across all departments: sales, marketing, engineering, product management, operations, services, support, corporate development, and business development. </p>
+                    <p>Skyhigh offers competitive compensation including stock options, medical insurance, a fully stocked fridge and the best coffee machine in Silicon Valley. We’re changing how the world adopts cloud, come join us!</p>
+                    <p>Send your r&eacute;sum&eacute; to <a href="mailto:jobs@skyhighnetworks.com">jobs@skyhighnetworks.com</a></p>
+                    {% comment %}
+                    <div class="third">
+                        <h3>Culture</h3>
+                        <p>At Skyhigh Networks we’re building groundbreaking and non-intrusive technology to help enable the proper adoption of cloud services by enterprise customers.</p>
+                        <ul>
+                            <li>Craftmanship <img src="" /></li>
+                            <li>Responsibility <img src="" /></li>
+                            <li>Drive <img src="" /></li>
+                        </ul>
+                    </div>
+                    <div class="third">
+                        <h3>Benefits</h3>
+                        <p>We offer competitive compensation including stock options, medical insurance, a fully stocked fridge and the best coffee machine in Silicon Valley!</p>
+                    </div>
+                    <div class="third">
+                        <h3>Open Positions</h3>
+                        <p>While we work hard, we maintain a fun, energetic, and collaborative culture. Most importantly, we all check our ego at the door. We’re changing how the world adopts cloud, come join us!</p>
+                        <a class="btn">Apply now</a>
+                    </div>
+                    {% endcomment %}
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

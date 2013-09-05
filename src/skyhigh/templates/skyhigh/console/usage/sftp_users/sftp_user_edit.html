@@ -1,0 +1,53 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}SFTP Users{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>{% if form.instance.id %}Edit{% else %}Add{% endif %} SFTP User</h1>
+            <a href="{% url console_usage_sftp_user_list %}" class="link btn_light console-btn">Back To List</a>
+            <div class="form">
+                <form id="frmNewSFTPUser" action="." method="POST">
+                    {% csrf_token %}
+                    
+                    <div class="row">
+                        <div class="field">
+                            <label>User Account</label>
+                            <div>{{ form.user }}{{ form.user.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label>Username</label>
+                            <div>{{ form.username }}{{ form.username.errors }}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="field">
+                            <label>Password</label>
+                            <div>{{ form.password }}{{ form.password.errors }}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="field">
+                            <label>Repeat Password</label>
+                            <div>{{ form.password_repeat }}{{ form.password_repeat.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <input type="submit" id="submit" value="{% if not form.instance.id %}Create{% else %}Update{% endif %} SFTP User" class="btn" />
+                    </div>
+                
+                    <div class="clear"></div>
+                </form>
+            </div>
+            </div><!--/content-->
+            <div class="clear"></div>
+        </div>
+    </div>
+{% endblock %}

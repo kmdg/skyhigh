@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}SFTP Account{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+            <h1>Edit SFTP Account</h1>
+            <a href="{% url my_profile_sftp_account_list %}" class="link btn_light">Back To List</a>
+            <div class="clear"></div><br/>
+            <div class="content">
+                <div class="column column_full">
+                	{% include 'includes/message_error_header.html' %}
+            		<form id="frmEditSFTPAccount" action="." method="POST">
+	                    {% csrf_token %}
+	                    <div class="row">
+	                        <div class="field">
+	                            <label>Username</label>
+	                            <div>{{ form.username }}{{ form.username.errors }}</div>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="row">
+	                        <div class="field">
+	                            <label>Password</label>
+	                            <div>{{ form.password }}{{ form.password.errors }}</div>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="row">
+	                        <div class="field">
+	                            <label>Repeat Password</label>
+	                            <div>{{ form.password_repeat }}{{ form.password_repeat.errors }}</div>
+	                        </div>
+	                    </div>
+	
+	                    <div class="buttons">
+	                        <input type="submit" id="submit" value="Update SFTP Account" class="btn" />
+	                    </div>
+	                
+	                    <div class="clear"></div>
+	                </form>
+	        	</div>
+            </div><!--/content-->
+            <div class="clear"></div>
+        </div>
+    </div>
+{% endblock %}

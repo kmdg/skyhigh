@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Activation Complete{% endblock %}
+
+{% block messages %}<div></div>{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+        	{% if evaluation_request %}
+        		<h2>You have successfully validated your account. You will be contacted shortly by the friendly Skyhigh team to initiate your Skyhigh Cloud Discovery and Risk Assessment.  Thank you!</h2>
+	        {% else %}
+	        	<h1>You have successfully activated your account.</h1>
+	            <h2>This page will redirect shortly.</h2>
+	        {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block bottom_js %}
+	{% if not evaluation_request %}
+	    <script type="text/javascript">
+	        jQuery(document).ready(function() {
+	            setTimeout(function() {
+	                  window.location.href = "{% url secure_login %}";
+	            }, 2500);
+	        });
+	    </script>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Blog List{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Blog List</h1>
+            <a href="{% url console_news_and_events_blog_create %}" class="link btn_light align-right">Add a Blog</a>
+            <div class="column column_full">
+                <div class="listing listing_full">
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">State:</th>
+                                <th width="120">Image</th>
+                                <th>Title</th>
+                                <th width="60"></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr onclick="DoNav('{% url console_news_and_events_blog_detail object.pk %}');">
+                                <td>{{ object.get_state_display }}</td>
+                                <td><img src="{{ object.get_120x120_url }}" /></td>
+                                <td><a href="{% url console_news_and_events_blog_detail object.pk %}">{{ object.title }}</a></td>
+                                <td><a href="{% url console_news_and_events_blog_update object.pk %}" class="link">Edit</a><br /><a href="{% url console_news_and_events_blog_delete object.pk %}" class="link">Delete</a></td>
+                            </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4">Sorry, there are no items to list</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

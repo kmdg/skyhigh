@@ -1,0 +1,36 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Press Release{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Press Release</h1>
+            <a href="{% url console_news_and_events_press_release_list %}" class="link btn_light console-btn">Back To List</a>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>State</th>
+                        <td>{{ object.get_state_display }}</td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td>{{ object.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>Content</th>
+                        <td>{{ object.content|safe|truncatechars:200 }}</td>
+                    </tr>
+                    <tr>
+                        <th>Publish Date/Time</th>
+                        <td>{{ object.publish_date_time }}</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><a href="{% url console_news_and_events_press_release_update object.pk %}" class="link btn btn-edit">Edit</a> &nbsp; <a href="{% url console_news_and_events_press_release_delete object.pk %}" class="link btn_light btn-delete">Delete</a></td>
+                    </tr>
+                </table>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

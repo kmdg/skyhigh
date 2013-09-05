@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Resources of Skyhigh Networks{% endblock %}
+{% block meta_description %}{% endblock %}
+
+{% block content %}
+    <div class="section white resources">
+        <div class="container">
+            <div class="content">
+                <div class="sidebar white">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_resources.html' %}
+                </div>
+                <div class="column">
+            		<h1>Datasheets</h1>
+                    {% for datasheet in object_list %}
+	                    <div class="listing">
+	                        <a href="{{ datasheet.external_link }}"><img src="{{ datasheet.get_73x90_url }}" class="image_third image_square" /></a>
+	                        <a href="{{ datasheet.external_link }}"><h3>{{ datasheet.title }}</h3></a>
+	                        <p>{{ datasheet.description|safe }}</p>
+	                    </div>
+	                {% empty %}
+	                	<p>No datasheets loaded</p>
+	                {% endfor %}
+		            <div class="social_feeds">
+		            	<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox addthis_default_style">
+						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+						<a class="addthis_button_tweet"></a>
+						<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+						<a class="addthis_button_linkedin_counter"></a>
+						</div>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+						<!-- AddThis Button END -->
+		            </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

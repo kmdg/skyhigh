@@ -1,0 +1,9 @@
+{% extends 'email/base.html' %}
+
+{% block content %}
+Product Evaluator {{ user.profile.display_name }} with email address {{ user.email }} has uploaded a logfile,<br/>
+<br />
+It has been attached.
+<br />
+IMPORTANT: do not change any of the formatting of the data, including spaces, commas, tabs, font size, anything!
+{% endblock %}

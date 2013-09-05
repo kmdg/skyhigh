@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+            <h1>Register for the Upcoming Webinar</h1>
+            <h2>Product Briefing: The Skyhigh Networks Cloud Services Manager</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_webinars.html' %}
+                </div>
+                <div class="column">
+                    <h3>“With Skyhigh, we immediately discovered a wide range of services that we had not authorized.” - Steve Martino, VP Information Security, at Cisco</h3>
+                    <p>Register below to see a live demo of how Skyhigh Networks solves customers’ security, compliance, and governance issues by providing total cloud visibility and control.  Attend this webinar and see how you can:</p>
+                    <ul>
+                       <li>Discover all cloud services used by your employees.</li> 
+                       <li>Understand the risk levels for the cloud services used by your employees.</li>
+                       <li>Identify data leaks, security breaches, and inconsistent policies in the use of cloud services.</li>
+                    </ul>
+                    <p><strong>Date:</strong> Wed., July 31, 2013 &nbsp;|&nbsp; <strong>Time:</strong> 10am PT/ 1pm ET &nbsp;|&nbsp; <strong>Duration:</strong> 30 minutes</p>
+                    <div class="marketo_embed"><iframe width="822" height="450" frameborder="0" style="margin: -45px 0 -150px -180px"  scrolling="no" src="http://info.skyhighnetworks.com/20130731ProdBriefWebinar.html"></iframe></div>
+                    <div class="speaker">
+                        <img src="{{ STATIC_URL }}skyhigh/img/kamal.png" class="image_thumb" />
+                        <p class="center">Speaker: Kamal Shah, VP of Products</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

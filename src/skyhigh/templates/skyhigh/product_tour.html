@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Cloud Service Broker : Skyhigh Product Tour{% endblock %}
+{% block meta_description %}Discover how Skyhigh Cloud Security products can help manage your cloud services effectively while ensuring highest storage security of your data.{% endblock %}
+{% block meta_keywords %}Cloud service broker, Cloud security products{% endblock %}
+
+{% block content %}
+    <div class="section no-pad-top white">
+        <div class="banner">
+            <div class="container">
+                <h1>Skyhigh Cloud Access Security Manager</h1>
+                <h2>Product Tour</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="sidebar white">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_product.html' %}
+                </div>
+                <div class="column">
+                    <div class="tour_deploy">
+                        <div class="title">Subscribe <span>to the Skyhigh service</span></div>
+                        <div class="text_tour text_deploy_1">Just point, load and go.</div>
+                        <div class="text_tour text_deploy_2">As soon as your log files are in Skyhigh...</div>
+                        <div class="text_tour text_deploy_3">You’ll no longer be flying blind.</div>
+                    </div>
+                    <div class="tour_discover">
+                        <div class="title">Discover <span>get complete visibility now</span></div>
+                        <div class="text_tour text_discover_1">See all cloud services in use and <br />their associated risks.</div>
+                        <div class="text_tour text_discover_2">Our CloudRegistry&trade; and CloudRisk&trade; engines<br />immediately assess the extent and risk of<br />Shadow IT in your organization.</div>
+                    </div>
+                    <div class="tour_analyze">
+                        <div class="title">Analyze <span>find opportunities and risks</span></div>
+                        <div class="text_tour text_analyze_1">Identify anomalous behavior and opportunities<br />to consolidate subscriptions.</div>
+                        <div class="text_tour text_analyze_2">Our Hadoop-based cloud security product identifies inconsistent policies, risky user<br />behavior, and underutilized subscriptions and<br />inconsistent policies.</div>
+                    </div>
+                    <div class="tour_control">
+                        <div class="title">Secure <span>fly with complete confidence</span></div>
+                        <div class="text_tour text_control_1">In 3 clicks, enforce key security and usage policies like access control, data encryption, and data loss prevention.</div>
+                        <div class="text_tour text_control_2">We deliver protection for your use of cloud<br />services from your personal or corporate<br />devices -- no device agent, zero friction.</div>
+                    </div>
+                    <p class="text_last">Learn more about Skyhigh delivers all this with a zero footprint, cloud-based, multi-tenant cloud service broker.</p>
+                    <div class="clear"></div>
+                    <p><a href="{% url asset_landing_data_security %}" class="btn seller btn_tour btn_rethink">READ THE WHITEPAPER</a></p>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

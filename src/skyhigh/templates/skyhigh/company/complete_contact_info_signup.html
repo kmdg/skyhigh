@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load honeypot %}
+
+{% block title %}Contact Info{% endblock %}
+
+{% block content %}
+    <div class="container form">
+        <h1>Thank you for contacting us.</h1>
+        <h2>If you wish to create a Profile with us, please enter your details in the form below</h2>
+        <div class="content">
+            <div class="column">
+                <form id="frmCompleteSignup" action="." method="POST" class="validate_form">{% csrf_token %}
+                    <div class="note">Fields marked with <span class="blue">*</span> are required</div>
+                    <div class="field">
+                        <label for="id_email">Email Address <span class="blue">*</span></label>
+                        {{ form.email }}{{ form.email.errors }}
+                    </div>
+                    <div class="field">
+                        <label for="id_password1">Password <span class="blue">*</span></label>
+                        {{ form.password1 }}{{ form.password1.errors }}
+                    </div>
+                    <div class="field">
+                        <label for="id_password2">Password (again) <span class="blue">*</span></label>
+                        {{ form.password2 }}{{ form.password2.errors }}
+                    </div>
+                    {% render_honeypot_field %}
+                    <div class="buttons">
+                        <input type="submit" value="Complete Signup" />
+                        <a href="{% url index %}" class="btn">No thanks</a>
+                    </div>
+                </form>
+            </div>
+    </div>
+{% endblock %}

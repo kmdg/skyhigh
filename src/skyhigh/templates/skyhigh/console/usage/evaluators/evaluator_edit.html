@@ -1,0 +1,141 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Evaluator{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>{% if form.instance.id %}Edit{% else %}Add{% endif %} Evaluator</h1>
+            <a href="{% url console_usage_evaluator_list %}" class="link btn_light console-btn">Back To List</a>
+            <div class="form">
+                <form id="frmNewEvaluator" action="." method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.modified_by }}
+                    {{ form.created_by }}
+
+                    <div class="row">
+                        <div class="field edit-image">
+                            <label>Evaluator Image</label>
+                            {% if form.object %}<img src="{{ form.object.get_120x120_url }}" class="edit_avatar" />{% endif %}
+                            <div>{{ form.image }}{{ form.image.errors }}</div>
+                            <div class="revert">{% if form.object %}Revert to default image{{ form.default_image }}{% endif %}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label>Title</label>
+                            <div>{{ form.title }}{{ form.title.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>First Name</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.first_name }}{{ form.first_name.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Last Name</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.last_name }}{{ form.last_name.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Email</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.email }}{{ form.email.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Company</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.company }}{{ form.company.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Job Title</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.job_title }}{{ form.job_title.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Role</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.role }}{{ form.role.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Evaluation Status</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.evaluator_status }}{{ form.evaluator_status.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Phone Number</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.phone_number }}{{ form.phone_number.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Mobile Number</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.mobile_number }}{{ form.mobile_number.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Address</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.address }}{{ form.address.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>City</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.city }}{{ form.city.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Zip/Postal Code</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.zip_postal_code }}{{ form.zip_postal_code.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>State/Province</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.state_province }}{{ form.state_province.errors }}</div>
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Country</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.country }}{{ form.country.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label>Timezone</label>
+                            <div class="clear"></div>
+                            <div class="editor">{{ form.timezone }}{{ form.timezone.errors }}</div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <input type="submit" id="submit" value="{% if not form.instance.id %}Create{% else %}Update{% endif %} Evaluator" class="btn" />
+                    </div>
+                
+                    <div class="clear"></div>
+                </form>
+            </div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load honeypot %}
+
+{% block title %}Login{% endblock %}
+
+{% block messages %}<div></div>{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+            <h1>{% if msg != 'None' and msg %}{{ msg }}{% else %}Login{% endif %}</h1>
+            <h2>Please enter the details you registered with below, to sign into your SkyHigh account</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    <div class="widget">
+                        <h3>Need help?</h3>
+                        <p>General Questions:</p>
+                        <p><a href="mailto:info@skyhighnetworks.com">info@skyhighnetworks.com</a></p>
+                        <p>Contact Support:</p>
+                        <p><a href="mailto:support@skyhighnetworks.com">support@skyhighnetworks.com</a></p>
+                        <p>Contact Sales:</p>
+                        <p><a href="mailto:sales@skyhighnetworks.com">sales@skyhighnetworks.com</a></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <form id="frmLogin" action="." method="POST" class="validate_form">{% csrf_token %}
+                        {% include 'includes/message_error_header.html' %}
+                        <input type="hidden" name="next" value="{{ next }}"/>
+                        {% for field in form %}
+		                    <div class="field">
+	                            {{ field.label_tag }}
+	                            {{ field }}
+                                {{ field.errors }}
+		                    </div>
+		                {% endfor %}
+		                {% render_honeypot_field %}
+                        <div class="buttons">
+                            <input type="submit" value="Login" />
+                            <p><a class="align-right" href="{% url secure_password_reset %}">Forgotten your password?</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

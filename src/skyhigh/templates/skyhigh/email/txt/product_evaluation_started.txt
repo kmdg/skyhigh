@@ -1,0 +1,7 @@
+{% extends 'email/base.txt' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},
+
+Your product evaluation period has begun. You have 30 days left.
+{% endblock %}

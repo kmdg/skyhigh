@@ -1,0 +1,85 @@
+{% extends 'skyhigh/console/base.html' %}
+{% load unobase_tags %}
+
+{% block title %}User List{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>User List</h1>
+            <a href="{% url console_usage_user_create %}" class="link btn_light console-btn">Add a User</a>
+            <a href="{% url console_usage_user_import %}" class="link btn_light console-btn">Import Users</a>
+            <a href="javascript: void(0);" class="link toggle-filter">Toggle Filter</a>
+            <div class="form filter">
+                <form id="frmUserFilter" action="." method="GET">
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>First Name</label>
+                            <div class="clear"></div>
+                            {{ filter_form.first_name }}{{ filter_form.first_name.errors }}
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Last Name</label>
+                            <div class="clear"></div>
+                            {{ filter_form.last_name }}{{ filter_form.last_name.errors }}
+                        </div>
+                        <div class="field">
+                            <label>Email</label>
+                            <div class="clear"></div>
+                            {{ filter_form.email }}{{ filter_form.email.errors }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>Company</label>
+                            <div class="clear"></div>
+                            {{ filter_form.company }}{{ filter_form.company.errors }}
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Job Title</label>
+                            <div class="clear"></div>
+                            {{ filter_form.job_title }}{{ filter_form.job_title.errors }}
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" id="submit" value="Filter" class="btn" />
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="clear"></div>
+            <div class="column column_full">
+                <div class="listing listing_full">
+
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">User</th>
+                                <th width="120">Email</th>
+                                <th width="120">Role</th>
+                                <th width="120">Login Date</th>
+                                <th width="60"></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr onclick="DoNav('{% url console_usage_user_detail object.pk %}');">
+                                <td><a href="{% url console_usage_user_detail object.pk %}">{{ object.display_name }}</a></td>
+                                <td><a href="mailto:{{ object.email }}">{{ object.email }}</a></td>
+                                <td>{{ object.get_role_display }}</td>
+                                <td>{{ object.last_login }}</td>
+                                <td><a href="{% url console_usage_user_update object.pk %}" class="link">Edit</a><br /><a href="{% url console_usage_user_delete object.pk %}" class="link">Delete</a></td>
+                            </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5">Sorry, there are no items to list</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    {% pagination page_obj %}
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

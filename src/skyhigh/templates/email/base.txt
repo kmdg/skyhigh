@@ -1,0 +1,9 @@
+{% block content %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+Kind regards
+The Skyhigh Team
+info@skyhighnetworks.com
+
+Copyright SkyhighNetworks. All Rights Reserved.

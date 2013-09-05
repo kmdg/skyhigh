@@ -1,0 +1,10 @@
+{% if messages or form.non_field_errors %}
+    <div class="messages">
+        {% for message in messages %}
+            <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|safe }}</div>
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="error">{{ error }}</div>
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,41 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Media Coverage{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Media Coverage</h1>
+            <a href="{% url console_news_and_events_media_coverage_list %}" class="link btn_light console-btn">Back To List</a>
+            <div class="listing listing_full">
+                <table>
+                    <tr>
+                        <th width="80">State</th>
+                        <td>{{ object.get_state_display }}</td>
+                    </tr>
+                    <tr>
+                        <th width="120">Image</th>
+                        <td><img src="{{ object.get_120x120_url }}" /></td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td>{{ object.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>Content</th>
+                        <td>{{ object.content|safe }}</td>
+                    </tr>
+                    <tr>
+                        <th>Publish Date/Time</th>
+                        <td>{{ object.publish_date_time }}</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><a href="{% url console_news_and_events_media_coverage_update object.pk %}" class="link btn btn-edit">Edit</a> &nbsp; <a href="{% url console_news_and_events_media_coverage_delete object.pk %}" class="link btn_light btn-delete">Delete</a></td>
+                    </tr>
+                </table>
+            </div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Case Detail{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Case</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    <div class="listing">
+                        <h3>{{ object.title }}</h3>
+                        <p>{{ object.content|safe }}</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

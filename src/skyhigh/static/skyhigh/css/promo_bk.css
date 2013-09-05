@@ -1,0 +1,107 @@
+/*
+	AnythingSlider v1.7+ Default (base) theme
+	By Chris Coyier: http://css-tricks.com
+	with major improvements by Doug Neiner: http://pixelgraphics.us/
+	based on work by Remy Sharp: http://jqueryfordesigners.com/
+*/
+
+/*****************************
+  SET DEFAULT DIMENSIONS HERE
+ *****************************/
+
+#slider { width: 940px; height: 325px; list-style: none; overflow-y: auto; overflow-x: hidden; }
+.anythingBase { max-width: 32766px; }
+
+/*****************
+  SET COLORS HERE
+ *****************/
+
+div.anythingSlider.activeSlider .anythingControls ul a.cur { color: #c5c5c5; }
+div.anythingSlider.activeSlider .anythingControls ul a { color: #666; line-height: 18px; }
+
+/***********************
+  COMMON SLIDER STYLING
+ ***********************/
+
+div.anythingSlider { margin: 0 auto; overflow: visible !important; position: relative; padding: 0; }
+div.anythingSlider .anythingWindow { overflow: hidden; position: relative; width: 100%; height: 100%; background: url('../img/promo/bg.jpg') top center no-repeat; }
+.anythingBase { background: transparent; list-style: none; position: absolute; overflow: visible !important; top: 0; left: 0; margin: 0; padding: 0; }
+.anythingBase .panel { display: block; overflow: hidden; float: left; padding: 0; margin: 0; position: relative; }
+	.anythingBase .promo_content { width: 100%!important; height: 372px!important; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; overflow-x: hidden; text-align: center; }
+	.anythingBase .panel h1 { width: 940px; margin: 55px auto 0 auto; padding: 0; white-space: nowrap; z-index: 10; font-weight: bold; text-transform: uppercase; color: #fff; font-size: 15px; text-align: center; }
+	.anythingBase .panel h2 { width: 940px; margin: 55px auto 10px auto; padding: 0; z-index: 10; font-weight: bold; color: #fff; font-size: 36px; line-height: 38px; }
+	.anythingBase .panel p { width: 100%; bottom: 100px; color: #fff; margin: 20px auto 0 auto; font-size: 20px; line-height: 26px; font-weight: bold; }
+	.anythingBase .panel .btn {
+		width: 190px;
+		height: 40px;
+		top: 435px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: 100;
+	    color: #fff;
+	    background-color: #e3a818;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e3a818), to(#b88813));
+        background-image: -webkit-linear-gradient(top, #e3a818, #b88813);
+        background-image:    -moz-linear-gradient(top, #e3a818, #b88813);
+        background-image:     -ms-linear-gradient(top, #e3a818, #b88813);
+        background-image:      -o-linear-gradient(top, #e3a818, #b88813);
+        border-top: 1px solid #e3a818;
+        border-bottom: 1px solid #644a0b;
+	    -webkit-border-radius: 4px; 
+	    border-radius: 4px; 
+	    text-decoration: none;
+	    display: block;
+	    box-shadow: 0 2px 3px -2px #999;
+	    font-size: 18px;
+	    font-weight: bold;
+	    line-height: 38px;
+	}
+	.anythingBase .panel .wide { width: 220px; }
+	.anythingBase .panel .btn i { width: 60px; height: 40px; float: left; background: url('../img/promo/btn_arrow.png') center no-repeat; display: none; }
+	.anythingBase .panel .btn:hover {
+		background-color: #b88813;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b88813), to(#e3a818));
+        background-image: -webkit-linear-gradient(top, #b88813, #e3a818);
+        background-image:    -moz-linear-gradient(top, #b88813, #e3a818);
+        background-image:     -ms-linear-gradient(top, #b88813, #e3a818);
+        background-image:      -o-linear-gradient(top, #b88813, #e3a818);
+	}
+	.anythingBase .panel .promo_wide { width: 230px; }
+	.anythingBase .panel .image { width: 100%; height: 455px; display: block; position: absolute; left: 0; right: 0; top: 0; overflow: hidden; text-align: center; display: table-cell; vertical-align: middle; }
+	.anythingBase .panel .image img { display: block; left: 0; right: 0; top: 0; overflow: hidden; margin: 0 auto; position: absolute; text-align: center; }
+	.anythingBase .rsa h2,
+	.anythingBase .rsa p { display: none; }
+	.anythingBase .container { width: 940px!important; height: 372px!important; margin: 0 auto; }
+	.anythingBase .container img { position: relative; float: right; margin: 74px 0 0 0; }
+	.anythingBase .container h2 { margin: 80px 0 0 0; }
+	.anythingBase .container h2,
+	.anythingBase .container p { width: 460px; float: left; text-align: left!important; }
+	.anythingBase .container .btn { float: left; margin: 30px 0 0 0; position: relative; top: auto; }
+	.anythingBase .promo_left { width: 460px; float: left; }
+	.anythingBase .rethink_promo .container { height: 376px!important; background: url('../img/promo/rethink.png') right bottom no-repeat!important; }
+	
+.anythingBase .panel.vertical { float: none; }
+div.anythingSlider .arrow { top: 150px; position: absolute; display: block; }
+div.anythingSlider .arrow a { width: 56px; height: 56px; overflow: hidden; display: block }
+div.anythingSlider .arrow a span { display: block; text-indent: -9999px; }
+div.anythingSlider .back { left: 10%; }
+div.anythingSlider .back a { background: url('../img/promo/prev.png') top no-repeat; }
+div.anythingSlider .back a:hover, 
+div.anythingSlider .back a.hover { background: url('../img/promo/prev.png') bottom no-repeat; }
+div.anythingSlider .back.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+div.anythingSlider .forward { right: 10%; }
+div.anythingSlider .forward a { background: url('../img/promo/next.png') top no-repeat; }
+div.anythingSlider .forward a:hover, 
+div.anythingSlider .forward a.hover { background: url('../img/promo/next.png') bottom no-repeat; }
+div.anythingSlider .forward.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+div.anythingSlider .anythingControls { width: auto; margin: 0 auto; outline: 0; text-align: center; }
+div.anythingSlider .anythingControls ul { width: auto; margin: 0 auto; padding: 0; position: absolute; top: 35px; left: 0; right: 0; text-align: center; }
+div.anythingSlider .anythingControls ul li { width: 10px; height: 10px; margin: 0 5px 0 0; display: inline; }
+div.anythingSlider .anythingControls ul li a { background: url('../img/promo/dots.png') top no-repeat; }
+div.anythingSlider .anythingControls ul li a.cur { background: url('../img/promo/dots.png') bottom no-repeat; }
+div.anythingSlider .anythingControls ul li.last { border: 0; }
+div.anythingSlider .anythingControls ul a { width: 10px; height: 10px; display: inline-block; text-decoration: none; text-align: left; outline: 0; overflow: hidden; text-indent: -999px; }
+div.anythingSlider, div.anythingSlider .anythingWindow, div.anythingSlider .anythingControls ul a, div.anythingSlider .arrow a, div.anythingSlider .start-stop { transition-duration: 0; -o-transition-duration: 0; -moz-transition-duration: 0; -webkit-transition-duration: 0; }

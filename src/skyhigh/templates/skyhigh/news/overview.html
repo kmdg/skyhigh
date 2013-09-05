@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}News &amp; Events{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>News &amp; Events</h1>
+            <div class="content media_overview">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar_company.html' %}
+                </div>
+                <h2 class="lesstitle"><a href="{% url media_events %}">Events&nbsp;&raquo;</a></h2>
+                <div class="column">
+                    {% for event in params.event_list %}
+                        <div class="listing no-bord no-marg-bottom">
+                            <a class="event_image" href="{{ event.external_link }}"><img src="{{ MEDIA_URL }}{{ event.image }}" class="image_third" /></a>
+                            <div class="listing_event_content">
+                                <h3>{{ event.title }}</h3>
+                                <p>{{ event.content|safe|truncatewords:"23" }}</p>
+                                {% if event.external_link %}<p><a href="{{ event.external_link }}" class="link">Read More</a></p>{% endif %}
+                            </div>
+                        </div>
+                    {% empty %}
+                        <p class="empty">There are no events to list.</p>
+                    {% endfor %}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="lesstitle"><a href="{% url media_coverage %}">Media Coverage&nbsp;&raquo;</a></h2>
+                <div class="column">
+                    <div class="listing no-bord no-marg-bottom">
+                        <img src="/static/skyhigh/img/logo_crn.png" width="150" class="image_third" />
+                        <h3>The 25 Coolest Emerging Vendors For 2013</h3>
+                        <p><a href="http://www.crn.com/slide-shows/components-peripherals/240159701/the-25-coolest-emerging-vendors-for-2013.htm?pgno=21" class="link" target="_blank">Read More</a></p>
+                    </div>
+                    <div class="listing no-bord no-marg-bottom">
+                        <img src="/static/skyhigh/img/logo_itbusinessedge.png" width="150" class="image_third" />
+                        <h3>Compliance Management Gets Streamlined with Skyhigh Secure</h3>
+                        <p><a href="http://www.itbusinessedge.com/blogs/it-unmasked/compliance-management-gets-streamlined-with-skyhigh-secure.html" class="link" target="_blank">Read More</a></p>
+                    </div>
+                    <div class="listing no-bord no-marg-bottom">
+                        <img src="/static/skyhigh/img/logo_networkworld.png" width="150" class="image_third" />
+                        <h3>10 Hot Security Startups to Watch</h3>
+                        <p><a href="http://www.networkworld.com/news/2013/071013-10-hot-security-startups-to-271677.html?page=4" class="link" target="_blank">Read More</a></p>
+                    </div>
+{% comment %}
+                    <div class="listing no-bord no-marg-bottom">
+                        <img src="/static/skyhigh/img/logo_networkworld.png" width="150" class="image_third" />
+                        <h3>Skyhigh Networks helps you discover every cloud service your company uses</h3>
+                        <p><a href="http://www.networkworld.com/newsletters/techexec/2013/041913bestpractices.html" class="link" target="_blank">Read More</a></p>
+                    </div>
+                    <div class="listing no-bord no-marg-bottom">
+                        <img src="/static/skyhigh/img/logo_nyt.png" width="150" class="image_third" />
+                        <h3>Where Apps Meet Work, Secret Data Is at Risk</h3>
+                        <p><a href="http://www.nytimes.com/2013/03/04/technology/it-managers-struggle-to-contain-corporate-data-in-the-mobile-age.html?pagewanted=all&_r=2&" class="link" target="_blank">Read More</a></p>
+                    </div>
+                    
+                    <div class="listing no-bord no-marg-bottom">
+                        <img src="/static/skyhigh/img/logo_wsj.png" width="150" class="image_third" />
+                        <h3>CIOs Go Skyhigh to Corral Cloud Services, Shadow IT</h3>
+                        <p><a href="http://blogs.wsj.com/cio/2013/02/27/cios-go-skyhigh-to-corral-cloud-services-shadow-it/tab/print/" class="link" target="_blank">Read More</a></p>
+                    </div>
+{% endcomment %}
+{% comment %}
+                    {% for media_coverage in params.media_coverage_list %}
+                        <div class="listing no-bord no-marg-bottom">
+                            <img src="{{ media_coverage.get_202x126_url }}" width="150" class="image_third" />
+                            <h3>{{ media_coverage.title }}</h3>
+                            <p>{{ media_coverage.content|safe|truncatewords:"23" }}</p>
+                            <p><a href="{{ media_coverage.external_link }}" class="link" target="_blank">Read More</a></p>
+                        </div>
+                    {% empty %}
+                        <p class="empty">There is no media coverage to list.</p>
+                    {% endfor %}
+{% endcomment %}
+                    <div class="clear"></div>
+                </div>
+                <h2 class="lesstitle"><a href="{% url media_press_releases %}">Press Releases&nbsp;&raquo;</a></h2>
+                <div class="column">
+                    {% for press_release in params.press_release_list %}
+                        <div class="listing no-bord no-marg-bottom">
+                            <h3>{{ press_release.title }}</h3>
+                            <p>{{ press_release.content|safe|truncatewords:"23" }}</p>
+                            <p><a href="{% url media_press_releases_detail press_release.pk %}" class="link">Read More</a></p>
+                        </div>
+                    {% empty %}
+                        <p class="empty">There are no press releases to list.</p>
+                    {% endfor %}
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

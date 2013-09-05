@@ -1,0 +1,36 @@
+{% comment %}
+	<div class="widget">
+	    <h3>Take the 30-in-30 Challenge</h3>
+	    <p>Identify 30 unknown cloud services in 30 mins</p>
+	    <p><a href="{% url 30_in_30_vanity %}" class="link">Learn More</a></p>
+	</div>
+
+	<div class="widget">
+	    <h3>View the Product Demo</h3>
+	    <p>Register for the product demo webinar</p>
+	    <p><a href="{% url campaign_demo %}" class="link">Register Now</a></p>
+	</div>
+	<div class="widget">
+	    <h3>Read the Product Overview</h3>
+	    <p>Get the 1 page overview of Skyhigh Networks</p>
+	    <p><a href="{{ STATIC_URL }}skyhigh/pdf/Skyhigh-1-pager.pdf" target="_blank" onclick="_gaq.push(['_trackPageview', '/goals/click/pdfdownload.html']);" class="link">Download PDF</a></p>
+	</div>
+	<div class="widget">
+	    <h3>See How it’s Deployed</h3>
+	    <p>Check out this simple deployment diagram</p>
+	    <p><a href="{{ STATIC_URL }}skyhigh/img/deployment.png" class="link open_pop">View Diagram</a></p>
+	</div>
+{% endcomment %}
+<div class="widget">
+	<h3>Schedule a Demo</h3>
+	<p><a href="{% url campaign_demo %}" class="link">Schedule a product demo</a></p>
+</div>
+<div class="widget">
+	<h3>Product Datasheet</h3>
+	<p><a href="{% url asset_landing_access_security %}" class="link">Download the datasheet</a></p>
+</div>
+<div class="widget">
+	<h3>The 4 Step Guide to Cloud Data Security</h3>
+	<p><a href="{% url asset_landing_data_security %}" class="link">Read the whitepaper</a></p>
+</div>
+

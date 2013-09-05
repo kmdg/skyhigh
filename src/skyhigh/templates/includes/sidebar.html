@@ -1,0 +1,45 @@
+{% load skyhigh_widgets %}
+
+{% comment %}
+	{% newsletter_signup %}
+	{% if not user.profile.is_partner %}
+		<div class="widget">
+		    <h3>Become a Partner</h3>
+		    <p>Contact us to become a Skyhigh Technology Partner or Reseller/Distributor.</p>
+		    <p><a href="{% url partners_overview %}" class="link">Become a Partner</a></p>
+		</div>
+	{% endif %}
+	<div class="widget">
+	    <h3>Contact Us</h3>
+	    <p>Do you have questions about the Skyhigh Dashboard, or would like to see a Demo?</p>
+	    <p><a href="{% url company_contact %}" class="link">Contact Us</a></p>
+	</div>
+{% endcomment %}
+{% comment %}
+<div class="widget">
+    <h3>Take the 30-in-30 Challenge</h3>
+    <p>Identify 30 unknown cloud services in 30 mins</p>
+    <p><a href="{% url 30_in_30_vanity %}" class="link">Learn More</a></p>
+</div>
+{% endcomment %}
+<div class="widget">
+	<h3>The 4 Step Guide to Cloud Data Security</h3>
+	<p><a href="{% url asset_landing_data_security %}" class="link">Read the whitepaper</a></p>
+</div>
+{% comment %}
+	<div class="widget">
+	    <h3>View the Product Demo</h3>
+	    <p>Register for the product demo webinar</p>
+	    <p><a href="{% url campaign_demo %}" class="link">Register Now</a></p>
+	</div>
+{% endcomment %}
+<div class="widget">
+    <h3>Understand the Risk</h3>
+    <p>Learn about the hidden growth and risk of Shadow IT</p>
+    <p><a href="{% url rethink_cloud %}" class="link">Learn More</a></p>
+</div>
+<div class="widget">
+    <h3>Skyhigh’s Solution</h3>
+    <p>See how Skyhigh shines a light on Shadow IT, eliminating risk and increasing returns</p>
+    <p><a href="{% url product_tour %}" class="link">Take The Tour</a></p>
+</div>

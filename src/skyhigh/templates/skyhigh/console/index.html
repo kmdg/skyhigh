@@ -1,0 +1,61 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% load skyhigh_tags %}
+
+{% block title %}Console{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Console</h1>
+            <h2>This is the console, a restricted area where permitted users can administer the site.</h2>
+            <div class="content">
+                <div class="column column_full">
+                    <div class="third">
+                        <h3>Users</h3>
+                        <p>Users on the site.<br />&nbsp;</p>
+                        <p><a href="{% url console_usage_user_list %}" class="link">Users</a></p>
+                    </div>
+                    <div class="third">
+                        <h3>Evaluators</h3>
+                        <p>Users permitted to evaluate the product.</p>
+                        <p><a href="{% url console_usage_evaluator_list %}" class="link">Evaluators</a></p>
+                    </div>
+                    <div class="third">
+                        <h3>Partners</h3>
+                        <p>Authorised partners.<br />&nbsp;</p>
+                        <p><a href="{% url console_usage_partner_list 'technical' %}" class="link">Partners</a></p>
+                    </div>
+                    <div class="third">
+                        <h3>Events</h3>
+                        <p>Advertise upcoming events on the site.</p>
+                        <p><a href="{% url console_news_and_events_event_list %}" class="link">Events</a></p>
+                    </div>
+                </div>
+                <div class="column column_full">
+                    <div class="third">
+                        <h3>Media Coverage</h3>
+                        <p>Link to any related articles on the web.</p>
+                        <p><a href="{% url console_news_and_events_media_coverage_list %}" class="link">Media Coverage</a></p>
+                    </div>
+                    <div class="third">
+                        <h3>Press Releases</h3>
+                        <p>Important company news.<br />&nbsp;</p>
+                        <p><a href="{% url console_news_and_events_press_release_list %}" class="link">Press Releases</a></p>
+                    </div>
+                    <div class="third">
+                        <h3>Corporate Blog</h3>
+                        <p>A blog about company related matters.</p>
+                        <p><a href="{% url console_news_and_events_blog_detail 'corporate-blog' %}" class="link">Corporate Blog</a></p>
+                    </div>
+                    <div class="third">
+                        <h3>Engineering Blog</h3>
+                        <p>A space for engineers to write about technical matters.</p>
+                        <p><a href="{% url console_news_and_events_blog_detail 'engineering-blog' %}" class="link">Engineering Blog</a></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

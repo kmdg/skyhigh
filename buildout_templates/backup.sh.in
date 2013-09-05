@@ -1,0 +1,29 @@
+#!/bin/sh
+
+backup_files="${buildout:directory}"
+dest="${buildout:backup-directory}"
+
+day=$(date +%y%m%d)
+hostname=$(hostname -s)
+archive_file="${buildout:server-name}-$hostname-$day.tar.gz"
+database_archive="${buildout:database-name}.db-$hostname-$day.tar"
+
+echo "Backing up $backup_files to $dest/$archive_file"
+date
+echo
+
+tar -czf $dest/$archive_file $backup_files
+
+
+echo "Backing up database ${buildout:database-name} to $dest/$database_archive"
+date
+echo
+
+sudo -u postgres pg_dump -Ft ${buildout:database-name} > $dest/$database_archive
+gzip $dest/$database_archive $dest/$database_archive.gz
+
+echo
+echo "Backup done"
+date
+
+ls -lh $dest

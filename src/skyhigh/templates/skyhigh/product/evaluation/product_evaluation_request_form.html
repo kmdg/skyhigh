@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load honeypot %}
+
+{% block title %}SaaS Security Solutions, Cloud Control Company{% endblock %}
+{% block meta_description %}Equip your cloud applications with enhanced security controls that ensure absolute safety of your data. Contact us for a no cost evaluation.{% endblock %}
+{% block meta_keywords %}SaaS security, Cloud control{% endblock %}
+
+{% block landing_class %}class="landing"{% endblock %}
+
+{% block header %}
+	<div class="container">
+	    <a href="/" class="logo">Skyhigh Networks | Cloud Usage Monitoring</a>
+	</div>
+{% endblock %}
+
+{% block landing_nav %}{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form form_full_site">
+            <h1>Schedule a FREE Cloud Discovery & Risk Assessment</h1>
+            <div class="content">
+                <div class="column column_full">
+                    <p style="margin-top: 0px;">Because Skyhigh's Cloud Access Security Manager is a zero footprint solution, the assessment is simple and takes less than 24 hrs:</p>
+                    <p>This offering enables you to:</p>
+                    <ul>
+                        <li><strong>Discover and quantify your enterprise cloud usage</strong> through complete visibility into all IaaS, PaaS, and SaaS cloud services used by your employees.</li>
+                        <li><strong>Receive a risk assessment for all the cloud services</strong> used by your employees based on 30 attributes across data, user / device, service and business categories.</li>
+                        <li><strong>Isolate potential data leaks, security breaches, and non-compliance</strong> with regulatory and internal policies from the use of cloud services.</li>
+                        <li><strong>Identify cloud services that should be approved, controlled, or consolidated</strong>, and identify subscriptions that should be adjusted based on actual usage and industry best practices.</li>
+                    </ul>
+{% comment %}
+                    <form id="frmEvaluationRequest" action="." method="POST" class="validate_form">{% csrf_token %}
+                    	{{ form.search_string }}
+                    	{{ form.search_engine }}
+                    	{{ form.pay_per_click_keyword }}
+                        <div class="note">Fields marked with <span class="blue">*</span> are required</div>
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_first_name">First Name <span class="blue">*</span></label>
+                                {{ form.first_name }}{{ form.first_name.errors }}
+                            </div>
+                            <div class="field field-half align-right">
+                                <label for="id_last_name">Last Name <span class="blue">*</span></label>
+                                {{ form.last_name }}{{ form.last_name.errors }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_company">Company <span class="blue">*</span></label>
+                                {{ form.company }}{{ form.company.errors }}
+                            </div>
+                            <div class="field field-half align-right">
+                                <label for="id_email">Company Email <span class="blue">*</span></label>
+                                {{ form.email }}{{ form.email.errors }}
+                            </div>
+                        </div>
+                        {% if not user.is_authenticated %}
+                        <div class="row">
+	                        <div class="field field-half">
+	                            <label for="id_email">Password <span class="blue">*</span></label>
+	                            {{ form.password1 }}{{ form.password1.errors }}
+	                        </div>
+	                        <div class="field field-half align-right">
+	                            <label for="id_email">Confirm Password <span class="blue">*</span></label>
+	                            {{ form.password2 }}{{ form.password2.errors }}
+	                        </div>
+                        </div>
+                        {% endif %}
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_job_title">Job Title</label>
+                                {{ form.job_title }}{{ form.job_title.errors }}
+                            </div>
+                            <div class="field field-half align-right">
+                                <label for="id_phone_number">Phone Number</label>
+                                {{ form.phone_number }}{{ form.phone_number.errors }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field field-half">
+                                <label for="id_requests_or_comments">Requests or Comments </label>
+                                {{ form.requests_or_comments }}{{ form.requests_or_comments.errors }}
+                            </div>
+                            <div class="field field-half align-right check">
+                                <label for="id_upload_log_file_sample">Upload Log File Sample {{ form.upload_log_file_sample }}</label>
+                                {{ form.upload_log_file_sample.errors }}
+                                <div id="static_page_row">
+                                    {{ form.log_file_sample }}{{ form.log_file_sample.errors }}
+                                    <div class="clear"></div>
+                                    <p>Please copy & paste 5 to 20 lines of the firewall or SIEM or web proxy log file you wish to use. Skyhigh will setup your account and contact you with upload information.</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% render_honeypot_field %}
+                        <div class="buttons">
+                            <input type="submit" value="Request an Evaluation" class="btn" />
+                        </div>
+                    </form>
+                    <div class="clear"></div>
+{% endcomment %}
+					
+                    <div class="column_float position">
+                    	<h4>Cloud Discovery & Risk Assessment Report</h4>                    	
+					    <img src="/static/skyhigh/img/Image_borderless.png" alt="Cloud Discovery & Risk Assessment" />
+					</div>
+                    <div class="marketo_embed_wider"><iframe width="600" height="450" frameborder="0" style="margin: -45px 0 -120px -120px" scrolling="no" src="http://info.skyhighnetworks.com/TrySkyhighNow_RegistrationPage.html"></iframe></div>
+                    <div class="clear"></div>
+{% comment %}
+                    <div class="form_additional">
+                        <h3>Product Evaluation Details</h3>
+                        <p>We offer no cost evaluations of the product, during which we will work with you to conduct a thorough Cloud Discovery and Risk Assessment.</p>
+                        <p>This offering enables you to:</p>
+                        <ul>
+                            <li>Discover your enterprise cloud exposure through complete visibility into all IaaS, PaaS, and SaaS cloud services used by your employees.</li>
+                            <li>Receive a risk assessment for all the cloud services used by your employees based on 30 attributes across data, user / device, service and business categories.</li>
+                            <li>Isolate potential data leaks, security breaches, and non-compliance with regulatory and internal policies from the use of cloud services.</li>
+                            <li>Identify cloud services that should be approved, controlled, consolidated, or subscriptions that should be adjusted based on actual usage and industry best practices.</li>
+                        </ul>
+                        <p>If you have any questions, please let us know at <a href="mailto:sales@skyhighnetworks.com">sales@skyhighnetworks.com</a></p>
+                    </div>
+{% endcomment %}
+                </div>
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block bottom_js %}
+	{% include 'includes/ga_remarketing_scripts.html' %}
+{% endblock %}
+
+{% block extra_tracking_js %}
+<script type="text/javascript" src="//formalyzer.com/formalyze_init.js"></script> 
+<script type="text/javascript" src="//formalyzer.com/formalyze_call.js"></script> 
+{% endblock %}
+
+{% block livechat %}{% endblock %}
+
+

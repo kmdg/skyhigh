@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}The 4-Step Guide to Cloud Data Security{% endblock %}
+{% block meta_description %}Gartner predicts that 35% of IT spending will take place outside of IT by 2015, so a large volume of corporate data is moving to and from these unmanaged cloud services exposing, companies to significant risk.{% endblock %}
+
+{% block landing_class %}class="landing"{% endblock %}
+
+{% block header %}
+	<div class="container">
+	    <a href="/" class="logo">Skyhigh Networks | Cloud Usage Monitoring</a>
+	</div>
+{% endblock %}
+
+{% block landing_nav %}{% endblock %}
+
+{% block content %}
+
+    <div class="section">
+        <div class="container form_full_site">
+            <h1>The 4-Step Guide to Cloud Data Security</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="widget">
+                        <h2>Download Now</h2>
+                        <div class="marketo_embed"><iframe width="576" height="435" frameborder="0" style="margin: -10px 0 0 -268px;"  scrolling="no" src="http://info.skyhighnetworks.com/CloudDiscoveryAnalysisBestPractices_RegistrationPage.html"></iframe></div>
+                   </div>
+                </div>
+				<div class="column">
+					<div class="column_float column_shorter">
+						<img src="{{ STATIC_URL }}skyhigh/img/thumb_cloud_data_security.png" alt="" class="image_square" />
+					</div>
+					<p>Employees love cloud services for a variety of reasons, from ease of use to business agility. However, these services come with significant security, legal, and business risks when procured and managed outside of IT.</p>
+					<p>Gartner predicts that 35% of IT spending will take place outside of IT by 2015, so a large volume of corporate data is moving to and from these unmanaged cloud services exposing, companies to significant risk.</p>
+					<p>Download this whitepaper to learn the 4-step process for protecting all of your data in the cloud without any impact to user experience.</p>				
+					<div class="socials">
+					    <span title='Delicious' class='st_delicious_large' displayText='Delicious'></span>
+				        <span title='Digg' class='st_diigo_large' displayText='Diigo'></span>
+				        <span title='Facebook' class='st_facebook_large' displayText='Facebook'></span>
+				        <span title='Twitter' class='st_twitter_large' displayText='Tweet'></span>
+				        <span title='LinkedIn' class='st_linkedin_large' displayText='LinkedIn'></span>
+				        <span title='Pinterest' class='st_pinterest_large' displayText='Pinterest'></span>
+				        <span title='Google Plus' class='st_googleplus_large' displayText='Google +'></span>
+				        <span title='Reddit' class='st_reddit_large' displayText='Reddit'></span>
+				        <span title='StumbleUpon' class='st_stumbleupon_large' displayText='StumbleUpon'></span>
+					</div>
+				</div><!--/column-->
+            </div><!--/content-->
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block landing_footer %}
+
+	<div class="footer">
+	    <div class="container">
+	        <p class="legal">Copyright &copy; 2013 Skyhigh Networks</p>
+	        <p class="connect">
+                <a href="http://www.facebook.com/pages/Skyhigh-Networks/179236572223050?ref=ts&fref=ts" class="fb">Skyhigh on Facebook</a>                
+                <a href="https://twitter.com/SkyhighNetworks" class="tw">Skyhigh on Twitter</a>                
+            </p>	        
+	    </div>
+	</div><!--/footer-->
+        
+{% endblock %}
+
+{% block bottom_js %}
+    {% include 'unobase/commenting/comment_script.html' %}
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ed2330ac-a311-4a43-8879-41e85bd1a870", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+{% endblock %}
+
+{% block livechat %}{% endblock %}

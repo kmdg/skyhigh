@@ -1,0 +1,13 @@
+{% extends 'email/base.html' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},<br/>
+<br/>
+You have changed your email address on {{ app_name }} at http://{{ site }}<br/>
+<br/>
+Your username is: {{ user.username }}<br/>
+<br/>
+To reactivate your account, go to http://{{ site }}/secure/accounts/activate/{{ activation_key }}/<br/>
+<br/>
+You have {{ expiration_days }} days to activate your account.<br/>
+{% endblock %}

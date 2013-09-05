@@ -1,0 +1,1 @@
+{{ app_name }} Cloud Service Provider {{ user.email }} CSP Attributes updated

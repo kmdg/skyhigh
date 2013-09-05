@@ -1,0 +1,49 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Messages{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Contact Messages</h1>
+            <br class="clear">
+
+            <a class="{% ifequal label 'inbox' %}active{% endifequal %}" href="{% url console_messages 'inbox' %}">Inbox</a>
+            <a class="{% ifequal label 'read' %}active{% endifequal %}" href="{% url console_messages 'read' %}">Read</a>
+            <a class="{% ifequal label 'unread' %}active{% endifequal %}" href="{% url console_messages 'unread' %}">Unread</a>
+            <a class="{% ifequal label 'responded' %}active{% endifequal %}" href="{% url console_messages 'responded' %}">Responded</a>
+            <div class="column column_full">
+                <div class="listing listing_full">
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">Name</th>
+                                <th width="120">Email Address</th>
+                                <th width="120">Job Title</th>
+                                <th width="120">Company</th>
+                                <th width="120">Source</th>
+                                <th width="120">Sent At</th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr>
+                                <td>{% ifequal object.status 0 %}<strong><a href="{% url console_message_detail object.pk %}">{{ object.user.first_name }} {{ object.user.last_name }}</a></strong>{% else %}<a href="{% url console_message_detail object.pk %}">{{ object.user.first_name }} {{ object.user.last_name }}</a>{% endifequal %}</td>
+                                <td>{% ifequal object.status 0 %}<strong>{{ object.user.email }}</strong>{% else %}{{ object.user.email }}{% endifequal %}</td>
+                                <td>{% ifequal object.status 0 %}<strong>{{ object.user.profile.job_title }}</strong>{% else %}{{ object.user.profile.job_title }}{% endifequal %}</td>
+                                <td>{% ifequal object.status 0 %}<strong>{{ object.user.profile.company }}</strong>{% else %}{{ object.user.profile.company }}{% endifequal %}</td>
+                                <td>{% ifequal object.status 0 %}<strong>Contact</strong>{% else %}Contact{% endifequal %}</td>
+                                <td>{% ifequal object.status 0 %}<strong>{{ object.sent_date }}</strong>{% else %}{{ object.sent_date }}{% endifequal %}</td>
+                            </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="6">Sorry, there are no items to list</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Press Releases{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Press Releases</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dolore magna aliqua.</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+	                {% for object in object_list %}
+                        <div class="listing">
+                            <h3>{{ object.title }}</h3>
+                            <p>{{ object.content|safe|truncatechars:200 }}</p>
+                            <p>{% if object.pdf %}<a href="{{ MEDIA_URL }}{{ object.pdf }}" class="link">Download PDF</a> &nbsp; {% endif %}<a href="#" class="link">Read More</a></p>
+                        </div>
+                    {% empty %}
+                        <p>There are no press releases to display.</p>
+                    {% endfor %}
+                </div>
+                {% pagination page_obj %}
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

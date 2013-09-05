@@ -1,0 +1,41 @@
+{% extends 'skyhigh/my_profile_csp_attributes_update_base.html' %}
+
+{% block step2 %}on{% endblock %}
+
+{% block wizard_form %}
+<div class="field">
+    <label for="id_anonymous_use">Anonymous use</label>
+    <p>Does the app allow anonymous use of the service?</p>
+    {{ wizard.form.anonymous_use }}{{ wizard.form.anonymous_use.errors }}
+</div>
+<div class="field">
+    <label for="id_multi_factor_authentication">Multi-factor authentication</label>
+    <p>Does the SP support multi factor authentication?</p>
+    {{ wizard.form.multi_factor_authentication }}{{ wizard.form.multi_factor_authentication.errors }}
+</div>
+<div class="field">
+    <label for="id_jail_broken_app">Jail broken app</label>
+    <p>If mobile app supported, does it have a jail broken version?</p>
+    {{ wizard.form.jail_broken_app }}{{ wizard.form.jail_broken_app.errors }}
+</div>
+<div class="field">
+    <label for="id_mobile_app_support">Mobile app support</label>
+    <p>Is there a mobile app for the service?</p>
+    {{ wizard.form.mobile_app_support }}{{ wizard.form.mobile_app_support.errors }}
+</div>
+<div class="field">
+    <label for="id_identity_federation_method">Identity federation method</label>
+    <p>Does the SP support SAML/OAuth for Id Federation?</p>
+    {{ wizard.form.identity_federation_method }}{{ wizard.form.identity_federation_method.errors }}
+</div>
+<div class="field">
+    <label for="id_enterprise_identity">Enterprise identity</label>
+    <p>Does the service allow importing of enterprise identities for authentication, ex, from AD?</p>
+    {{ wizard.form.enterprise_identity }}{{ wizard.form.enterprise_identity.errors }}
+</div>
+<div class="field">
+    <label for="id_sso">SSO</label>
+    <p>Is SSO supported?</p>
+    {{ wizard.form.sso }}{{ wizard.form.sso.errors }}
+</div>
+{% endblock %}

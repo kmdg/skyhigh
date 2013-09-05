@@ -1,0 +1,63 @@
+#!/bin/sh
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DESC="Celeryd "
+NAME=$(basename $0)
+SCRIPTNAME=/etc/init.d/$NAME
+
+ROOT=${buildout:directory}
+BIN_PATH=$ROOT/bin
+LOG_PATH=$ROOT/logs
+SCHEDULER_PATH=$ROOT/scheduler
+EXEC_SCRIPT=$BIN_PATH/${exec_script}
+PIDFILE=$BIN_PATH/$NAME.pid
+RUN_AS=${buildout:user}
+
+d_start(){
+    if [ -f $PIDFILE ]; then
+        echo -n " already running"
+    else
+        start-stop-daemon --start --quiet \
+            --pidfile $PIDFILE \
+            --chuid $RUN_AS \
+            --exec $EXEC_SCRIPT celeryd_detach -- \
+            --beat \
+            --pidfile $PIDFILE \
+            -l info \
+            -f $LOG_PATH/celeryd.log \
+            -s $SCHEDULER_PATH/celerybeat-schedule
+    fi
+}
+
+d_stop(){
+    start-stop-daemon --stop --quiet --pidfile $PIDFILE \
+            || echo -n " not running"
+    if [ -f $PIDFILE ]; then
+        rm $PIDFILE
+    fi
+}
+
+
+case $1 in
+    start)
+    echo -n "Starting $DESC: $NAME"
+    d_start
+    echo "."
+    ;;
+    stop)
+    echo -n "Stopping $DESC: $NAME"
+    d_stop
+    echo "."
+    ;;
+    restart)
+    echo -n "Restarting: $DESC: $NAME"
+    d_stop
+    sleep 1
+    d_start
+    echo "."
+    ;;
+    *)
+    echo "Usage: $0 (start|stop|restart)"
+    exit 1
+    ;;
+esac

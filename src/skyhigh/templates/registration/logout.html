@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Logout{% endblock %}
+
+{% block messages %}<div></div>{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container form">
+        	{% include 'includes/message_error_header.html' %}
+            <h1>You have successfully been logged out.</h1>
+            <h2>This page will redirect shortly.</h2>
+        </div>
+    </div>
+{% endblock %}
+
+{% block bottom_js %}
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            setTimeout(function() {
+                  window.location.href = "{% url index %}";
+            }, 2500);
+        });
+    </script>
+{% endblock %}

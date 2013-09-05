@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block landing_class %}class="landing"{% endblock %}
+
+{% block header %}
+	<div class="container">
+	    <a href="/" class="logo">Skyhigh Networks | Cloud Usage Monitoring</a>
+	</div>
+{% endblock %}
+
+{% block landing_nav %}{% endblock %}
+
+{% block content %}
+
+    <div class="section">
+        <div class="container form_full_site">
+            <h1>A Platform-Centric Approach to Cloud Data Security</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="widget">
+                        <h2>Register Now!</h2>
+                        <div class="marketo_embed"><iframe width="576" height="435" frameborder="0" style="margin: -10px 0 0 -260px;"  scrolling="no" src="http://info.skyhighnetworks.com/20130815LaunchControlFeatures.html"></iframe></div>
+                   </div>
+                </div>
+				<div class="column">
+					<h3><span>Date &amp; Time:</span> Thursday, August 15 at 10 am PT / 1pm ET</h3>
+					<h3><span>Featured Speakers:</span> Kamal Shah &amp; Kaushik Narayan</h3>
+					<div class="column_float">
+					    <img src="/static/skyhigh/img/kamal.png" />
+					    <p>Speaker: Kamal Shah, <br /> VP of Products and Marketing</p>
+					    <img src="/static/skyhigh/img/kaushik.png" />
+					    <p>Speaker: Kaushik Narayann, <br /> Co-Founder and Chief Architect</p>
+					</div>
+					<p>A recent Morgan Stanley CIO survey found that 42% site security as their largest barrier to cloud adoption.  Traditionally, point solutions have addressed certain security requirements (e.g. encryption) for specific cloud services, but leading organizations now implement platform-centric approaches covering all aspects of cloud data security across wide ranges of services like Salesforce, Box, Dropbox, Jive, Evernote, and ServiceNow. </p>
+					<p>Listen in as Kamal Shah and Kaushik Narayan discuss best practices for platform-centric cloud data security that will help you:</p>
+					<ul>
+					    <li>Secure mobile to cloud access without deploying agents and VPNs</li>
+					    <li>Leverage real-time application and usage analytics to detect threats and secure data to and from the cloud</li>
+					    <li>Deploy cloud encryption and data loss prevention in 3-clicks</li>                
+					</ul>					
+					<div class="socials">
+					    <span title='Delicious' class='st_delicious_large' displayText='Delicious'></span>
+				        <span title='Digg' class='st_diigo_large' displayText='Diigo'></span>
+				        <span title='Facebook' class='st_facebook_large' displayText='Facebook'></span>
+				        <span title='Twitter' class='st_twitter_large' displayText='Tweet'></span>
+				        <span title='LinkedIn' class='st_linkedin_large' displayText='LinkedIn'></span>
+				        <span title='Pinterest' class='st_pinterest_large' displayText='Pinterest'></span>
+				        <span title='Google Plus' class='st_googleplus_large' displayText='Google +'></span>
+				        <span title='Reddit' class='st_reddit_large' displayText='Reddit'></span>
+				        <span title='StumbleUpon' class='st_stumbleupon_large' displayText='StumbleUpon'></span>
+					</div>
+				</div><!--/column-->
+            </div><!--/content-->
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block landing_footer %}
+
+	<div class="footer">
+	    <div class="container">
+	        <p class="legal">Copyright &copy; 2013 Skyhigh Networks</p>
+	        <p class="connect">
+                <a href="http://www.facebook.com/pages/Skyhigh-Networks/179236572223050?ref=ts&fref=ts" class="fb">Skyhigh on Facebook</a>                
+                <a href="https://twitter.com/SkyhighNetworks" class="tw">Skyhigh on Twitter</a>                
+            </p>	        
+	    </div>
+	</div><!--/footer-->
+        
+{% endblock %}
+
+{% block bottom_js %}
+    {% include 'unobase/commenting/comment_script.html' %}
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ed2330ac-a311-4a43-8879-41e85bd1a870", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+{% endblock %}

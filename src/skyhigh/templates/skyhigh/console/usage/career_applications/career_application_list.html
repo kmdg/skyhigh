@@ -1,0 +1,71 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}Career Application List{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Career Application List</h1>
+            <a href="javascript: void(0);" class="link toggle-filter">Toggle Filter</a>
+            <div class="form filter">
+                <form id="frmUserFilter" action="." method="GET">
+                    <div class="row">
+                        <div class="field field-half">
+                            <label>First Name</label>
+                            <div class="clear"></div>
+                            {{ filter_form.first_name }}{{ filter_form.first_name.errors }}
+                        </div>
+                        <div class="field field-half align-right">
+                            <label>Last Name</label>
+                            <div class="clear"></div>
+                            {{ filter_form.last_name }}{{ filter_form.last_name.errors }}
+                        </div>
+                        <div class="field">
+                            <label>Email</label>
+                            <div class="clear"></div>
+                            {{ filter_form.email }}{{ filter_form.email.errors }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="buttons">
+                            <input type="submit" id="submit" value="Filter" class="btn" />
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="clear"></div>
+            <div class="column column_full">
+                <div class="listing listing_full">
+
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">User</th>
+                                <th width="120">Email</th>
+                                <th width="120">Role</th>
+                                <th width="120">Login Date</th>
+                                <th width="60"></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr onclick="DoNav('{% url console_usage_career_application_detail object.pk %}');">
+                                <td><a href="{% url console_usage_career_application_detail object.pk %}">{{ object.user.profile.display_name }}</a></td>
+                                <td><a href="mailto:{{ object.user.email }}">{{ object.user.email }}</a></td>
+                                <td>{{ object.user.profile.get_role_display }}</td>
+                                <td>{{ object.user.profile.last_login }}</td>
+                                <td><a href="{% url console_usage_career_application_delete object.pk %}" class="link">Delete</a></td>
+                            </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5">Sorry, there are no items to list</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

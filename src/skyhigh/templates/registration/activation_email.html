@@ -1,0 +1,13 @@
+{% extends 'email/base.html' %}
+
+{% block content %}
+Dear {{ user.profile.display_name }},<br/>
+<br/>
+Thank you for your evaluation request. You are now registered on Skyhigh at http://{{ site }}<br/>
+<br/>
+Your username is: {{ user.username }}<br/>
+<br />
+We are eager to help you discover and analyze the cloud serviced in use at your organization. <br />
+<br/>
+You have 7 days to activate your account. To activate your account, please click <a style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #3399cc;" href="http://{{ site }}/secure/accounts/activate/{{ activation_key }}/">here</a>. Once activated, we will contact you shortly to initiate your no cost Skyhigh Cloud Discovery and Risk Assessment.  
+{% endblock %}

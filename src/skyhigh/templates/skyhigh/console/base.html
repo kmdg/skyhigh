@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block console_link %}
+    <a href="{% url index %}">Regular Site</a>
+{% endblock %}
+
+{% block console_js %}
+<script type="text/javascript">
+        function DoNav(theUrl)
+        {
+            document.location.href = theUrl;
+        }
+    </script>
+{% endblock %}
+
+{% block nav %}
+     <div class="container">
+         <ul>
+             {% comment %}
+             <li>
+                 <a href="javascript: void(0);">Statistics</a>
+                 <ul>
+                     <li><a href="{% url console_statistics_kpis %}">KPI's</a></li>
+                     <li><a href="{% url console_statistics_averages %}">Averages</a></li>
+                     <li><a href="{% url console_statistics_totals %}">Totals</a></li>
+                 </ul>
+             </li>
+             {% endcomment %}
+             <li>
+                 <a href="javascript: void(0);">Usage</a>
+                 <ul>
+                 	 <li><a href="{% url console_usage_sftp_user_list %}">SFTP Users</a></li>
+                     <li><a href="{% url console_usage_user_list %}">Users</a></li>
+                     <li><a href="{% url console_usage_evaluator_list %}">Evaluators</a></li>
+                     <li><a href="{% url console_usage_partner_list 'technical' %}">Technical Partners</a></li>
+                     <li><a href="{% url console_usage_partner_list 'channel' %}">Channel Partners</a></li>
+                     <li><a href="{% url console_usage_career_list %}">Careers</a></li>
+                     <li><a href="{% url console_usage_career_application_list %}">Career Applications</a></li>
+                     <li><a href="{% url console_usage_leader_list %}">Leaders</a></li>
+                     <li><a href="{% url console_usage_investor_list %}">Investors</a></li>
+                     <li><a href="{% url console_usage_case_study_list %}">Case Studies</a></li>
+                     <li><a href="{% url console_usage_configurable_email_list %}">Configurable Emails</a></li>
+                     {% comment %}<li><a href="{% url console_usage_downloads %}">Downloads</a></li>{% endcomment %}
+                 </ul>
+             </li>
+             <li>
+                 <a href="javascript: void(0);">News &amp; Events</a>
+                 <ul>
+                     <li><a href="{% url console_news_and_events_event_list %}">Events</a></li>
+                     <li><a href="{% url console_news_and_events_media_coverage_list %}">Media Coverage</a></li>
+                     <li><a href="{% url console_news_and_events_press_release_list %}">Press Releases</a></li>
+                     <li><a href="{% url console_news_and_events_blog_detail 'corporate-blog' %}">Corporate Blog</a></li>
+                     <li><a href="{% url console_news_and_events_blog_detail 'engineering-blog' %}">Engineering Blog</a></li>
+                 </ul>
+             </li>
+             {% comment %}
+             <li>
+                 <a href="{% url console_messages 'inbox' %}">Messages</a>
+             </li>
+             {% endcomment %}
+             <li>
+                 <a href="{% url outbound_email_list %}" class="no_sub">Outbound Emails</a>
+             </li>
+             <li>
+                 <a href="javascript: void(0);">Approvals</a>
+                 <ul>
+                     <li><a href="{% url console_approvals_evaluation %}">Evaluation</a></li>
+                     <li><a href="{% url console_approvals_partnership %}">Partnership</a></li>
+                 </ul>
+             </li>
+         </ul>
+     </div>
+{% endblock %}
+

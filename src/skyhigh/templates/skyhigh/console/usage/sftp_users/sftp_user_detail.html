@@ -1,0 +1,28 @@
+{% extends 'skyhigh/console/base.html' %}
+
+{% block title %}SFTP Users{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>SFTP User</h1>
+            <a href="{% url console_usage_sftp_user_list %}" class="link btn_light console-btn">Back To List</a>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th width="80">SFTP User</th>
+                        <td>{{ object.username }}</td>
+                    </tr>
+                    <tr>
+                        <th width="80">SFTP Password</th>
+                        <td>{{ object.password }}</td>
+                    </tr>
+                    <tr>
+                        <th width="60"></th>
+                        <td><a href="{% url console_usage_sftp_user_update object.pk %}" class="link btn btn-edit">Edit</a> &nbsp; <a href="{% url console_usage_sftp_user_delete object.pk %}" class="link btn_light btn-delete">Delete</a></td>
+                    </tr>
+                </table>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

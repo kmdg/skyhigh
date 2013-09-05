@@ -1,0 +1,37 @@
+{% extends 'skyhigh/console/base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Configurable Emails{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Configurable Emails</h1>
+            <div class="column column_full">
+                <div class="listing listing_full">
+                    <table>
+                        <tr>
+                            <thead>
+                                <th>Title</th>
+                                <th width="60"></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr onclick="DoNav('{% url console_usage_configurable_email_detail object.pk %}');">
+                                <td><a href="{% url console_usage_configurable_email_detail object.pk %}">{{ object.title }}</a></td>
+                                <td><a href="{% url console_usage_configurable_email_update object.pk %}" class="link">Edit</a><br /><a href="{% url console_usage_configurable_email_delete object.pk %}" class="link">Delete</a></td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="3">There are no configurable emails yet.</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            {% pagination page_obj %}
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

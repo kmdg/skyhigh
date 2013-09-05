@@ -1,0 +1,54 @@
+{% extends 'skyhigh/my_profile_csp_attributes_update_base.html' %}
+
+{% block step5 %}on{% endblock %}
+
+{% block wizard_form %}
+<div class="field">
+    <label for="id_terms_of_use">Terms of use</label>
+    {{ wizard.form.terms_of_use }}{{ wizard.form.terms_of_use.errors }}
+</div>
+<div class="field">
+    <label for="id_data_residency">Data residency</label>
+    {{ wizard.form.data_residency }}{{ wizard.form.data_residency.errors }}
+</div>
+<div class="field">
+    <label for="id_service_not_in_itar_list">Service not in itar list</label>
+    {{ wizard.form.service_not_in_itar_list }}{{ wizard.form.service_not_in_itar_list.errors }}
+</div>
+<div class="field">
+    <label for="id_account_termination">Account termination</label>
+    {{ wizard.form.account_termination }}{{ wizard.form.account_termination.errors }}
+</div>
+<div class="field">
+    <label for="id_ip_ownership">IP ownership</label>
+    {{ wizard.form.ip_ownership }}{{ wizard.form.ip_ownership.errors }}
+</div>
+<div class="field">
+    <label for="id_privacy_policy">Privacy policy</label>
+    {{ wizard.form.privacy_policy }}{{ wizard.form.privacy_policy.errors }}
+</div>
+<div class="field">
+    <label for="id_impacted_by_compliance">Impacted by compliance</label>
+    {{ wizard.form.impacted_by_compliance }}{{ wizard.form.impacted_by_compliance.errors }}
+</div>
+<div class="field">
+    <label for="id_dispute_resolution">Dispute resolution</label>
+    {{ wizard.form.dispute_resolution }}{{ wizard.form.dispute_resolution.errors }}
+</div>
+<div class="field">
+    <label for="id_jurisdictional_location">Jurisdictional Location</label>
+    {{ wizard.form.jurisdictional_location }}{{ wizard.form.jurisdictional_location.errors }}
+</div>
+<div class="field">
+    <label for="id_indemnity">Indemnity</label>
+    {{ wizard.form.indemnity }}{{ wizard.form.indemnity.errors }}
+</div>
+<div class="field">
+    <label for="id_copyright_controls">Copyright controls</label>
+    {{ wizard.form.copyright_controls }}{{ wizard.form.copyright_controls.errors }}
+</div>
+<div class="field">
+    <label for="id_statute_of_limitations">Statute of limitations</label>
+    {{ wizard.form.statute_of_limitations }}{{ wizard.form.statute_of_limitations.errors }}
+</div>
+{% endblock %}

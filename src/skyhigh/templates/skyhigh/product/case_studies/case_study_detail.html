@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Customers{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <h1>Customers</h1>
+        <div class="content">
+            <div class="sidebar">
+                <div class="sidebar_top"></div>
+                <div class="sidebar_bottom"></div>
+                {% include 'includes/sidebar.html' %}
+            </div>
+            <div class="column">
+                <div class="listing">
+                    <h3>{{ object.title }}</h3>
+                    {% if object.get_202x126_url %}
+                        <a href="{% url product_case_study_detail object.pk %}"><img src="{{ object.get_202x126_url }}" class="image_third" /></a>
+                    {% endif %}
+                    {{ object.content|safe }}
+                    {% if object.pdf %}<p><a class="link" href="{{ object.pdf.url }}">Download this Case Study</a></p>{% endif %}
+                </div>
+                <div class="back_to_list"><a href="{% url product_case_studies %}" class="btn btn_light">&laquo; Back To List</a></div>
+            </div>
+        </div><!--/content-->
+    </div>
+</div>
+{% endblock %}

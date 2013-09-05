@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Forum{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>{{ object.title }}</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% if perms.forum.can_moderate %}
+                        <div class="widget">
+                            <h3>Create a New Category</h3>
+                            <p><a href="{% url forum_category_create object.slug %}" class="link btn_light console-btn">Create Category</a></p>
+                        </div>
+                    {% endif %}
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    <h3>Categories</h3>
+                    {% for obj in object_list %}
+                        <div class="listing">
+                            <h3><a href="{% url forum_category_detail object.slug obj.slug %}">{{ obj.title }}</a></h3>
+                            <p>{{ obj.content|safe|truncatewords_html:40 }}</p>
+                            {% if perms.forum.can_moderate %}
+                            <p>
+                                <a href="{% url forum_category_edit obj.slug %}" class="link">Edit</a> &nbsp;
+                                <a href="{% url forum_category_delete obj.slug %}" class="link">Delete</a>
+                            </p>
+                            {% endif %}
+                            {% tag_list obj %}
+                        </div>
+                    {% empty %}
+                        <p>There are no forum categories to display.</p>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+                {% pagination page_obj %}
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

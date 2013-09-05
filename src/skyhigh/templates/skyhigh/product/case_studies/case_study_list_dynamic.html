@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Customers{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>Customers</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+	                {% for object in object_list %}
+                        <div class="listing">
+                            {% if object.get_202x126_url %}
+                            	{% if object.has_detail %}
+                                    <a href="{% url product_case_study_detail object.pk %}"><img src="{{ object.get_202x126_url }}" class="image_third" /></a>
+                                {% else %}
+                                    <img src="{{ object.get_202x126_url }}" class="image_third" />
+                                {% endif %}
+                            {% endif %}
+                            <h3>{{ object.title }}</h3>
+                            <p>{% if object.has_detail %}{{ object.content|safe|truncatechars:"200" }}{% else %}{{ object.content|safe }}{% endif %}</p>
+                            {% if object.has_detail %}
+                            	<p><a href="{% url product_case_study_detail object.pk %}" class="link">Read More</a></p>
+                            {% endif %}
+                        </div>
+                    {% empty %}
+                        <p>There are no case studies to display.</p>
+                    {% endfor %}
+                </div>
+                {% comment %}{% pagination page_obj %}{% endcomment %}
+                <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

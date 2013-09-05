@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Skyhigh Cloud Access Security Manager Datasheet{% endblock %}
+{% block meta_description %}Gain a comprehensive view into cloud services. Identify anomalous usage indicative of a security breach, data leakage, or high risk activity. Enforce security policies{% endblock %}
+
+{% block landing_class %}class="landing"{% endblock %}
+
+{% block header %}
+	<div class="container">
+	    <a href="/" class="logo">Skyhigh Networks | Cloud Usage Monitoring</a>
+	</div>
+{% endblock %}
+
+{% block landing_nav %}{% endblock %}
+
+{% block content %}
+
+    <div class="section">
+        <div class="container form_full_site">
+            <h1>Skyhigh Cloud Access Security Manager Datasheet</h1>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="widget">
+                        <h2>Download Now</h2>
+                        <div class="marketo_embed"><iframe width="576" height="435" frameborder="0" style="margin: -10px 0 0 -240px;"  scrolling="no" src="http://info.skyhighnetworks.com/SkyhighCASMdatasheet_RegistrationPage.html"></iframe></div>
+                   </div>
+                </div>
+				<div class="column">
+					<div class="column_float column_shorter">
+						<img src="{{ STATIC_URL }}skyhigh/img/thumb_skyhigh_networks_general_brochure_v14.png" alt="" class="image_square" />
+					</div>
+					<p>It takes just 3 steps to gain visibility and control over cloud services. Download the brochure to understand how your organization can:</p>
+					<ul>
+						<li>Gain a comprehensive view into cloud services in use across the organization and their risks</li>
+						<li>Identify anomalous usage indicative of a security breach, data leakage, or high risk activity</li>
+						<li>Enforce security policies across all cloud services including mobile-to-cloud activity</li>
+					</ul>				
+					<div class="socials">
+					    <span title='Delicious' class='st_delicious_large' displayText='Delicious'></span>
+				        <span title='Digg' class='st_diigo_large' displayText='Diigo'></span>
+				        <span title='Facebook' class='st_facebook_large' displayText='Facebook'></span>
+				        <span title='Twitter' class='st_twitter_large' displayText='Tweet'></span>
+				        <span title='LinkedIn' class='st_linkedin_large' displayText='LinkedIn'></span>
+				        <span title='Pinterest' class='st_pinterest_large' displayText='Pinterest'></span>
+				        <span title='Google Plus' class='st_googleplus_large' displayText='Google +'></span>
+				        <span title='Reddit' class='st_reddit_large' displayText='Reddit'></span>
+				        <span title='StumbleUpon' class='st_stumbleupon_large' displayText='StumbleUpon'></span>
+					</div>
+				</div><!--/column-->
+            </div><!--/content-->
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block landing_footer %}
+
+	<div class="footer">
+	    <div class="container">
+	        <p class="legal">Copyright &copy; 2013 Skyhigh Networks</p>
+	        <p class="connect">
+                <a href="http://www.facebook.com/pages/Skyhigh-Networks/179236572223050?ref=ts&fref=ts" class="fb">Skyhigh on Facebook</a>                
+                <a href="https://twitter.com/SkyhighNetworks" class="tw">Skyhigh on Twitter</a>                
+            </p>	        
+	    </div>
+	</div><!--/footer-->
+        
+{% endblock %}
+
+{% block bottom_js %}
+    {% include 'unobase/commenting/comment_script.html' %}
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ed2330ac-a311-4a43-8879-41e85bd1a870", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+{% endblock %}
+
+{% block livechat %}{% endblock %}

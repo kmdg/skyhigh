@@ -1,0 +1,56 @@
+{% extends 'skyhigh/my_profile_csp_attributes_update_base.html' %}
+
+{% block step4 %}on{% endblock %}
+
+{% block wizard_form %}
+<div class="field">
+    <label for="id_service_hosting_locations">Service hosting locations</label>
+    <p>In which geography is the service hosted?</p>
+    {{ wizard.form.service_hosting_locations }}{{ wizard.form.service_hosting_locations.errors }}
+</div>
+<div class="field">
+    <label for="id_compliance_certifications">Compliance certifications</label>
+    <p>Does the service have any compliance certifications?</p>
+    {{ wizard.form.compliance_certifications }}{{ wizard.form.compliance_certifications.errors }}
+</div>
+<div class="field">
+    <label for="id_service_address">Service address</label>
+    <p>Business addresses of the Service Provider</p>
+    {{ wizard.form.service_address }}{{ wizard.form.service_address.errors }}
+</div>
+<div class="field">
+    <label for="id_pricing_model">Pricing model</label>
+    <p>What is the pricing model for the Service?</p>
+    {{ wizard.form.pricing_model }}{{ wizard.form.pricing_model.errors }}
+</div>
+<div class="field">
+    <label for="id_price">Price</label>
+    <p>Pricing structure for the service</p>
+    {{ wizard.form.price }}{{ wizard.form.price.errors }}
+</div>
+<div class="field">
+    <label for="id_infrastructure_status_reporting">Infrastructure status reporting</label>
+    <p>Do they have a reporting mechanism for the health of their infrastructure?</p>
+    {{ wizard.form.infrastructure_status_reporting }}{{ wizard.form.infrastructure_status_reporting.errors }}
+</div>
+<div class="field">
+    <label for="id_business_hq">Business HQ</label>
+    <p>Geography of the headquarters of the SP</p>
+    {{ wizard.form.business_hq }}{{ wizard.form.business_hq.errors }}
+</div>
+<div class="field">
+    <label for="id_admin_audit_logging">Admin audit logging</label>
+    <p>Do they log all admin actions and if so what are the possible ways to access the logs?</p>
+    {{ wizard.form.admin_audit_logging }}{{ wizard.form.admin_audit_logging.errors }}
+</div>
+<div class="field">
+    <label for="id_user_activity_logging">User activity logging</label>
+    <p>Is all user activity logged and what access do the tenants get for these logs?</p>
+    {{ wizard.form.user_activity_logging }}{{ wizard.form.user_activity_logging.errors }}
+</div>
+<div class="field">
+    <label for="id_data_access_logging">Data access logging</label>
+    <p>Is access to the data logged and how do tenants get access to these logs?</p>
+    {{ wizard.form.data_access_logging }}{{ wizard.form.data_access_logging.errors }}
+</div>
+{% endblock %}

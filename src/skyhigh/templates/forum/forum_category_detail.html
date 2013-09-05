@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Forum Category{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container">
+            <h1>{{ object.title }}</h1>
+            <h2>{{ object_list|length }} thread{{ object_list|length|pluralize }}</h2>
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar_top"></div>
+                    <div class="sidebar_bottom"></div>
+                    <div class="widget">
+                        <h3>Create a New Thread</h3>
+                        <p><a href="{% url forum_thread_create object.slug %}" class="link btn_light">Create Thread</a></p>
+                    </div>
+                    {% include 'includes/sidebar.html' %}
+                </div>
+                <div class="column">
+                    {% for obj in object_list %}
+                        <div class="listing">
+                            <h3><a href="{% url forum_thread_detail object.forum.slug object.slug obj.slug %}">{{ obj.title }}</a></h3>
+                            <p>{{ object.content|safe|truncatewords_html:40 }}</p>
+                            {% if request.user == obj.created_by or perms.forum.can_moderate %}
+                            <p>
+                                <a href="{% url forum_thread_edit obj.slug %}" class="link">Edit</a> &nbsp; 
+                                {% if perms.forum.can_moderate %}
+                                    <a href="{% url forum_thread_delete obj.slug %}" class="link">Delete</a>
+                                {% endif %}
+                            </p>
+                            {% endif %}
+                            {% tag_list obj %}
+                        </div>
+                    {% empty %}
+                        <p>There are no forum threads to display.</p>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+                {% pagination page_obj %}
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

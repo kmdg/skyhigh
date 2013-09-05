@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load skyhigh_tags %}
+
+{% block title %}Cloud and IT Networking Services ­- Skyhigh Networks{% endblock %}
+{% block meta_description %}Skyhigh Networks cloud enablement solution helps businesses adopt the cloud rapidly by discovering the cloud services their employees are using, analyze risk and enforce security policies.{% endblock %}
+{% block meta_keywords %}Cloud service broker, Data loss prevention tools, Data loss prevention software, Shadow IT{% endblock %}
+
+{% block content %}
+	<div class="section promo micpro">
+        <ul id="micro">
+            <li class="announcing">
+                <div class="wording">
+                    <h1>Announcing Skyhigh Secure</h1>
+                </div>
+                <img src="{{ STATIC_URL }}skyhigh/img/promo/banner3.png" alt="Skyhigh Advanced Data Security Solutions" />
+            </li>
+        </ul>
+    </div>   
+
+    <div class="section micro">
+        <div class="container">            
+            <div class="blogs">
+            	<h3>Announcement</h3>
+            	<h4>Blog</h4>
+            	<p>Skyhigh Announces Skyhigh Secure to Protect All Data Across All Cloud Services<br /><a href="/blog/detail/skyhigh-announces-skyhigh-secure-to-protect-all-data-across-all-cloud-services/">Read More</a></p>
+            	<h4>Press Release</h4>
+            	<p>Skyhigh Networks Announces<br /> Skyhigh Secure™<br /><a href="/news/press_releases/104/detail/">Read More</a></p>
+            </div>
+            <div class="blogs">
+            	<h3>Learn More</h3>
+            	<div class="list">
+            		<img src="{{ STATIC_URL }}skyhigh/img/icon_datasheet.png" />
+            		<p><a href="{% url asset_landing_secure_brochure %}">Datasheet - Skyhigh Secure</a></p>
+            	</div>
+            </div>
+            <div class="blogs marker no-pad">
+            	<div class="marker_box">
+            		<img src="{{ STATIC_URL }}skyhigh/img/thumb_whitepaper.png" />
+            		<p class="yellow">Whitepaper</p>
+            		<p>The 4 Step Guide to Cloud Data Security</p>
+            		<a class="btn download" href="{% url asset_landing_data_security %}">Download Now</a>
+            	</div>
+            </div>
+            <div class="social_feeds">
+            	<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+				<a class="addthis_button_linkedin_counter"></a>
+				</div>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+				<!-- AddThis Button END -->
+            </div>
+        </div><!--/container-->
+    </div><!--/section-->
+    
+{% endblock %}
+
+

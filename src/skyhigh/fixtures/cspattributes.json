@@ -1,0 +1,492 @@
+[
+    {
+        "pk": 1,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 1,
+            "name": "Data Sharing Support",
+            "description": "Does the service allow sharing of data by allowing users to upload files"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 2,
+            "name": "Data Capacity",
+            "description": "If yes to the above, what is the size of the file allowed"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 3,
+            "name": "Data Encryption at Rest",
+            "description": "Is the data encrypted once stored in the cloud"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 4,
+            "name": "Data Encryption in transit",
+            "description": "Is the data encrypted in transit, essentially do they use SSL"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 5,
+            "name": "Data Multi-tenancy",
+            "description": "Is the service multi-tenant?"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 6,
+            "name": "Encryption with Tenant Managed Keys (Data Mingling)",
+            "description": "Does the service allow usage of tenant specified keys for encrypting data at rest?"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 7,
+            "name": "Data Retention on Termination",
+            "description": "What happens to the tenant data once the tenant/SP terminates the contract"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 8,
+            "name": "Auto Sync of Data",
+            "description": "Does the service support auto-sync of data via desktop / mobile app"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 9,
+            "name": "Encryption Strength",
+            "description": "Key strength for encrypting data at rest?"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 0,
+            "si_number": 10,
+            "name": "Password Policy Strength",
+            "description": "Do they support strong passwords?"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 1,
+            "si_number": 11,
+            "name": "Anonymous Use",
+            "description": "Does the app allow anonymous use of the service?"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 1,
+            "si_number": 12,
+            "name": "Multi-factor Aunthentication",
+            "description": "Does the SP support multi factor authentication?"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 1,
+            "si_number": 13,
+            "name": "Jail Broken App",
+            "description": "If mobile app supported, does it have a jail broken version"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 1,
+            "si_number": 14,
+            "name": "Mobile App Support",
+            "description": "Is there a mobile app for the service?"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 1,
+            "si_number": 15,
+            "name": "Identity Federation Method",
+            "description": "Does the SP support SAML/OAuth for Id Federation?"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 1,
+            "si_number": 16,
+            "name": "Enterprise Identity",
+            "description": "Does the service allow importing of enterprise identities for authentication, ex, from AD?"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 1,
+            "si_number": 17,
+            "name": "SSO",
+            "description": "Is SSO supported?"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 18,
+            "name": "Recent Vulnerabilities",
+            "description": " "
+        }
+    },
+    {
+        "pk": 23,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 19,
+            "name": "CSRF",
+            "description": "The vendor has implemented a systemic way to protect against CSRF attacks on all their services"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 20,
+            "name": "SQLi",
+            "description": "The vendor has implemented a systemic way to protect against SQLi attacks on all their services"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 21,
+            "name": "XSS",
+            "description": "The vendor has implemented a systemic way to protect against XSS attacks on all their services"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 22,
+            "name": "Pentesting",
+            "description": " "
+        }
+    },
+    {
+        "pk": 27,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 23,
+            "name": "API Supported",
+            "description": "Does the Service Provider exposes APIs to access the functionality?"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 25,
+            "name": "IP Filtering Support",
+            "description": "Does the SP provide IP filtering, where in access to the service is restricted to the tenants IPs?"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 26,
+            "name": "Malware Site Use",
+            "description": "Does the SP site allow malwares?"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 27,
+            "name": "API Authentication",
+            "description": " "
+        }
+    },
+    {
+        "pk": 32,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 28,
+            "name": "Service Hosting Locations",
+            "description": "In which geography is the service hosted?"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 29,
+            "name": "Compliance Certifications",
+            "description": "Does the service has any compliance certifications?"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 31,
+            "name": "Pricing Model",
+            "description": "What is the pricing model for the service?"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 32,
+            "name": "Price",
+            "description": "Pricing structure for the service"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 33,
+            "name": "Infrastructure Status Reporting",
+            "description": "Do they have a reporting mechanism for the health of their infrastructure?"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 34,
+            "name": "Business HQ",
+            "description": "Geography of the headquartes of the SP"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 35,
+            "name": "Admin Audit Logging",
+            "description": "Do they log all admin actions and if so what are the possible ways to access the logs?"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 36,
+            "name": "User Activity Logging",
+            "description": "Is all user activity logged and what access do the tenants get for these logs?"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 37,
+            "name": "Data Access Logging",
+            "description": "Is access to the data logged and how do tenants get access to these logs?"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 38,
+            "name": "Terms of Use",
+            "description": "Does the SP has a terms of use / service. If yes, is it different for various geographies?"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 39,
+            "name": "Data Residency",
+            "description": "Which geography is the data stored in?"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 40,
+            "name": "Service not in ITAR List",
+            "description": "Is the service in the list of ITAR countries and entities?"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 41,
+            "name": "Account Termination",
+            "description": "Who controls the termination of the service?"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 42,
+            "name": "IP Ownership",
+            "description": "Who owns the IP of the data / content?"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 43,
+            "name": "Privacy Policy",
+            "description": "What is the privacy policy for the data / content stored with the SP?"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 44,
+            "name": "Impacted by Compliance",
+            "description": "Is the service impacted by any compliance requirements?"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 45,
+            "name": "Dispute Resolution",
+            "description": "In case of dispute between the SP and the tenant, how is the dispute resolved and where"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 46,
+            "name": "Jursidictional Location",
+            "description": "In case of dispute between the SP and the tenant, what is the jurisdictional location"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 47,
+            "name": "Indemnity",
+            "description": "Is the tenant or SP indemnified against any wrong doing by either of them and what governs it?"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 48,
+            "name": "Copyright Controls",
+            "description": " "
+        }
+    },
+    {
+        "pk": 53,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 4,
+            "si_number": 49,
+            "name": "Statute of Limitations",
+            "description": " "
+        }
+    },
+    {
+        "pk": 34,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 3,
+            "si_number": 30,
+            "name": "Service Address",
+            "description": "Business Addresses of the Service Provider"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "skyhigh.cspattribute",
+        "fields": {
+            "category": 2,
+            "si_number": 24,
+            "name": "API URL",
+            "description": "If yes to above, what is the end point of the API?"
+        }
+    }
+]

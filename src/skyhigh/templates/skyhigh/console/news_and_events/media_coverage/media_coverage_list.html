@@ -1,0 +1,42 @@
+{% extends 'skyhigh/console/base.html' %}
+{% load unobase_tags %}
+
+{% block title %}Media Coverage List{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <div class="container console">
+            <h1>Media Coverage List</h1>
+            <a href="{% url console_news_and_events_media_coverage_create %}" class="link btn_light console-btn">Add a Media Coverage</a>
+            <div class="column column_full">
+                <div class="listing listing_full">
+                    <table>
+                        <tr>
+                            <thead>
+                                <th width="80">State</th>
+                                <th width="120">Image</th>
+                                <th>Title</th>
+                                <th width="60"></th>
+                            </thead>
+                        </tr>
+                        {% for object in object_list %}
+                            <tr onclick="DoNav('{% url console_news_and_events_media_coverage_detail object.pk %}');">
+                                <td>{{ object.get_state_display }}</td>
+                                <td><img src="{{ object.get_120x120_url }}" /></td>
+                                <td><a href="{% url console_news_and_events_media_coverage_detail object.pk %}">{{ object.title }}</a></td>
+                                <td><a href="{% url console_news_and_events_media_coverage_update object.pk %}" class="link">Edit</a><br /><a href="{% url console_news_and_events_media_coverage_delete object.pk %}" class="link">Delete</a></td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="4">Sorry, there are no items to list</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    {% pagination page_obj %}
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div><!--/content-->
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,2192 @@
+[
+    {
+        "pk": 213, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TJ", 
+            "dial_code": "992", 
+            "name": "Tajikistan", 
+            "three_digit_code": "TJK"
+        }
+    }, 
+    {
+        "pk": 212, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TW", 
+            "dial_code": "886", 
+            "name": "Taiwan, Province of China", 
+            "three_digit_code": "TWN"
+        }
+    }, 
+    {
+        "pk": 193, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "RS", 
+            "dial_code": "381", 
+            "name": "Serbia", 
+            "three_digit_code": "SRB"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "EG", 
+            "dial_code": "20", 
+            "name": "Egypt", 
+            "three_digit_code": "EGY"
+        }
+    }, 
+    {
+        "pk": 215, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TH", 
+            "dial_code": "66", 
+            "name": "Thailand", 
+            "three_digit_code": "THA"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SV", 
+            "dial_code": "503", 
+            "name": "El Salvador", 
+            "three_digit_code": "SLV"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GQ", 
+            "dial_code": "240", 
+            "name": "Equatorial Guinea", 
+            "three_digit_code": "GNQ"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ER", 
+            "dial_code": "291", 
+            "name": "Eritrea", 
+            "three_digit_code": "ERI"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "EE", 
+            "dial_code": "372", 
+            "name": "Estonia", 
+            "three_digit_code": "EST"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ET", 
+            "dial_code": "251", 
+            "name": "Ethiopia", 
+            "three_digit_code": "ETH"
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "FK", 
+            "dial_code": "500", 
+            "name": "Falkland Islands (Malvinas)", 
+            "three_digit_code": "FLK"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "FO", 
+            "dial_code": "298", 
+            "name": "Faroe Islands", 
+            "three_digit_code": "FRO"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "FJ", 
+            "dial_code": "679", 
+            "name": "Fiji", 
+            "three_digit_code": "FJI"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "FI", 
+            "dial_code": "358", 
+            "name": "Finland", 
+            "three_digit_code": "FIN"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "FR", 
+            "dial_code": "33", 
+            "name": "France", 
+            "three_digit_code": "FRA"
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GF", 
+            "dial_code": "594", 
+            "name": "French Guiana", 
+            "three_digit_code": "GUF"
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PF", 
+            "dial_code": "689", 
+            "name": "French Polynesia", 
+            "three_digit_code": "PYF"
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GA", 
+            "dial_code": "241", 
+            "name": "Gabon", 
+            "three_digit_code": "GAB"
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GM", 
+            "dial_code": "220", 
+            "name": "Gambia", 
+            "three_digit_code": "GMB"
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GE", 
+            "dial_code": "995", 
+            "name": "Georgia", 
+            "three_digit_code": "GEO"
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "DE", 
+            "dial_code": "49", 
+            "name": "Germany", 
+            "three_digit_code": "DEU"
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GH", 
+            "dial_code": "233", 
+            "name": "Ghana", 
+            "three_digit_code": "GHA"
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GI", 
+            "dial_code": "350", 
+            "name": "Gibraltar", 
+            "three_digit_code": "GIB"
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GR", 
+            "dial_code": "30", 
+            "name": "Greece", 
+            "three_digit_code": "GRC"
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GL", 
+            "dial_code": "299", 
+            "name": "Greenland", 
+            "three_digit_code": "GRL"
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "JO", 
+            "dial_code": "962", 
+            "name": "Jordan", 
+            "three_digit_code": "JOR"
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KZ", 
+            "dial_code": "7", 
+            "name": "Kazakhstan", 
+            "three_digit_code": "KAZ"
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KE", 
+            "dial_code": "254", 
+            "name": "Kenya", 
+            "three_digit_code": "KEN"
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KI", 
+            "dial_code": "686", 
+            "name": "Kiribati", 
+            "three_digit_code": "KIR"
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KP", 
+            "dial_code": "850", 
+            "name": "Korea, Democratic People's Republic of", 
+            "three_digit_code": "PRK"
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KR", 
+            "dial_code": "82", 
+            "name": "Korea, Republic of", 
+            "three_digit_code": "KOR"
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KW", 
+            "dial_code": "965", 
+            "name": "Kuwait", 
+            "three_digit_code": "KWT"
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KG", 
+            "dial_code": "7", 
+            "name": "Kyrgyzstan", 
+            "three_digit_code": "KGZ"
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LA", 
+            "dial_code": "856", 
+            "name": "Lao People's Democratic Republic", 
+            "three_digit_code": "LAO"
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LV", 
+            "dial_code": "371", 
+            "name": "Latvia", 
+            "three_digit_code": "LVA"
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LB", 
+            "dial_code": "961", 
+            "name": "Lebanon", 
+            "three_digit_code": "LBN"
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LS", 
+            "dial_code": "266", 
+            "name": "Lesotho", 
+            "three_digit_code": "LSO"
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LR", 
+            "dial_code": "231", 
+            "name": "Liberia", 
+            "three_digit_code": "LBR"
+        }
+    }, 
+    {
+        "pk": 125, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LY", 
+            "dial_code": "218", 
+            "name": "Libyan Arab Jamahiriya", 
+            "three_digit_code": "LBY"
+        }
+    }, 
+    {
+        "pk": 126, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LI", 
+            "dial_code": "423", 
+            "name": "Liechtenstein", 
+            "three_digit_code": "LIE"
+        }
+    }, 
+    {
+        "pk": 127, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LT", 
+            "dial_code": "370", 
+            "name": "Lithuania", 
+            "three_digit_code": "LTU"
+        }
+    }, 
+    {
+        "pk": 128, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LU", 
+            "dial_code": "352", 
+            "name": "Luxembourg", 
+            "three_digit_code": "LUX"
+        }
+    }, 
+    {
+        "pk": 129, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MO", 
+            "dial_code": "853", 
+            "name": "Macao", 
+            "three_digit_code": "MAC"
+        }
+    }, 
+    {
+        "pk": 130, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MK", 
+            "dial_code": "389", 
+            "name": "Macedonia, the Former Yugoslav Republic of", 
+            "three_digit_code": "MKD"
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MG", 
+            "dial_code": "261", 
+            "name": "Madagascar", 
+            "three_digit_code": "MDG"
+        }
+    }, 
+    {
+        "pk": 132, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MW", 
+            "dial_code": "265", 
+            "name": "Malawi", 
+            "three_digit_code": "MWI"
+        }
+    }, 
+    {
+        "pk": 133, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MY", 
+            "dial_code": "60", 
+            "name": "Malaysia", 
+            "three_digit_code": "MYS"
+        }
+    }, 
+    {
+        "pk": 134, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MV", 
+            "dial_code": "960", 
+            "name": "Maldives", 
+            "three_digit_code": "MDV"
+        }
+    }, 
+    {
+        "pk": 135, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ML", 
+            "dial_code": "223", 
+            "name": "Mali", 
+            "three_digit_code": "MLI"
+        }
+    }, 
+    {
+        "pk": 136, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MT", 
+            "dial_code": "356", 
+            "name": "Malta", 
+            "three_digit_code": "MLT"
+        }
+    }, 
+    {
+        "pk": 138, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MQ", 
+            "dial_code": "596", 
+            "name": "Martinique", 
+            "three_digit_code": "MTQ"
+        }
+    }, 
+    {
+        "pk": 139, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MR", 
+            "dial_code": "222", 
+            "name": "Mauritania", 
+            "three_digit_code": "MRT"
+        }
+    }, 
+    {
+        "pk": 140, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MU", 
+            "dial_code": "230", 
+            "name": "Mauritius", 
+            "three_digit_code": "MUS"
+        }
+    }, 
+    {
+        "pk": 141, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "YT", 
+            "dial_code": "269", 
+            "name": "Mayotte", 
+            "three_digit_code": "MYT"
+        }
+    }, 
+    {
+        "pk": 144, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MD", 
+            "dial_code": "373", 
+            "name": "Moldova, Republic of", 
+            "three_digit_code": "MDA"
+        }
+    }, 
+    {
+        "pk": 145, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MC", 
+            "dial_code": "377", 
+            "name": "Monaco", 
+            "three_digit_code": "MCO"
+        }
+    }, 
+    {
+        "pk": 146, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MN", 
+            "dial_code": "976", 
+            "name": "Mongolia", 
+            "three_digit_code": "MNG"
+        }
+    }, 
+    {
+        "pk": 147, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MS", 
+            "dial_code": "664", 
+            "name": "Montserrat", 
+            "three_digit_code": "MSR"
+        }
+    }, 
+    {
+        "pk": 148, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MA", 
+            "dial_code": "212", 
+            "name": "Morocco", 
+            "three_digit_code": "MAR"
+        }
+    }, 
+    {
+        "pk": 149, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MZ", 
+            "dial_code": "258", 
+            "name": "Mozambique", 
+            "three_digit_code": "MOZ"
+        }
+    }, 
+    {
+        "pk": 150, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "MM", 
+            "dial_code": "95", 
+            "name": "Myanmar", 
+            "three_digit_code": "MMR"
+        }
+    }, 
+    {
+        "pk": 151, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NA", 
+            "dial_code": "264", 
+            "name": "Namibia", 
+            "three_digit_code": "NAM"
+        }
+    }, 
+    {
+        "pk": 152, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NR", 
+            "dial_code": "674", 
+            "name": "Nauru", 
+            "three_digit_code": "NRU"
+        }
+    }, 
+    {
+        "pk": 153, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NP", 
+            "dial_code": "977", 
+            "name": "Nepal", 
+            "three_digit_code": "NPL"
+        }
+    }, 
+    {
+        "pk": 154, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NL", 
+            "dial_code": "31", 
+            "name": "Netherlands", 
+            "three_digit_code": "NLD"
+        }
+    }, 
+    {
+        "pk": 155, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AN", 
+            "dial_code": "599", 
+            "name": "Netherlands Antilles", 
+            "three_digit_code": "ANT"
+        }
+    }, 
+    {
+        "pk": 156, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NC", 
+            "dial_code": "687", 
+            "name": "New Caledonia", 
+            "three_digit_code": "NCL"
+        }
+    }, 
+    {
+        "pk": 157, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NZ", 
+            "dial_code": "64", 
+            "name": "New Zealand", 
+            "three_digit_code": "NZL"
+        }
+    }, 
+    {
+        "pk": 158, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NI", 
+            "dial_code": "505", 
+            "name": "Nicaragua", 
+            "three_digit_code": "NIC"
+        }
+    }, 
+    {
+        "pk": 159, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NE", 
+            "dial_code": "227", 
+            "name": "Niger", 
+            "three_digit_code": "NER"
+        }
+    }, 
+    {
+        "pk": 160, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NG", 
+            "dial_code": "234", 
+            "name": "Nigeria", 
+            "three_digit_code": "NGA"
+        }
+    }, 
+    {
+        "pk": 161, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NU", 
+            "dial_code": "683", 
+            "name": "Niue", 
+            "three_digit_code": "NIU"
+        }
+    }, 
+    {
+        "pk": 162, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NF", 
+            "dial_code": "672", 
+            "name": "Norfolk Island", 
+            "three_digit_code": "NFK"
+        }
+    }, 
+    {
+        "pk": 164, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "NO", 
+            "dial_code": "47", 
+            "name": "Norway", 
+            "three_digit_code": "NOR"
+        }
+    }, 
+    {
+        "pk": 165, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "OM", 
+            "dial_code": "968", 
+            "name": "Oman", 
+            "three_digit_code": "OMN"
+        }
+    }, 
+    {
+        "pk": 166, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PK", 
+            "dial_code": "92", 
+            "name": "Pakistan", 
+            "three_digit_code": "PAK"
+        }
+    }, 
+    {
+        "pk": 168, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PS", 
+            "dial_code": "970", 
+            "name": "Palestinian Territory, Occupied", 
+            "three_digit_code": "PSE"
+        }
+    }, 
+    {
+        "pk": 169, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PA", 
+            "dial_code": "507", 
+            "name": "Panama", 
+            "three_digit_code": "PAN"
+        }
+    }, 
+    {
+        "pk": 170, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PG", 
+            "dial_code": "675", 
+            "name": "Papua New Guinea", 
+            "three_digit_code": "PNG"
+        }
+    }, 
+    {
+        "pk": 171, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PY", 
+            "dial_code": "595", 
+            "name": "Paraguay", 
+            "three_digit_code": "PRY"
+        }
+    }, 
+    {
+        "pk": 172, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PE", 
+            "dial_code": "51", 
+            "name": "Peru", 
+            "three_digit_code": "PER"
+        }
+    }, 
+    {
+        "pk": 173, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PH", 
+            "dial_code": "63", 
+            "name": "Philippines", 
+            "three_digit_code": "PHL"
+        }
+    }, 
+    {
+        "pk": 175, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PL", 
+            "dial_code": "48", 
+            "name": "Poland", 
+            "three_digit_code": "POL"
+        }
+    }, 
+    {
+        "pk": 176, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PT", 
+            "dial_code": "351", 
+            "name": "Portugal", 
+            "three_digit_code": "PRT"
+        }
+    }, 
+    {
+        "pk": 178, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "QA", 
+            "dial_code": "974", 
+            "name": "Qatar", 
+            "three_digit_code": "QAT"
+        }
+    }, 
+    {
+        "pk": 179, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "RE", 
+            "dial_code": "262", 
+            "name": "Reunion", 
+            "three_digit_code": "REU"
+        }
+    }, 
+    {
+        "pk": 180, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "RO", 
+            "dial_code": "40", 
+            "name": "Romania", 
+            "three_digit_code": "ROU"
+        }
+    }, 
+    {
+        "pk": 181, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "RU", 
+            "dial_code": "7", 
+            "name": "Russian Federation", 
+            "three_digit_code": "RUS"
+        }
+    }, 
+    {
+        "pk": 182, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "RW", 
+            "dial_code": "250", 
+            "name": "Rwanda", 
+            "three_digit_code": "RWA"
+        }
+    }, 
+    {
+        "pk": 183, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SH", 
+            "dial_code": "290", 
+            "name": "Saint Helena", 
+            "three_digit_code": "SHN"
+        }
+    }, 
+    {
+        "pk": 184, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KN", 
+            "dial_code": "869", 
+            "name": "Saint Kitts and Nevis", 
+            "three_digit_code": "KNA"
+        }
+    }, 
+    {
+        "pk": 185, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LC", 
+            "dial_code": "758", 
+            "name": "Saint Lucia", 
+            "three_digit_code": "LCA"
+        }
+    }, 
+    {
+        "pk": 186, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "PM", 
+            "dial_code": "508", 
+            "name": "Saint Pierre and Miquelon", 
+            "three_digit_code": "SPM"
+        }
+    }, 
+    {
+        "pk": 187, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "VC", 
+            "dial_code": "784", 
+            "name": "Saint Vincent and the Grenadines", 
+            "three_digit_code": "VCT"
+        }
+    }, 
+    {
+        "pk": 188, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "WS", 
+            "dial_code": "7", 
+            "name": "Samoa", 
+            "three_digit_code": "WSM"
+        }
+    }, 
+    {
+        "pk": 189, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SM", 
+            "dial_code": "378", 
+            "name": "San Marino", 
+            "three_digit_code": "SMR"
+        }
+    }, 
+    {
+        "pk": 190, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ST", 
+            "dial_code": "239", 
+            "name": "Sao Tome and Principe", 
+            "three_digit_code": "STP"
+        }
+    }, 
+    {
+        "pk": 191, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SA", 
+            "dial_code": "966", 
+            "name": "Saudi Arabia", 
+            "three_digit_code": "SAU"
+        }
+    }, 
+    {
+        "pk": 192, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SN", 
+            "dial_code": "221", 
+            "name": "Senegal", 
+            "three_digit_code": "SEN"
+        }
+    }, 
+    {
+        "pk": 194, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SC", 
+            "dial_code": "248", 
+            "name": "Seychelles", 
+            "three_digit_code": "SYC"
+        }
+    }, 
+    {
+        "pk": 195, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SL", 
+            "dial_code": "232", 
+            "name": "Sierra Leone", 
+            "three_digit_code": "SLE"
+        }
+    }, 
+    {
+        "pk": 196, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SG", 
+            "dial_code": "65", 
+            "name": "Singapore", 
+            "three_digit_code": "SGP"
+        }
+    }, 
+    {
+        "pk": 197, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SK", 
+            "dial_code": "421", 
+            "name": "Slovakia", 
+            "three_digit_code": "SVK"
+        }
+    }, 
+    {
+        "pk": 198, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SI", 
+            "dial_code": "386", 
+            "name": "Slovenia", 
+            "three_digit_code": "SVN"
+        }
+    }, 
+    {
+        "pk": 199, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SB", 
+            "dial_code": "677", 
+            "name": "Solomon Islands", 
+            "three_digit_code": "SLB"
+        }
+    }, 
+    {
+        "pk": 200, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SO", 
+            "dial_code": "252", 
+            "name": "Somalia", 
+            "three_digit_code": "SOM"
+        }
+    }, 
+    {
+        "pk": 201, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ZA", 
+            "dial_code": "27", 
+            "name": "South Africa", 
+            "three_digit_code": "ZAF"
+        }
+    }, 
+    {
+        "pk": 203, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ES", 
+            "dial_code": "34", 
+            "name": "Spain", 
+            "three_digit_code": "ESP"
+        }
+    }, 
+    {
+        "pk": 204, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "LK", 
+            "dial_code": "94", 
+            "name": "Sri Lanka", 
+            "three_digit_code": "LKA"
+        }
+    }, 
+    {
+        "pk": 205, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SD", 
+            "dial_code": "249", 
+            "name": "Sudan", 
+            "three_digit_code": "SDN"
+        }
+    }, 
+    {
+        "pk": 206, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SR", 
+            "dial_code": "597", 
+            "name": "Suriname", 
+            "three_digit_code": "SUR"
+        }
+    }, 
+    {
+        "pk": 208, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SZ", 
+            "dial_code": "268", 
+            "name": "Swaziland", 
+            "three_digit_code": "SWZ"
+        }
+    }, 
+    {
+        "pk": 209, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SE", 
+            "dial_code": "46", 
+            "name": "Sweden", 
+            "three_digit_code": "SWE"
+        }
+    }, 
+    {
+        "pk": 210, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CH", 
+            "dial_code": "41", 
+            "name": "Switzerland", 
+            "three_digit_code": "CHE"
+        }
+    }, 
+    {
+        "pk": 211, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "SY", 
+            "dial_code": "963", 
+            "name": "Syrian Arab Republic", 
+            "three_digit_code": "SYR"
+        }
+    }, 
+    {
+        "pk": 214, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TZ", 
+            "dial_code": "255", 
+            "name": "Tanzania, United Republic Of", 
+            "three_digit_code": "TZA"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AL", 
+            "dial_code": "355", 
+            "name": "Albania", 
+            "three_digit_code": "ALB"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "DZ", 
+            "dial_code": "213", 
+            "name": "Algeria", 
+            "three_digit_code": "DZA"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AD", 
+            "dial_code": "376", 
+            "name": "Andorra", 
+            "three_digit_code": "AND"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AO", 
+            "dial_code": "244", 
+            "name": "Angola", 
+            "three_digit_code": "AGO"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AI", 
+            "dial_code": "264", 
+            "name": "Anguilla", 
+            "three_digit_code": "AIA"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AQ", 
+            "dial_code": "672", 
+            "name": "Antarctica", 
+            "three_digit_code": "ATA"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AG", 
+            "dial_code": "268", 
+            "name": "Antigua and Barbuda", 
+            "three_digit_code": "ATG"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AR", 
+            "dial_code": "54", 
+            "name": "Argentina", 
+            "three_digit_code": "ARG"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AM", 
+            "dial_code": "374", 
+            "name": "Armenia", 
+            "three_digit_code": "ARM"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AW", 
+            "dial_code": "297", 
+            "name": "Aruba", 
+            "three_digit_code": "ABW"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AU", 
+            "dial_code": "61", 
+            "name": "Australia", 
+            "three_digit_code": "AUS"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AT", 
+            "dial_code": "43", 
+            "name": "Austria", 
+            "three_digit_code": "AUT"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AZ", 
+            "dial_code": "994", 
+            "name": "Azerbaijan", 
+            "three_digit_code": "AZE"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BS", 
+            "dial_code": "242", 
+            "name": "Bahamas", 
+            "three_digit_code": "BHS"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BH", 
+            "dial_code": "973", 
+            "name": "Bahrain", 
+            "three_digit_code": "BHR"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BD", 
+            "dial_code": "880", 
+            "name": "Bangladesh", 
+            "three_digit_code": "BGD"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BB", 
+            "dial_code": "246", 
+            "name": "Barbados", 
+            "three_digit_code": "BRB"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BY", 
+            "dial_code": "375", 
+            "name": "Belarus", 
+            "three_digit_code": "BLR"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BE", 
+            "dial_code": "32", 
+            "name": "Belgium", 
+            "three_digit_code": "BEL"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BZ", 
+            "dial_code": "501", 
+            "name": "Belize", 
+            "three_digit_code": "BLZ"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BJ", 
+            "dial_code": "229", 
+            "name": "Benin", 
+            "three_digit_code": "BEN"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BM", 
+            "dial_code": "441", 
+            "name": "Bermuda", 
+            "three_digit_code": "BMU"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BT", 
+            "dial_code": "975", 
+            "name": "Bhutan", 
+            "three_digit_code": "BTN"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BO", 
+            "dial_code": "591", 
+            "name": "Bolivia", 
+            "three_digit_code": "BOL"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BA", 
+            "dial_code": "387", 
+            "name": "Bosnia and Herzegovina", 
+            "three_digit_code": "BIH"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BW", 
+            "dial_code": "267", 
+            "name": "Botswana", 
+            "three_digit_code": "BWA"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BR", 
+            "dial_code": "55", 
+            "name": "Brazil", 
+            "three_digit_code": "BRA"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BN", 
+            "dial_code": "673", 
+            "name": "Brunei Darussalam", 
+            "three_digit_code": "BRN"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BG", 
+            "dial_code": "359", 
+            "name": "Bulgaria", 
+            "three_digit_code": "BGR"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BF", 
+            "dial_code": "226", 
+            "name": "Burkina Faso", 
+            "three_digit_code": "BFA"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "BI", 
+            "dial_code": "257", 
+            "name": "Burundi", 
+            "three_digit_code": "BDI"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KH", 
+            "dial_code": "855", 
+            "name": "Cambodia", 
+            "three_digit_code": "KHM"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CM", 
+            "dial_code": "237", 
+            "name": "Cameroon", 
+            "three_digit_code": "CMR"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CA", 
+            "dial_code": "1", 
+            "name": "Canada", 
+            "three_digit_code": "CAN"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CV", 
+            "dial_code": "238", 
+            "name": "Cape Verde", 
+            "three_digit_code": "CPV"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KY", 
+            "dial_code": "345", 
+            "name": "Cayman Islands", 
+            "three_digit_code": "CYM"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CF", 
+            "dial_code": "236", 
+            "name": "Central African Republic", 
+            "three_digit_code": "CAF"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TD", 
+            "dial_code": "235", 
+            "name": "Chad", 
+            "three_digit_code": "TCD"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CL", 
+            "dial_code": "56", 
+            "name": "Chile", 
+            "three_digit_code": "CHL"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CN", 
+            "dial_code": "86", 
+            "name": "China", 
+            "three_digit_code": "CHN"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CX", 
+            "dial_code": "61", 
+            "name": "Christmas Island", 
+            "three_digit_code": "CXR"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CC", 
+            "dial_code": "61", 
+            "name": "Cocos (Keeling) Islands", 
+            "three_digit_code": "CCK"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CO", 
+            "dial_code": "57", 
+            "name": "Colombia", 
+            "three_digit_code": "COL"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "KM", 
+            "dial_code": "269", 
+            "name": "Comoros", 
+            "three_digit_code": "COM"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AF", 
+            "dial_code": "93", 
+            "name": "Afghanistan", 
+            "three_digit_code": "AFG"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CG", 
+            "dial_code": "242", 
+            "name": "Congo", 
+            "three_digit_code": "COG"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CD", 
+            "dial_code": "243", 
+            "name": "Congo, the Democratic Republic of the", 
+            "three_digit_code": "COD"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CK", 
+            "dial_code": "682", 
+            "name": "Cook Islands", 
+            "three_digit_code": "COK"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CR", 
+            "dial_code": "506", 
+            "name": "Costa Rica", 
+            "three_digit_code": "CRI"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CI", 
+            "dial_code": "225", 
+            "name": "Cote d'Ivoire", 
+            "three_digit_code": "CIV"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "HR", 
+            "dial_code": "385", 
+            "name": "Croatia", 
+            "three_digit_code": "HRV"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CU", 
+            "dial_code": "53", 
+            "name": "Cuba", 
+            "three_digit_code": "CUB"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CY", 
+            "dial_code": "357", 
+            "name": "Cyprus", 
+            "three_digit_code": "CYP"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "CZ", 
+            "dial_code": "420", 
+            "name": "Czech Republic", 
+            "three_digit_code": "CZE"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "DK", 
+            "dial_code": "45", 
+            "name": "Denmark", 
+            "three_digit_code": "DNK"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "DJ", 
+            "dial_code": "253", 
+            "name": "Djibouti", 
+            "three_digit_code": "DJI"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "DM", 
+            "dial_code": "767", 
+            "name": "Dominica", 
+            "three_digit_code": "DMA"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "DO", 
+            "dial_code": "809", 
+            "name": "Dominican Republic", 
+            "three_digit_code": "DOM"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "EC", 
+            "dial_code": "593", 
+            "name": "Ecuador", 
+            "three_digit_code": "ECU"
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GD", 
+            "dial_code": "473", 
+            "name": "Grenada", 
+            "three_digit_code": "GRD"
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GP", 
+            "dial_code": "590", 
+            "name": "Guadeloupe", 
+            "three_digit_code": "GLP"
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GT", 
+            "dial_code": "502", 
+            "name": "Guatemala", 
+            "three_digit_code": "GTM"
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GN", 
+            "dial_code": "224", 
+            "name": "Guinea", 
+            "three_digit_code": "GIN"
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GW", 
+            "dial_code": "245", 
+            "name": "Guinea-Bissau", 
+            "three_digit_code": "GNB"
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "HT", 
+            "dial_code": "509", 
+            "name": "Haiti", 
+            "three_digit_code": "HTI"
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "VA", 
+            "dial_code": "39", 
+            "name": "Holy See (Vatican City State)", 
+            "three_digit_code": "VAT"
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "HN", 
+            "dial_code": "504", 
+            "name": "Honduras", 
+            "three_digit_code": "HND"
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "HK", 
+            "dial_code": "852", 
+            "name": "Hong Kong", 
+            "three_digit_code": "HKG"
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "HU", 
+            "dial_code": "36", 
+            "name": "Hungary", 
+            "three_digit_code": "HUN"
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "IS", 
+            "dial_code": "354", 
+            "name": "Iceland", 
+            "three_digit_code": "ISL"
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "IN", 
+            "dial_code": "91", 
+            "name": "India", 
+            "three_digit_code": "IND"
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ID", 
+            "dial_code": "62", 
+            "name": "Indonesia", 
+            "three_digit_code": "IDN"
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "IR", 
+            "dial_code": "98", 
+            "name": "Iran, Islamic Republic of", 
+            "three_digit_code": "IRN"
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "IQ", 
+            "dial_code": "964", 
+            "name": "Iraq", 
+            "three_digit_code": "IRQ"
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "IE", 
+            "dial_code": "353", 
+            "name": "Ireland", 
+            "three_digit_code": "IRL"
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "IL", 
+            "dial_code": "972", 
+            "name": "Israel", 
+            "three_digit_code": "ISR"
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "IT", 
+            "dial_code": "39", 
+            "name": "Italy", 
+            "three_digit_code": "ITA"
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "JM", 
+            "dial_code": "876", 
+            "name": "Jamaica", 
+            "three_digit_code": "JAM"
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "JP", 
+            "dial_code": "81", 
+            "name": "Japan", 
+            "three_digit_code": "JPN"
+        }
+    }, 
+    {
+        "pk": 230, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "US", 
+            "dial_code": "1", 
+            "name": "United States", 
+            "three_digit_code": "USA"
+        }
+    }, 
+    {
+        "pk": 243, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ZW", 
+            "dial_code": "263", 
+            "name": "Zimbabwe", 
+            "three_digit_code": "ZWE"
+        }
+    }, 
+    {
+        "pk": 242, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "ZM", 
+            "dial_code": "260", 
+            "name": "Zambia", 
+            "three_digit_code": "ZMB"
+        }
+    }, 
+    {
+        "pk": 241, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "YE", 
+            "dial_code": "967", 
+            "name": "Yemen", 
+            "three_digit_code": "YEM"
+        }
+    }, 
+    {
+        "pk": 239, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "WF", 
+            "dial_code": "681", 
+            "name": "Wallis and Futuna", 
+            "three_digit_code": "WLF"
+        }
+    }, 
+    {
+        "pk": 237, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "VG", 
+            "dial_code": "284", 
+            "name": "Virgin Islands, British", 
+            "three_digit_code": "VGB"
+        }
+    }, 
+    {
+        "pk": 236, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "VN", 
+            "dial_code": "84", 
+            "name": "Viet Nam", 
+            "three_digit_code": "VNM"
+        }
+    }, 
+    {
+        "pk": 235, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "VE", 
+            "dial_code": "58", 
+            "name": "Venezuela", 
+            "three_digit_code": "VEN"
+        }
+    }, 
+    {
+        "pk": 234, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "VU", 
+            "dial_code": "678", 
+            "name": "Vanuatu", 
+            "three_digit_code": "VUT"
+        }
+    }, 
+    {
+        "pk": 233, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "UZ", 
+            "dial_code": "998", 
+            "name": "Uzbekistan", 
+            "three_digit_code": "UZB"
+        }
+    }, 
+    {
+        "pk": 232, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "UY", 
+            "dial_code": "598", 
+            "name": "Uruguay", 
+            "three_digit_code": "URY"
+        }
+    }, 
+    {
+        "pk": 229, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "GB", 
+            "dial_code": "44", 
+            "name": "United Kingdom", 
+            "three_digit_code": "GBR"
+        }
+    }, 
+    {
+        "pk": 228, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "AE", 
+            "dial_code": "971", 
+            "name": "United Arab Emirates", 
+            "three_digit_code": "ARE"
+        }
+    }, 
+    {
+        "pk": 227, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "UA", 
+            "dial_code": "380", 
+            "name": "Ukraine", 
+            "three_digit_code": "UKR"
+        }
+    }, 
+    {
+        "pk": 226, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "UG", 
+            "dial_code": "256", 
+            "name": "Uganda", 
+            "three_digit_code": "UGA"
+        }
+    }, 
+    {
+        "pk": 225, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TV", 
+            "dial_code": "688", 
+            "name": "Tuvalu", 
+            "three_digit_code": "TUV"
+        }
+    }, 
+    {
+        "pk": 224, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TC", 
+            "dial_code": "649", 
+            "name": "Turks and Caicos Islands", 
+            "three_digit_code": "TCA"
+        }
+    }, 
+    {
+        "pk": 223, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TM", 
+            "dial_code": "993", 
+            "name": "Turkmenistan", 
+            "three_digit_code": "TKM"
+        }
+    }, 
+    {
+        "pk": 222, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TR", 
+            "dial_code": "90", 
+            "name": "Turkey", 
+            "three_digit_code": "TUR"
+        }
+    }, 
+    {
+        "pk": 221, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TN", 
+            "dial_code": "216", 
+            "name": "Tunisia", 
+            "three_digit_code": "TUN"
+        }
+    }, 
+    {
+        "pk": 220, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TT", 
+            "dial_code": "868", 
+            "name": "Trinidad and Tobago", 
+            "three_digit_code": "TTO"
+        }
+    }, 
+    {
+        "pk": 219, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TO", 
+            "dial_code": "676", 
+            "name": "Tonga", 
+            "three_digit_code": "TON"
+        }
+    }, 
+    {
+        "pk": 218, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TK", 
+            "dial_code": "690", 
+            "name": "Tokelau", 
+            "three_digit_code": "TKL"
+        }
+    }, 
+    {
+        "pk": 217, 
+        "model": "skyhigh.country", 
+        "fields": {
+            "two_digit_code": "TG", 
+            "dial_code": "228", 
+            "name": "Togo", 
+            "three_digit_code": "TGO"
+        }
+    }
+]

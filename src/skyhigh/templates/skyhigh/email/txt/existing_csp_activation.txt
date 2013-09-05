@@ -1,0 +1,17 @@
+{% extends 'email/base.txt' %}
+
+{% block content %}
+Dear Cloud Service Provider,
+
+We offer an online Cloud Registry that lists a set of cloud services of interest to our customers. Your service is one of the services in our registry. For each service in our registry we gather publicly available information (e.g., if the service allows file sharing, supports encryption, etc.) and compute an objective risk score for the service.  Our customers use this risk score as an important criteria in deciding which service to use.  This information is also available from the web site of the Cloud Security Alliance (see https://cloudsecurityalliance.org/star/registry/).
+
+This email is to offer you the opportunity to review the attributes we have on your service and let us know if some attribute value should be changed.
+
+Your username is: {{ user.username }}
+
+Please go to http://{{ site }}/secure/accounts/reset/{{ uid }}-{{ token }}/ to reset your password and login to your Skyhigh Networks account and provide us feedback on your attribute values.
+
+To find out more about Skyhigh Networks, please see www.skyhighnetworks.com
+
+If you are not the correct person to receive this email, please forward this email to the appropriate individual.
+{% endblock %}
