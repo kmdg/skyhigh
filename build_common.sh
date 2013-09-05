@@ -4,7 +4,7 @@ echo "Building "$SERVER_NAME
 
 python bootstrap.py -v1.7.1
 bin/buildout \
-    buildout:server-names=$SERVER_NAMES \
+    buildout:server-names="$SERVER_NAMES" \
     buildout:server-name=$SERVER_NAME \
     buildout:fcgi-port=$FCGI_PORT \
     buildout:nginx_conf_file=$NGINX_CONF_FILE \
