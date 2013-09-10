@@ -3,14 +3,6 @@ server {
     server_name ${server_names}; 
     client_max_body_size 100m;
     
-    location /static/skyhigh/pdf/Case {
-        rewrite (.*) https://${server_name}/product/case_studies/ permanent;
-    }
-    
-    location /static/skyhigh/pdf/Case-Study {
-        rewrite (.*) https://${server_name}/product/case_studies/ permanent;
-    }
-    
     # static resources
     location ^~ /media/ {
         alias   ${media_root}/;
@@ -69,9 +61,6 @@ server {
     server_name ${server_names};
     client_max_body_size 100m;
 
-#    ssl                  on;
-#    ssl_certificate      ${crt_dir}/${server_name}.crt;
-#    ssl_certificate_key  ${crt_dir}/${server_name}.key;
     keepalive_timeout    70;
 
     # static resources
@@ -159,6 +148,4 @@ server {
     access_log  ${log_dir}/nginx_access.log;
     error_log   ${log_dir}/nginx_error.log;
 
-#    auth_basic            "Restricted";
-#    auth_basic_user_file  /etc/nginx/htpasswd;
 }
