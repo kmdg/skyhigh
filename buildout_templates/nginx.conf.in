@@ -3,14 +3,6 @@ server {
     server_name ${server_names}; 
     client_max_body_size 100m;
     
-    #location /static/skyhigh/pdf/Case {
-    #    rewrite (.*) https://${server_name}/product/case_studies/ permanent;
-    #}
-    
-    #location /static/skyhigh/pdf/Case-Study {
-    #    rewrite (.*) https://${server_name}/product/case_studies/ permanent;
-    #}
-    
     # static resources
     location ^~ /media/ {
         alias   ${media_root}/;
